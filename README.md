@@ -23,7 +23,8 @@ cubekit-website/
 ├── docs.html               # Documentation page
 ├── styles.css              # Custom CSS and CubeKit theme
 ├── script.js               # JavaScript functionality
-├── logo.svg                # CubeKit logo
+├── icons/
+│   └── cubekit_logo.png        # CubeKit logo
 ├── favicon.ico             # Website favicon
 ├── screenshots/            # Component screenshots
 │   ├── schema-visualizer.png
@@ -116,8 +117,8 @@ To run the website locally:
 - Modify `styles.css` for custom styling
 
 ### Replace Logo
-- Replace `logo.svg` with your own logo
-- Update the favicon by replacing `favicon.ico`
+- Replace `icons/cubekit_logo.png` with your own logo
+- The same file is used as favicon for consistency
 
 ### Update Kit.com Form
 - Replace the form code in `index.html` with your own Kit.com form

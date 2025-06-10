@@ -7,8 +7,7 @@
 - [ ] `docs.html` - Documentation page  
 - [ ] `styles.css` - Custom CSS with CubeKit theme
 - [ ] `script.js` - JavaScript functionality
-- [ ] `logo.svg` - CubeKit logo
-- [ ] `favicon.ico` - Website favicon
+- [ ] `icons/cubekit_logo.png` - CubeKit logo and favicon
 - [ ] `README.md` - Project documentation
 - [ ] `.nojekyll` - Prevents Jekyll processing
 - [ ] `.github/workflows/deploy.yml` - Automated deployment (optional)
