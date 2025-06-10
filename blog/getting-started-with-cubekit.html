@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cubekit">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started with CubeKit: Build Analytics UIs in Minutes - CubeKit Blog</title>
+    <meta name="description" content="Learn how CubeKit's high-level components can transform your Cube.dev development workflow. From QueryBuilder to AI-powered chat interfaces.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../icons/cubekit_logo.png">
+    <link rel="apple-touch-icon" href="../icons/cubekit_logo.png">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FWLNLJBYD6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-FWLNLJBYD6');
+    </script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans">
+    <!-- Navigation -->
+    <div class="navbar bg-base-100 border-b border-base-200 sticky top-0 z-50">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16"></path>
+                    </svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <li><a href="../index.html#features">Features</a></li>
+                    <li><a href="../index.html#pricing">Pricing</a></li>
+                    <li><a href="../docs.html">Docs</a></li>
+                    <li><a href="../blog/">Blog</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <a href="../index.html" class="btn btn-ghost">
+                <img src="../icons/cubekit_logo.png" alt="CubeKit" class="h-12">
+            </a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+                <li><a href="../index.html#features" class="hover:text-primary">Features</a></li>
+                <li><a href="../index.html#pricing" class="hover:text-primary">Pricing</a></li>
+                <li><a href="../docs.html" class="hover:text-primary">Docs</a></li>
+                <li><a href="../blog/" class="hover:text-primary">Blog</a></li>
+                <li><a href="../index.html#contact" class="hover:text-primary">Contact</a></li>
+            </ul>
+        </div>
+        <div class="navbar-end">
+            <a href="../index.html" class="btn btn-primary">Join Waiting List</a>
+        </div>
+    </div>
+
+    <!-- Article Header -->
+    <article class="max-w-4xl mx-auto px-4 py-8">
+        <header class="mb-8">
+            <div class="flex items-center gap-2 text-sm text-base-content/60 mb-4">
+                <a href="index.html" class="hover:text-primary transition-colors">← Back to Blog</a>
+                <span>•</span>
+                <time datetime="2024-01-15">January 15, 2024</time>
+                <span>•</span>
+                <span class="badge badge-primary badge-outline">Getting Started</span>
+            </div>
+            <h1 class="text-4xl lg:text-5xl font-bold mb-4 leading-tight">
+                Getting Started with CubeKit: Build Analytics UIs in Minutes
+            </h1>
+            <p class="text-xl text-base-content/70 mb-6">
+                Learn how CubeKit's high-level components can transform your Cube.dev development workflow. 
+                From QueryBuilder to AI-powered chat interfaces, discover how to build professional analytics 
+                applications without the usual complexity.
+            </p>
+            <div class="flex items-center gap-3">
+                <div class="avatar placeholder">
+                    <div class="bg-primary text-primary-content rounded-full w-12">
+                        <span class="text-sm font-bold">CK</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="font-medium">CubeKit Team</div>
+                    <div class="text-sm text-base-content/60">5 min read</div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Article Content -->
+        <div class="prose prose-lg max-w-none">
+            <h2>The Problem with Building Analytics UIs</h2>
+            <p>
+                If you've worked with Cube.dev before, you know it's incredibly powerful for building analytics applications. 
+                The semantic layer, caching, and APIs are top-notch. But when it comes to building the actual user interface, 
+                you're often stuck writing repetitive boilerplate code.
+            </p>
+            
+            <p>
+                Setting up query builders, creating visualizations, handling loading states, managing filters – it all takes time. 
+                And if you want to create something that looks professional and works well across different screen sizes? 
+                Even more time.
+            </p>
+
+            <h2>Enter CubeKit</h2>
+            <p>
+                CubeKit solves this problem by providing high-level, ready-to-use React components that work seamlessly with 
+                your Cube.dev setup. Instead of building everything from scratch, you can focus on your data and business logic 
+                while CubeKit handles the UI complexity.
+            </p>
+
+            <div class="alert alert-info mb-6">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <span><strong>What makes CubeKit different?</strong> Unlike other UI libraries, CubeKit is specifically designed for Cube.dev applications. Every component understands Cube queries, measures, dimensions, and filters natively.</span>
+            </div>
+
+            <h2>Core Components Overview</h2>
+            <p>
+                CubeKit includes five main high-level components, each designed to solve specific use cases in analytics applications:
+            </p>
+
+            <h3>1. QueryBuilder</h3>
+            <p>
+                The QueryBuilder provides a no-code interface for business users to create their own analytics queries. 
+                Users can drag and drop measures and dimensions, apply filters, and see results instantly.
+            </p>
+            
+            <div class="mockup-code mb-6">
+                <pre data-prefix="$"><code>npm install @cubekit/query-builder</code></pre>
+                <pre data-prefix=">" class="text-warning"><code>Installing QueryBuilder components...</code></pre>
+                <pre data-prefix=">" class="text-success"><code>Ready to use!</code></pre>
+            </div>
+
+            <div class="bg-base-200 p-6 rounded-lg mb-6">
+                <h4 class="font-semibold mb-3">QueryBuilder Features:</h4>
+                <ul class="list-disc list-inside space-y-1 text-sm">
+                    <li>Drag & drop interface for measures and dimensions</li>
+                    <li>Advanced filtering with multiple operators</li>
+                    <li>Time range selection with presets</li>
+                    <li>Real-time query preview and results</li>
+                    <li>Export capabilities (CSV, Excel, PDF)</li>
+                </ul>
+            </div>
+
+            <h3>2. SQL Builder</h3>
+            <p>
+                For power users who prefer writing SQL, the SQL Builder provides a sophisticated code editor with 
+                syntax highlighting, auto-completion, and direct integration with Cube's SQL API endpoint.
+            </p>
+
+            <h3>3. Schema Visualization</h3>
+            <p>
+                The Schema Visualization component creates an interactive explorer that shows cube relationships, 
+                measures, dimensions, and metadata. Perfect for helping users understand your data model.
+            </p>
+
+            <h3>4. Dashboard Builder</h3>
+            <p>
+                Create drag-and-drop dashboard interfaces where users can compose multiple visualizations, 
+                arrange layouts, and create interactive filters that affect multiple charts simultaneously.
+            </p>
+
+            <h3>5. AI Chat Bot</h3>
+            <p>
+                The AI Chat Bot allows users to ask questions in natural language and get back relevant data insights. 
+                It translates natural language queries into Cube queries and presents results in an intuitive format.
+            </p>
+
+            <h2>Quick Start Example</h2>
+            <p>
+                Here's how easy it is to get started with CubeKit. Let's create a basic analytics dashboard:
+            </p>
+
+            <div class="mockup-code mb-6">
+                <pre data-prefix="1"><code>import { QueryBuilder } from '@cubekit/query-builder';</code></pre>
+                <pre data-prefix="2"><code>import { DashboardBuilder } from '@cubekit/dashboard';</code></pre>
+                <pre data-prefix="3"><code></code></pre>
+                <pre data-prefix="4"><code>function AnalyticsDashboard() {</code></pre>
+                <pre data-prefix="5"><code>  return (</code></pre>
+                <pre data-prefix="6"><code>    &lt;DashboardBuilder</code></pre>
+                <pre data-prefix="7"><code>      cubeApi={cubeApi}</code></pre>
+                <pre data-prefix="8"><code>      defaultQueries={[</code></pre>
+                <pre data-prefix="9"><code>        { measures: ['Orders.count'] }</code></pre>
+                <pre data-prefix="10"><code>      ]}</code></pre>
+                <pre data-prefix="11"><code>    /&gt;</code></pre>
+                <pre data-prefix="12"><code>  );</code></pre>
+                <pre data-prefix="13"><code>}</code></pre>
+            </div>
+
+            <p>
+                That's it! You now have a fully functional dashboard with drag-and-drop capabilities, 
+                responsive design, and all the features your users expect.
+            </p>
+
+            <h2>Theme Integration</h2>
+            <p>
+                CubeKit works seamlessly with DaisyUI themes, giving you access to 30+ professionally designed 
+                color schemes. You can also create custom themes that match your brand perfectly.
+            </p>
+
+            <div class="bg-base-200 p-6 rounded-lg mb-6">
+                <h4 class="font-semibold mb-3">Supported Themes Include:</h4>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-2 text-sm">
+                    <span class="badge badge-outline">light</span>
+                    <span class="badge badge-outline">dark</span>
+                    <span class="badge badge-outline">corporate</span>
+                    <span class="badge badge-outline">synthwave</span>
+                    <span class="badge badge-outline">retro</span>
+                    <span class="badge badge-outline">cyberpunk</span>
+                    <span class="badge badge-outline">valentine</span>
+                    <span class="badge badge-outline">garden</span>
+                </div>
+            </div>
+
+            <h2>What's Next?</h2>
+            <p>
+                This is just the beginning. CubeKit is designed to grow with your needs, whether you're building 
+                a simple analytics dashboard or a complex multi-tenant analytics platform.
+            </p>
+
+            <p>
+                In upcoming posts, we'll dive deeper into each component, share best practices, and show you 
+                advanced customization techniques. We'll also cover integration patterns, performance optimization, 
+                and how to extend CubeKit with your own custom components.
+            </p>
+
+            <div class="alert alert-success mt-8">
+                <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span><strong>Ready to get started?</strong> Join our waiting list to be among the first to try CubeKit when it launches.</span>
+            </div>
+        </div>
+
+        <!-- Article Footer -->
+        <footer class="mt-12 pt-8 border-t border-base-200">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                <div class="flex items-center gap-3">
+                    <div class="avatar placeholder">
+                        <div class="bg-primary text-primary-content rounded-full w-12">
+                            <span class="text-sm font-bold">CK</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="font-medium">CubeKit Team</div>
+                        <div class="text-sm text-base-content/60">Building the future of analytics UIs</div>
+                    </div>
+                </div>
+                <div class="flex gap-2">
+                    <button class="btn btn-sm btn-outline">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                        </svg>
+                        Like
+                    </button>
+                    <button class="btn btn-sm btn-outline">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"></path>
+                        </svg>
+                        Share
+                    </button>
+                </div>
+            </div>
+        </footer>
+    </article>
+
+    <!-- Related Posts -->
+    <section class="py-16 bg-base-200">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 text-center">Related Posts</h2>
+            <div class="text-center">
+                <div class="text-6xl mb-4">📝</div>
+                <h3 class="text-xl font-semibold mb-2">More tutorials coming soon!</h3>
+                <p class="text-base-content/70 mb-6">
+                    We're working on detailed guides for each CubeKit component.
+                </p>
+                <a href="../index.html" class="btn btn-primary">
+                    Join Waiting List for Updates
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer footer-center p-10 bg-base-100 text-base-content">
+        <aside>
+            <div class="flex justify-center mb-4">
+                <img src="../icons/cubekit_logo.png" alt="CubeKit" class="h-12">
+            </div>
+            <p class="text-base-content/70">Premium components for Cube.dev applications.</p>
+        </aside>
+        <nav>
+            <div class="grid grid-flow-col gap-8">
+                <div class="flex flex-col gap-2">
+                    <span class="footer-title">Product</span>
+                    <a href="../index.html#features" class="link link-hover">Features</a>
+                    <a href="../index.html#pricing" class="link link-hover">Pricing</a>
+                    <a href="../docs.html" class="link link-hover">Documentation</a>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <span class="footer-title">Resources</span>
+                    <a href="../blog/" class="link link-hover">Blog</a>
+                    <a href="../index.html#contact" class="link link-hover">Contact</a>
+                    <a href="#" class="link link-hover">Support</a>
+                </div>
+            </div>
+        </nav>
+        <aside>
+            <p>&copy; 2024 CubeKit. All rights reserved.</p>
+        </aside>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html> 
