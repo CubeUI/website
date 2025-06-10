@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Sitemap (update with your actual GitHub Pages URL)
+Sitemap: https://yourusername.github.io/cubekit-website/sitemap.xml
+
+# Allow search engines to index the site
+Disallow: 
+
+# Optional: Block specific paths if needed
+# Disallow: /private/
+# Disallow: /admin/ 

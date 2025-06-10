@@ -1,0 +1,179 @@
+/* CubeKit Official Theme */
+[data-theme="cubekit"] {
+  color-scheme: light;
+  --color-base-100: oklch(98% 0 0);
+  --color-base-200: oklch(96% 0.001 286.375);
+  --color-base-300: oklch(92% 0.004 286.32);
+  --color-base-content: oklch(21% 0.006 285.885);
+  --color-primary: #333333;
+  --color-primary-content: oklch(96% 0.001 286.375);
+  --color-secondary: oklch(51% 0.253 323.949);
+  --color-secondary-content: oklch(92% 0.004 286.32);
+  --color-accent: oklch(84% 0.143 164.978);
+  --color-accent-content: oklch(26% 0.051 172.552);
+  --color-neutral: oklch(44% 0.017 285.786);
+  --color-neutral-content: oklch(98% 0 0);
+  --color-info: oklch(70% 0.165 254.624);
+  --color-info-content: oklch(28% 0.091 267.935);
+  --color-success: oklch(77% 0.152 181.912);
+  --color-success-content: oklch(27% 0.046 192.524);
+  --color-warning: oklch(75% 0.183 55.934);
+  --color-warning-content: oklch(26% 0.079 36.259);
+  --color-error: oklch(70% 0.191 22.216);
+  --color-error-content: oklch(25% 0.092 26.042);
+  --radius-selector: 0.25rem;
+  --radius-field: 0.25rem;
+  --radius-box: 0.25rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 1;
+
+  /* DaisyUI mappings - primary color #333333 converts to oklch(23% 0 0) */
+  --p: 23% 0 0;
+  --pc: 96% 0.001 286.375;
+  --s: 51% 0.253 323.949;
+  --sc: 92% 0.004 286.32;
+  --a: 84% 0.143 164.978;
+  --ac: 26% 0.051 172.552;
+  --n: 44% 0.017 285.786;
+  --nc: 98% 0 0;
+  --b1: 98% 0 0;
+  --b2: 96% 0.001 286.375;
+  --b3: 92% 0.004 286.32;
+  --bc: 21% 0.006 285.885;
+  --in: 70% 0.165 254.624;
+  --inc: 28% 0.091 267.935;
+  --su: 77% 0.152 181.912;
+  --suc: 27% 0.046 192.524;
+  --wa: 75% 0.183 55.934;
+  --wac: 26% 0.079 36.259;
+  --er: 70% 0.191 22.216;
+  --erc: 25% 0.092 26.042;
+  --rounded-box: 0.25rem;
+  --rounded-btn: 0.25rem;
+  --rounded-badge: 0.25rem;
+  --animation-btn: 0.25s;
+  --animation-input: 0.2s;
+  --btn-focus-scale: 0.95;
+  --border-btn: 1px;
+  --tab-border: 1px;
+  --tab-radius: 0.25rem;
+}
+
+/* Fix for primary color to use hex value */
+[data-theme="cubekit"] .btn-primary,
+[data-theme="cubekit"] .bg-primary {
+  background-color: #333333;
+}
+
+/* Minimal custom styles to complement DaisyUI */
+
+/* Chart bar animations */
+.chart-bar {
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom animations for scroll-triggered elements */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Hover effects for cards */
+.feature-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+}
+
+/* Backdrop blur fallback for older browsers */
+@supports not (backdrop-filter: blur(10px)) {
+    .navbar {
+        background: rgba(255, 255, 255, 0.98) !important;
+    }
+}
+
+/* Custom styles for better image display */
+.modal-open {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Image hover effects with better quality scaling */
+img.cursor-pointer {
+  transition: all 0.3s ease;
+}
+
+img.cursor-pointer:hover {
+  transform: scale(1.01);
+  opacity: 0.8;
+  filter: brightness(1.05);
+}
+
+/* Better image cropping for screenshots */
+.object-cover {
+  object-fit: none;
+  object-position: center;
+}
+
+.object-top {
+  object-position: center top;
+}
+
+.object-center {
+  object-position: center center;
+}
+
+/* Custom positioning for specific components - showing actual pixel windows */
+img[src*="query-builder"] {
+  object-fit: none;
+  object-position: 0px -100px;
+}
+
+img[src*="schema-explorer"] {
+  object-fit: none;
+  object-position: 0px -50px;
+}
+
+img[src*="dashboard-builder"] {
+  object-fit: none;
+  object-position: 0px -150px;
+}
+
+img[src*="sql-builder"] {
+  object-fit: none;
+  object-position: 0px -80px;
+}
+
+img[src*="ai-chat-bot"] {
+  object-fit: none;
+  object-position: 0px -120px;
+}
+
+/* Better image containment for screenshots */
+.object-contain {
+  object-fit: contain;
+  background: linear-gradient(135deg, 
+    oklch(98% 0 0) 0%, 
+    oklch(96% 0.001 286.375) 100%);
+} 

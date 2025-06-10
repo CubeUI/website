@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cubekit">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CubeKit Documentation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans">
+    <!-- Navigation -->
+    <div class="navbar bg-base-100 border-b border-base-200 sticky top-0 z-50">
+        <div class="navbar-start">
+            <a href="index.html" class="btn btn-ghost text-xl font-bold">
+                <img src="logo.svg" alt="CubeKit" class="w-8 h-8">
+                CubeKit Docs
+            </a>
+        </div>
+        <div class="navbar-end">
+            <a href="index.html" class="btn btn-outline">← Back to Home</a>
+        </div>
+    </div>
+
+    <div class="drawer lg:drawer-open">
+        <input id="drawer-toggle" type="checkbox" class="drawer-toggle" />
+        <div class="drawer-content">
+            <!-- Page content -->
+            <div class="p-8 max-w-4xl mx-auto">
+                <h1 class="text-4xl font-bold mb-8">CubeKit Documentation</h1>
+                
+                <!-- Getting Started -->
+                <section id="getting-started" class="mb-16">
+                    <h2 class="text-3xl font-bold mb-6">Getting Started</h2>
+                    
+                    <div id="what-is-cubekit" class="mb-8">
+                        <h3 class="text-2xl font-semibold mb-4">What is CubeKit?</h3>
+                        <p class="text-lg mb-4">CubeKit is a comprehensive collection of high-level React components designed specifically for Cube.dev applications. It provides ready-to-use components that help you build sophisticated analytics interfaces in minutes, not months.</p>
+                        
+                        <div class="alert alert-info mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <div>
+                                <h4 class="font-bold">Key Benefits</h4>
+                                <ul class="list-disc list-inside mt-2">
+                                    <li>🚀 Rapid Development: Drop-in components that work out of the box</li>
+                                    <li>🎨 DaisyUI Themes: 30+ beautiful themes with full customization</li>
+                                    <li>🤖 AI-Powered: Natural language query building capabilities</li>
+                                    <li>📱 Responsive: Mobile-first design for all screen sizes</li>
+                                    <li>💪 TypeScript: Full type safety and IntelliSense support</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="installation" class="mb-8">
+                        <h3 class="text-2xl font-semibold mb-4">Installation</h3>
+                        <div class="tabs tabs-boxed mb-4">
+                            <a class="tab tab-active">NPM</a>
+                            <a class="tab">Yarn</a>
+                        </div>
+                        <div class="mockup-code mb-4">
+                            <pre data-prefix="$"><code>npm install @cubekit/react @cubekit/core</code></pre>
+                            <pre data-prefix="$"><code>npm install @cube-dev/client-react</code></pre>
+                        </div>
+                        
+                        <h4 class="text-lg font-semibold mb-2">Quick Start</h4>
+                        <div class="mockup-code">
+                            <pre data-prefix="1"><code>import { QueryBuilder } from '@cubekit/react';</code></pre>
+                            <pre data-prefix="2"><code>import '@cubekit/react/dist/index.css';</code></pre>
+                            <pre data-prefix="3"><code></code></pre>
+                            <pre data-prefix="4"><code>// Setup Cube API</code></pre>
+                            <pre data-prefix="5"><code>const cubeApi = cubejs('YOUR_TOKEN', {</code></pre>
+                            <pre data-prefix="6"><code>  apiUrl: 'http://localhost:4000/cubejs-api/v1'</code></pre>
+                            <pre data-prefix="7"><code>});</code></pre>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Components -->
+                <section id="components" class="mb-16">
+                    <h2 class="text-3xl font-bold mb-8">Components</h2>
+
+                    <!-- QueryBuilder -->
+                    <div id="querybuilder" class="mb-16">
+                        <h3 class="text-2xl font-bold mb-4">QueryBuilder</h3>
+                        <p class="mb-4">A powerful no-code interface that allows business users to build complex Cube.dev queries through an intuitive drag-and-drop interface.</p>
+                        
+                        <div class="card bg-base-100 shadow-xl mb-6">
+                            <div class="card-body">
+                                <h4 class="card-title">Live Preview</h4>
+                                <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 p-4 bg-base-200 rounded-lg">
+                                    <div class="space-y-3">
+                                        <h5 class="font-medium text-sm opacity-70">MEASURES</h5>
+                                        <div class="space-y-2">
+                                            <div class="badge badge-primary">Orders.count</div>
+                                            <div class="badge badge-outline">Orders.totalAmount</div>
+                                        </div>
+                                    </div>
+                                    <div class="space-y-3">
+                                        <h5 class="font-medium text-sm opacity-70">DIMENSIONS</h5>
+                                        <div class="space-y-2">
+                                            <div class="badge badge-secondary">Orders.status</div>
+                                            <div class="badge badge-outline">Users.city</div>
+                                        </div>
+                                    </div>
+                                    <div class="space-y-3">
+                                        <h5 class="font-medium text-sm opacity-70">TIME DIMENSIONS</h5>
+                                        <div class="space-y-2">
+                                            <div class="badge badge-accent">Orders.createdAt</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mockup-code mb-8">
+                            <pre data-prefix="1"><code>import { QueryBuilder } from '@cubekit/react';</code></pre>
+                            <pre data-prefix="2"><code></code></pre>
+                            <pre data-prefix="3"><code>&lt;QueryBuilder</code></pre>
+                            <pre data-prefix="4"><code>  cubeApi={cubeApi}</code></pre>
+                            <pre data-prefix="5"><code>  query={query}</code></pre>
+                            <pre data-prefix="6"><code>  onQueryChange={setQuery}</code></pre>
+                            <pre data-prefix="7"><code>  enableFilters={true}</code></pre>
+                            <pre data-prefix="8"><code>  theme="cubekit"</code></pre>
+                            <pre data-prefix="9"><code>/&gt;</code></pre>
+                        </div>
+
+                        <!-- Sub-components -->
+                        <div class="space-y-8">
+                            <div id="querybuilder-filters" class="border-l-4 border-primary pl-4">
+                                <h4 class="text-xl font-semibold mb-3">Filters</h4>
+                                <p class="mb-3">Advanced filtering capabilities with multiple operators and value types.</p>
+                                <div class="mockup-code">
+                                    <pre data-prefix="1"><code>&lt;QueryBuilder.Filters</code></pre>
+                                    <pre data-prefix="2"><code>  filters={filters}</code></pre>
+                                    <pre data-prefix="3"><code>  onFiltersChange={setFilters}</code></pre>
+                                    <pre data-prefix="4"><code>  operators={['equals', 'contains', 'gt', 'lt']}</code></pre>
+                                    <pre data-prefix="5"><code>/&gt;</code></pre>
+                                </div>
+                            </div>
+
+                            <div id="querybuilder-measures" class="border-l-4 border-secondary pl-4">
+                                <h4 class="text-xl font-semibold mb-3">Measures</h4>
+                                <p class="mb-3">Select and configure measures for your query with aggregation options.</p>
+                                <div class="mockup-code">
+                                    <pre data-prefix="1"><code>&lt;QueryBuilder.Measures</code></pre>
+                                    <pre data-prefix="2"><code>  measures={measures}</code></pre>
+                                    <pre data-prefix="3"><code>  onMeasuresChange={setMeasures}</code></pre>
+                                    <pre data-prefix="4"><code>  showAggregationOptions={true}</code></pre>
+                                    <pre data-prefix="5"><code>/&gt;</code></pre>
+                                </div>
+                            </div>
+
+                            <div id="querybuilder-dimensions" class="border-l-4 border-accent pl-4">
+                                <h4 class="text-xl font-semibold mb-3">Dimensions</h4>
+                                <p class="mb-3">Choose dimensions to group and segment your data.</p>
+                                <div class="mockup-code">
+                                    <pre data-prefix="1"><code>&lt;QueryBuilder.Dimensions</code></pre>
+                                    <pre data-prefix="2"><code>  dimensions={dimensions}</code></pre>
+                                    <pre data-prefix="3"><code>  onDimensionsChange={setDimensions}</code></pre>
+                                    <pre data-prefix="4"><code>  maxDimensions={5}</code></pre>
+                                    <pre data-prefix="5"><code>/&gt;</code></pre>
+                                </div>
+                            </div>
+
+                            <div id="querybuilder-time" class="border-l-4 border-info pl-4">
+                                <h4 class="text-xl font-semibold mb-3">Time Dimensions</h4>
+                                <p class="mb-3">Configure time-based analysis with granularity and date range controls.</p>
+                                <div class="mockup-code">
+                                    <pre data-prefix="1"><code>&lt;QueryBuilder.TimeDimensions</code></pre>
+                                    <pre data-prefix="2"><code>  timeDimensions={timeDimensions}</code></pre>
+                                    <pre data-prefix="3"><code>  onTimeDimensionsChange={setTimeDimensions}</code></pre>
+                                    <pre data-prefix="4"><code>  defaultGranularity="day"</code></pre>
+                                    <pre data-prefix="5"><code>/&gt;</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SQLBuilder -->
+                    <div id="sqlbuilder" class="mb-16">
+                        <h3 class="text-2xl font-bold mb-4">SQLBuilder</h3>
+                        <p class="mb-4">An advanced SQL query builder that works with Cube.dev's SQL API endpoint, featuring syntax highlighting, autocomplete, and validation.</p>
+                        
+                        <div class="card bg-base-100 shadow-xl mb-6">
+                            <div class="card-body">
+                                <h4 class="card-title">Live Preview</h4>
+                                <div class="bg-gray-900 text-green-400 p-4 rounded font-mono text-sm">
+                                    <div class="mb-2">SELECT</div>
+                                    <div class="ml-4 mb-2">measure(`Orders.count`) as `orders_count`,</div>
+                                    <div class="ml-4 mb-2">dimension(`Orders.status`) as `orders_status`</div>
+                                    <div class="mb-2">FROM cube(`Orders`)</div>
+                                    <div class="mb-2">WHERE dimension(`Orders.createdAt`) >= '2024-01-01'</div>
+                                    <div>GROUP BY dimension(`Orders.status`)</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mockup-code mb-8">
+                            <pre data-prefix="1"><code>import { SQLBuilder } from '@cubekit/react';</code></pre>
+                            <pre data-prefix="2"><code></code></pre>
+                            <pre data-prefix="3"><code>&lt;SQLBuilder</code></pre>
+                            <pre data-prefix="4"><code>  cubeApi={cubeApi}</code></pre>
+                            <pre data-prefix="5"><code>  sql={sql}</code></pre>
+                            <pre data-prefix="6"><code>  onSqlChange={setSql}</code></pre>
+                            <pre data-prefix="7"><code>  enableAutocomplete={true}</code></pre>
+                            <pre data-prefix="8"><code>/&gt;</code></pre>
+                        </div>
+
+                        <!-- Sub-components -->
+                        <div class="space-y-8">
+                            <div id="sqlbuilder-editor" class="border-l-4 border-primary pl-4">
+                                <h4 class="text-xl font-semibold mb-3">SQL Editor</h4>
+                                <p class="mb-3">Full-featured code editor with syntax highlighting and multiple themes.</p>
+                                <div class="mockup-code">
+                                    <pre data-prefix="1"><code>&lt;SQLBuilder.Editor</code></pre>
+                                    <pre data-prefix="2"><code>  value={sql}</code></pre>
+                                    <pre data-prefix="3"><code>  onChange={setSql}</code></pre>
+                                    <pre data-prefix="4"><code>  theme="vs-dark"</code></pre>
+                                    <pre data-prefix="5"><code>/&gt;</code></pre>
+                                </div>
+                            </div>
+
+                            <div id="sqlbuilder-autocomplete" class="border-l-4 border-secondary pl-4">
+                                <h4 class="text-xl font-semibold mb-3">Autocomplete</h4>
+                                <p class="mb-3">Intelligent code completion for Cube.dev schema elements.</p>
+                                <div class="mockup-code">
+                                    <pre data-prefix="1"><code>&lt;SQLBuilder.Autocomplete</code></pre>
+                                    <pre data-prefix="2"><code>  schema={cubeSchema}</code></pre>
+                                    <pre data-prefix="3"><code>  enableSnippets={true}</code></pre>
+                                    <pre data-prefix="4"><code>/&gt;</code></pre>
+                                </div>
+                            </div>
+
+                            <div id="sqlbuilder-validation" class="border-l-4 border-accent pl-4">
+                                <h4 class="text-xl font-semibold mb-3">Validation</h4>
+                                <p class="mb-3">Real-time SQL validation against your Cube.dev schema.</p>
+                                <div class="mockup-code">
+                                    <pre data-prefix="1"><code>&lt;SQLBuilder.Validation</code></pre>
+                                    <pre data-prefix="2"><code>  sql={sql}</code></pre>
+                                    <pre data-prefix="3"><code>  schema={cubeSchema}</code></pre>
+                                    <pre data-prefix="4"><code>  showInlineErrors={true}</code></pre>
+                                    <pre data-prefix="5"><code>/&gt;</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Schema Visualization -->
+                    <div id="schema-visualization" class="mb-16">
+                        <h3 class="text-2xl font-bold mb-4">Schema Visualization</h3>
+                        <p class="mb-4">Interactive schema explorer with visual cube relationships and detailed metadata. Perfect for understanding your data model.</p>
+                        
+                        <div class="card bg-base-100 shadow-xl mb-6">
+                            <div class="card-body">
+                                <h4 class="card-title">Live Preview</h4>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 bg-base-200 rounded-lg">
+                                    <div class="border-2 border-primary rounded-lg p-4 bg-white">
+                                        <h5 class="font-bold text-primary mb-2">Orders</h5>
+                                        <div class="text-sm space-y-1">
+                                            <div>📊 <span class="font-medium">count</span></div>
+                                            <div>📊 <span class="font-medium">totalAmount</span></div>
+                                            <div>📏 <span class="opacity-70">status</span></div>
+                                            <div>📏 <span class="opacity-70">createdAt</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="border-2 border-secondary rounded-lg p-4 bg-white">
+                                        <h5 class="font-bold text-secondary mb-2">Users</h5>
+                                        <div class="text-sm space-y-1">
+                                            <div>📊 <span class="font-medium">count</span></div>
+                                            <div>📏 <span class="opacity-70">city</span></div>
+                                            <div>📏 <span class="opacity-70">signupDate</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mockup-code mb-8">
+                            <pre data-prefix="1"><code>import { SchemaVisualization } from '@cubekit/react';</code></pre>
+                            <pre data-prefix="2"><code></code></pre>
+                            <pre data-prefix="3"><code>&lt;SchemaVisualization</code></pre>
+                            <pre data-prefix="4"><code>  cubeApi={cubeApi}</code></pre>
+                            <pre data-prefix="5"><code>  layout="hierarchical"</code></pre>
+                            <pre data-prefix="6"><code>  showRelationships={true}</code></pre>
+                            <pre data-prefix="7"><code>/&gt;</code></pre>
+                        </div>
+
+                        <!-- Sub-components -->
+                        <div class="space-y-8">
+                            <div id="schema-explorer" class="border-l-4 border-primary pl-4">
+                                <h4 class="text-xl font-semibold mb-3">Schema Explorer</h4>
+                                <p class="mb-3">Browse and explore your cube schema with an interactive tree view.</p>
+                                <div class="mockup-code">
+                                    <pre data-prefix="1"><code>&lt;SchemaVisualization.Explorer</code></pre>
+                                    <pre data-prefix="2"><code>  schema={schema}</code></pre>
+                                    <pre data-prefix="3"><code>  onCubeSelect={handleCubeSelect}</code></pre>
+                                    <pre data-prefix="4"><code>/&gt;</code></pre>
+                                </div>
+                            </div>
+
+                            <div id="cube-relationships" class="border-l-4 border-secondary pl-4">
+                                <h4 class="text-xl font-semibold mb-3">Cube Relationships</h4>
+                                <p class="mb-3">Visual representation of relationships between cubes.</p>
+                                <div class="mockup-code">
+                                    <pre data-prefix="1"><code>&lt;SchemaVisualization.Relationships</code></pre>
+                                    <pre data-prefix="2"><code>  cubes={cubes}</code></pre>
+                                    <pre data-prefix="3"><code>  showJoinPaths={true}</code></pre>
+                                    <pre data-prefix="4"><code>/&gt;</code></pre>
+                                </div>
+                            </div>
+
+                            <div id="metadata-viewer" class="border-l-4 border-accent pl-4">
+                                <h4 class="text-xl font-semibold mb-3">Metadata Viewer</h4>
+                                <p class="mb-3">Detailed metadata display for measures, dimensions, and cubes.</p>
+                                <div class="mockup-code">
+                                    <pre data-prefix="1"><code>&lt;SchemaVisualization.Metadata</code></pre>
+                                    <pre data-prefix="2"><code>  selectedCube={selectedCube}</code></pre>
+                                    <pre data-prefix="3"><code>  showDescriptions={true}</code></pre>
+                                    <pre data-prefix="4"><code>/&gt;</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dashboard Builder -->
+                    <div id="dashboard-builder" class="mb-16">
+                        <h3 class="text-2xl font-bold mb-4">Dashboard Builder</h3>
+                        <p class="mb-4">Drag-and-drop dashboard composition tool with a rich widget library and flexible layout management.</p>
+                        
+                        <div class="card bg-base-100 shadow-xl mb-6">
+                            <div class="card-body">
+                                <h4 class="card-title">Live Preview</h4>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 bg-base-200 rounded-lg">
+                                    <div class="bg-white border rounded-lg p-4">
+                                        <h5 class="font-semibold mb-2">Revenue Chart</h5>
+                                        <div class="h-24 bg-gradient-to-r from-blue-100 to-blue-200 rounded flex items-end justify-around p-2">
+                                            <div class="bg-blue-500 w-4 h-8 rounded-t"></div>
+                                            <div class="bg-blue-500 w-4 h-12 rounded-t"></div>
+                                            <div class="bg-blue-500 w-4 h-6 rounded-t"></div>
+                                            <div class="bg-blue-500 w-4 h-16 rounded-t"></div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white border rounded-lg p-4">
+                                        <h5 class="font-semibold mb-2">Key Metrics</h5>
+                                        <div class="space-y-2">
+                                            <div class="stat">
+                                                <div class="stat-value text-lg">1,234</div>
+                                                <div class="stat-desc">Total Orders</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mockup-code mb-8">
+                            <pre data-prefix="1"><code>import { DashboardBuilder } from '@cubekit/react';</code></pre>
+                            <pre data-prefix="2"><code></code></pre>
+                            <pre data-prefix="3"><code>&lt;DashboardBuilder</code></pre>
+                            <pre data-prefix="4"><code>  cubeApi={cubeApi}</code></pre>
+                            <pre data-prefix="5"><code>  layout={layout}</code></pre>
+                            <pre data-prefix="6"><code>  onLayoutChange={setLayout}</code></pre>
+                            <pre data-prefix="7"><code>  enableDragDrop={true}</code></pre>
+                            <pre data-prefix="8"><code>/&gt;</code></pre>
+                        </div>
+
+                        <!-- Sub-components -->
+                        <div class="space-y-8">
+                            <div id="widget-library" class="border-l-4 border-primary pl-4">
+                                <h4 class="text-xl font-semibold mb-3">Widget Library</h4>
+                                <p class="mb-3">Pre-built widgets for charts, tables, and KPI cards.</p>
+                                <div class="mockup-code">
+                                    <pre data-prefix="1"><code>&lt;DashboardBuilder.WidgetLibrary</code></pre>
+                                    <pre data-prefix="2"><code>  availableWidgets={widgets}</code></pre>
+                                    <pre data-prefix="3"><code>  onWidgetAdd={handleWidgetAdd}</code></pre>
+                                    <pre data-prefix="4"><code>/&gt;</code></pre>
+                                </div>
+                            </div>
+
+                            <div id="layout-manager" class="border-l-4 border-secondary pl-4">
+                                <h4 class="text-xl font-semibold mb-3">Layout Manager</h4>
+                                <p class="mb-3">Grid-based layout system with responsive breakpoints.</p>
+                                <div class="mockup-code">
+                                    <pre data-prefix="1"><code>&lt;DashboardBuilder.LayoutManager</code></pre>
+                                    <pre data-prefix="2"><code>  gridSize={12}</code></pre>
+                                    <pre data-prefix="3"><code>  responsive={true}</code></pre>
+                                    <pre data-prefix="4"><code>/&gt;</code></pre>
+                                </div>
+                            </div>
+
+                            <div id="dashboard-export" class="border-l-4 border-accent pl-4">
+                                <h4 class="text-xl font-semibold mb-3">Export Tools</h4>
+                                <p class="mb-3">Export dashboards as PDF, PNG, or share via URL.</p>
+                                <div class="mockup-code">
+                                    <pre data-prefix="1"><code>&lt;DashboardBuilder.ExportTools</code></pre>
+                                    <pre data-prefix="2"><code>  dashboard={dashboard}</code></pre>
+                                    <pre data-prefix="3"><code>  formats={['pdf', 'png', 'share']}</code></pre>
+                                    <pre data-prefix="4"><code>/&gt;</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AI ChatBot -->
+                    <div id="ai-chatbot" class="mb-16">
+                        <h3 class="text-2xl font-bold mb-4">AI ChatBot</h3>
+                        <p class="mb-4">Natural language query interface powered by AI that converts conversational requests into Cube.dev queries.</p>
+                        
+                        <div class="card bg-base-100 shadow-xl mb-6">
+                            <div class="card-body">
+                                <h4 class="card-title">Live Preview</h4>
+                                <div class="bg-base-100 rounded-lg p-4 space-y-4">
+                                    <div class="chat chat-end">
+                                        <div class="chat-bubble chat-bubble-primary">
+                                            Show me total sales by month for the last 6 months
+                                        </div>
+                                    </div>
+                                    <div class="chat chat-start">
+                                        <div class="chat-bubble">
+                                            I'll create a query to show monthly sales data. Here's what I found:
+                                            <div class="mt-2 p-2 bg-base-200 rounded text-xs font-mono">
+                                                SELECT SUM(amount) as total_sales, DATE_TRUNC('month', created_at) as month<br/>
+                                                FROM orders WHERE created_at >= NOW() - INTERVAL '6 months'<br/>
+                                                GROUP BY month
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mockup-code mb-8">
+                            <pre data-prefix="1"><code>import { AIChatBot } from '@cubekit/react';</code></pre>
+                            <pre data-prefix="2"><code></code></pre>
+                            <pre data-prefix="3"><code>&lt;AIChatBot</code></pre>
+                            <pre data-prefix="4"><code>  cubeApi={cubeApi}</code></pre>
+                            <pre data-prefix="5"><code>  aiApiKey={process.env.REACT_APP_AI_API_KEY}</code></pre>
+                            <pre data-prefix="6"><code>  onQueryGenerated={handleQueryGenerated}</code></pre>
+                            <pre data-prefix="7"><code>  enableQuerySuggestions={true}</code></pre>
+                            <pre data-prefix="8"><code>/&gt;</code></pre>
+                        </div>
+
+                        <!-- Sub-components -->
+                        <div class="space-y-8">
+                            <div id="chat-interface" class="border-l-4 border-primary pl-4">
+                                <h4 class="text-xl font-semibold mb-3">Chat Interface</h4>
+                                <p class="mb-3">Conversational UI for natural language queries.</p>
+                                <div class="mockup-code">
+                                    <pre data-prefix="1"><code>&lt;AIChatBot.ChatInterface</code></pre>
+                                    <pre data-prefix="2"><code>  messages={messages}</code></pre>
+                                    <pre data-prefix="3"><code>  onSendMessage={handleSendMessage}</code></pre>
+                                    <pre data-prefix="4"><code>/&gt;</code></pre>
+                                </div>
+                            </div>
+
+                            <div id="query-suggestions" class="border-l-4 border-secondary pl-4">
+                                <h4 class="text-xl font-semibold mb-3">Query Suggestions</h4>
+                                <p class="mb-3">AI-powered suggestions for common queries.</p>
+                                <div class="mockup-code">
+                                    <pre data-prefix="1"><code>&lt;AIChatBot.QuerySuggestions</code></pre>
+                                    <pre data-prefix="2"><code>  schema={schema}</code></pre>
+                                    <pre data-prefix="3"><code>  onSuggestionSelect={handleSuggestion}</code></pre>
+                                    <pre data-prefix="4"><code>/&gt;</code></pre>
+                                </div>
+                            </div>
+
+                            <div id="natural-language" class="border-l-4 border-accent pl-4">
+                                <h4 class="text-xl font-semibold mb-3">Natural Language Processor</h4>
+                                <p class="mb-3">Converts natural language to Cube.dev queries.</p>
+                                <div class="mockup-code">
+                                    <pre data-prefix="1"><code>&lt;AIChatBot.NaturalLanguage</code></pre>
+                                    <pre data-prefix="2"><code>  input={userInput}</code></pre>
+                                    <pre data-prefix="3"><code>  schema={schema}</code></pre>
+                                    <pre data-prefix="4"><code>  onQueryGenerated={handleQuery}</code></pre>
+                                    <pre data-prefix="5"><code>/&gt;</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        
+        <!-- Sidebar -->
+        <div class="drawer-side">
+            <label for="drawer-toggle" aria-label="close sidebar" class="drawer-overlay"></label>
+            <aside class="min-h-full w-80 bg-base-200 text-base-content">
+                <div class="p-4">
+                    <ul class="menu">
+                        <li class="menu-title">Getting Started</li>
+                        <li><a href="#what-is-cubekit">What is CubeKit?</a></li>
+                        <li><a href="#installation">Installation</a></li>
+                        
+                        <li class="menu-title">Components</li>
+                        <li>
+                            <details open>
+                                <summary><a href="#querybuilder">QueryBuilder</a></summary>
+                                <ul>
+                                    <li><a href="#querybuilder-filters">Filters</a></li>
+                                    <li><a href="#querybuilder-measures">Measures</a></li>
+                                    <li><a href="#querybuilder-dimensions">Dimensions</a></li>
+                                    <li><a href="#querybuilder-time">Time Dimensions</a></li>
+                                </ul>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary><a href="#sqlbuilder">SQLBuilder</a></summary>
+                                <ul>
+                                    <li><a href="#sqlbuilder-editor">SQL Editor</a></li>
+                                    <li><a href="#sqlbuilder-autocomplete">Autocomplete</a></li>
+                                    <li><a href="#sqlbuilder-validation">Validation</a></li>
+                                </ul>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary><a href="#schema-visualization">Schema Visualization</a></summary>
+                                <ul>
+                                    <li><a href="#schema-explorer">Schema Explorer</a></li>
+                                    <li><a href="#cube-relationships">Cube Relationships</a></li>
+                                    <li><a href="#metadata-viewer">Metadata Viewer</a></li>
+                                </ul>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary><a href="#dashboard-builder">Dashboard Builder</a></summary>
+                                <ul>
+                                    <li><a href="#widget-library">Widget Library</a></li>
+                                    <li><a href="#layout-manager">Layout Manager</a></li>
+                                    <li><a href="#dashboard-export">Export Tools</a></li>
+                                </ul>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary><a href="#ai-chatbot">AI ChatBot</a></summary>
+                                <ul>
+                                    <li><a href="#chat-interface">Chat Interface</a></li>
+                                    <li><a href="#query-suggestions">Query Suggestions</a></li>
+                                    <li><a href="#natural-language">Natural Language</a></li>
+                                </ul>
+                            </details>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </div>
+</body>
+</html> 

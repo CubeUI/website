@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cubekit">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CubeKit - Premium Components for Cube.dev</title>
+    <meta name="description" content="Save hours of engineering time with CubeKit's collection of premium components for Cube.dev. Build stunning data experiences in minutes, not days.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom styles for embedded Kit.com form */
+        .formkit-form[data-uid="1bed8ab9be"] *{box-sizing:border-box;}.formkit-form[data-uid="1bed8ab9be"]{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}.formkit-form[data-uid="1bed8ab9be"] legend{border:none;font-size:inherit;margin-bottom:10px;padding:0;position:relative;display:table;}.formkit-form[data-uid="1bed8ab9be"] fieldset{border:0;padding:0.01em 0 0 0;margin:0;min-width:0;}.formkit-form[data-uid="1bed8ab9be"] body:not(:-moz-handler-blocked) fieldset{display:table-cell;}.formkit-form[data-uid="1bed8ab9be"] h1,.formkit-form[data-uid="1bed8ab9be"] h2,.formkit-form[data-uid="1bed8ab9be"] h3,.formkit-form[data-uid="1bed8ab9be"] h4,.formkit-form[data-uid="1bed8ab9be"] h5,.formkit-form[data-uid="1bed8ab9be"] h6{color:inherit;font-size:inherit;font-weight:inherit;}.formkit-form[data-uid="1bed8ab9be"] .formkit-input,.formkit-form[data-uid="1bed8ab9be"] .formkit-select,.formkit-form[data-uid="1bed8ab9be"] .formkit-checkboxes{width:100%;}.formkit-form[data-uid="1bed8ab9be"] .formkit-button,.formkit-form[data-uid="1bed8ab9be"] .formkit-submit{border:0;border-radius:8px;color:#ffffff;cursor:pointer;display:inline-block;text-align:center;font-size:16px;font-weight:600;cursor:pointer;margin-bottom:15px;overflow:hidden;padding:12px 24px;position:relative;vertical-align:middle;}.formkit-form[data-uid="1bed8ab9be"] .formkit-button:hover,.formkit-form[data-uid="1bed8ab9be"] .formkit-submit:hover{opacity:0.9;}.formkit-form[data-uid="1bed8ab9be"] .formkit-input{background:#ffffff;font-size:16px;padding:12px 16px;border:2px solid #ffffff;border-radius:8px;line-height:1.4;margin:0;font-family:'Inter', sans-serif;}.formkit-form[data-uid="1bed8ab9be"] .formkit-input:focus{outline:none;border-color:#ffffff;box-shadow:0 0 0 3px rgba(255,255,255,0.3);}.formkit-form[data-uid="1bed8ab9be"] .formkit-fields{display:flex;flex-wrap:wrap;gap:12px;}.formkit-form[data-uid="1bed8ab9be"] .formkit-field{flex:1;min-width:200px;}.formkit-form[data-uid="1bed8ab9be"] .formkit-submit{background-color:#333333;flex-shrink:0;}.formkit-form[data-uid="1bed8ab9be"] .formkit-spinner{display:none;}.formkit-form[data-uid="1bed8ab9be"] .formkit-alert{padding:12px;margin:10px 0;border-radius:8px;background:#fde8e2;border:1px solid #f2643b;color:#ea4110;}.formkit-form[data-uid="1bed8ab9be"] .formkit-alert:empty{display:none !important;}.formkit-form[data-uid="1bed8ab9be"] .formkit-alert-success{background:#d3fbeb;border-color:#10bf7a;color:#0c905c;}.formkit-form[data-uid="1bed8ab9be"] .formkit-powered-by-convertkit-container{display:none !important;}
+    </style>
+</head>
+<body class="font-sans">
+    <!-- Navigation -->
+    <div class="navbar bg-base-100/95 backdrop-blur-md fixed top-0 z-50 border-b border-base-200">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16"></path>
+                    </svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#docs">Docs</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <a class="btn btn-ghost text-xl font-bold">
+                <img src="logo.svg" alt="CubeKit" class="w-8 h-8">
+                CubeKit
+            </a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+                <li><a href="#features" class="hover:text-primary">Features</a></li>
+                <li><a href="#pricing" class="hover:text-primary">Pricing</a></li>
+                <li><a href="docs.html" class="hover:text-primary">Docs</a></li>
+                <li><a href="#contact" class="hover:text-primary">Contact</a></li>
+            </ul>
+        </div>
+        <div class="navbar-end">
+            <button class="btn btn-primary" onclick="joinWaitingList()">Join Waiting List</button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero min-h-screen bg-gradient-to-br from-base-200 to-base-300 pt-20">
+        <div class="hero-content max-w-7xl mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="text-center lg:text-left">
+                    <h1 class="text-4xl lg:text-6xl font-bold leading-tight mb-6">
+                        Premium Components for <span class="text-primary">Cube.dev</span>
+                    </h1>
+                    <p class="text-lg lg:text-xl text-base-content/70 mb-8 leading-relaxed">
+                        Build complete data applications with CubeKit's high-level components: Query Builder, Dashboard Builder, AI Chat, and more. 
+                        Turn your Cube.dev instance into a full-featured analytics platform in minutes, not months.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 mb-12">
+                        <button class="btn btn-primary btn-lg" onclick="joinWaitingList()">
+                            Join Waiting List
+                        </button>
+                        <button class="btn btn-outline btn-lg" onclick="openDemo()">
+                            View Demo
+                        </button>
+                    </div>
+                    <div class="stats stats-vertical sm:stats-horizontal shadow">
+                        <div class="stat place-items-center">
+                            <div class="stat-value text-primary">15+</div>
+                            <div class="stat-desc">Components</div>
+                        </div>
+                        <div class="stat place-items-center">
+                            <div class="stat-value text-primary">30+</div>
+                            <div class="stat-desc">DaisyUI Themes</div>
+                        </div>
+                        <div class="stat place-items-center">
+                            <div class="stat-value text-primary">AI</div>
+                            <div class="stat-desc">Query Builder</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <div class="mockup-window border bg-base-300 w-full max-w-md">
+                        <div class="flex justify-center px-4 py-16 bg-base-200">
+                            <div class="card w-full bg-base-100 shadow-xl">
+                                <div class="card-body">
+                                    <div class="flex justify-between items-center mb-4">
+                                        <h3 class="card-title text-sm">Dashboard Component</h3>
+                                        <div class="badge badge-success">Ready to use</div>
+                                    </div>
+                                    <div class="flex items-end justify-between h-24 gap-2">
+                                        <div class="chart-bar bg-primary w-full opacity-0 origin-bottom" style="height: 60%; transform: scaleY(0); transition: all 0.8s ease;"></div>
+                                        <div class="chart-bar bg-primary w-full opacity-0 origin-bottom" style="height: 80%; transform: scaleY(0); transition: all 0.8s ease;"></div>
+                                        <div class="chart-bar bg-primary w-full opacity-0 origin-bottom" style="height: 45%; transform: scaleY(0); transition: all 0.8s ease;"></div>
+                                        <div class="chart-bar bg-primary w-full opacity-0 origin-bottom" style="height: 90%; transform: scaleY(0); transition: all 0.8s ease;"></div>
+                                        <div class="chart-bar bg-primary w-full opacity-0 origin-bottom" style="height: 70%; transform: scaleY(0); transition: all 0.8s ease;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-base-100">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-5xl font-bold mb-4">Why Choose CubeKit?</h2>
+                <p class="text-lg text-base-content/70">Everything you need to build professional data experiences</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="feature-card card bg-base-100 shadow-lg hover:shadow-xl transition-all duration-300 border border-base-200 hover:border-primary">
+                    <div class="card-body">
+                        <div class="w-12 h-12 text-primary mb-4">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="card-title mb-2">Lightning Fast Setup</h3>
+                        <p class="text-base-content/70">Drop-in components that work out of the box with your existing Cube.dev setup. No complex configurations required.</p>
+                    </div>
+                </div>
+                <div class="feature-card card bg-base-100 shadow-lg hover:shadow-xl transition-all duration-300 border border-base-200 hover:border-primary">
+                    <div class="card-body">
+                        <div class="w-12 h-12 text-primary mb-4">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4 4 4 0 004-4V5z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="card-title mb-2">Built with DaisyUI</h3>
+                        <p class="text-base-content/70">Powered by DaisyUI for awesome Tailwind themes support. Switch between 30+ beautiful themes instantly and customize to match your brand.</p>
+                    </div>
+                </div>
+                <div class="feature-card card bg-base-100 shadow-lg hover:shadow-xl transition-all duration-300 border border-base-200 hover:border-primary">
+                    <div class="card-body">
+                        <div class="w-12 h-12 text-primary mb-4">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="card-title mb-2">Recharts Integration</h3>
+                        <p class="text-base-content/70">Fully integrated with Recharts to visualize any Cube query. Beautiful, interactive charts that automatically adapt to your data structure.</p>
+                    </div>
+                </div>
+                <div class="feature-card card bg-base-100 shadow-lg hover:shadow-xl transition-all duration-300 border border-base-200 hover:border-primary">
+                    <div class="card-body">
+                        <div class="w-12 h-12 text-primary mb-4">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="card-title mb-2">AI-Powered Queries</h3>
+                        <p class="text-base-content/70">AI API available to automate query building. Describe what you want in natural language and let AI generate the perfect Cube.dev query.</p>
+                    </div>
+                </div>
+                <div class="feature-card card bg-base-100 shadow-lg hover:shadow-xl transition-all duration-300 border border-base-200 hover:border-primary">
+                    <div class="card-body">
+                        <div class="w-12 h-12 text-primary mb-4">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="card-title mb-2">Mobile Ready</h3>
+                        <p class="text-base-content/70">All components are responsive and optimized for mobile devices. Your users get a great experience everywhere.</p>
+                    </div>
+                </div>
+                <div class="feature-card card bg-base-100 shadow-lg hover:shadow-xl transition-all duration-300 border border-base-200 hover:border-primary">
+                    <div class="card-body">
+                        <div class="w-12 h-12 text-primary mb-4">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                            </svg>
+                        </div>
+                        <h3 class="card-title mb-2">TypeScript Support</h3>
+                        <p class="text-base-content/70">Built with TypeScript for better developer experience. Get autocomplete, type checking, and IntelliSense.</p>
+                    </div>
+                </div>
+                <div class="feature-card card bg-base-100 shadow-lg hover:shadow-xl transition-all duration-300 border border-base-200 hover:border-primary">
+                    <div class="card-body">
+                        <div class="w-12 h-12 text-primary mb-4">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"></path>
+                            </svg>
+                        </div>
+                        <h3 class="card-title mb-2">Highly Customizable</h3>
+                        <p class="text-base-content/70">Every component can be customized to fit your needs. Override styles, add custom logic, and make it yours.</p>
+                    </div>
+                </div>
+                <div class="feature-card card bg-base-100 shadow-lg hover:shadow-xl transition-all duration-300 border border-base-200 hover:border-primary">
+                    <div class="card-body">
+                        <div class="w-12 h-12 text-primary mb-4">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="card-title mb-2">Production Ready</h3>
+                        <p class="text-base-content/70">Battle-tested components used in production by teams around the world. Reliable and performant.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- High-Level Components Section -->
+    <section class="py-20 bg-base-200">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-5xl font-bold mb-4">High-Level Components</h2>
+                <p class="text-lg text-base-content/70">Complete, ready-to-use components for building analytics applications</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-8 mb-12">
+                <div class="card bg-base-100 shadow-lg hover:shadow-xl transition-all duration-300 border border-base-200 hover:border-primary">
+                    <div class="card-body">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="card-title text-xl">Query Builder</h3>
+                        </div>
+                        <div class="mb-4">
+                            <img src="screenshots/query-builder.png" alt="Query Builder Interface" class="w-full h-40 rounded-lg bg-base-200 border border-base-300 cursor-pointer hover:opacity-80 transition-opacity" onclick="openImageModal('screenshots/query-builder.png', 'Query Builder Interface')">
+                        </div>
+                        <p class="text-base-content/70 mb-4">No-code interface for business users to build queries. Drag-and-drop dimensions, measures, and filters to create insights without technical knowledge.</p>
+                        <div class="text-sm text-base-content/50">
+                            <strong>Sub-components:</strong> Dimension picker, Measure selector, Filter builder, Preview panel
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card bg-base-100 shadow-lg hover:shadow-xl transition-all duration-300 border border-base-200 hover:border-primary">
+                    <div class="card-body">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center">
+                                <svg class="w-6 h-6 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path>
+                                </svg>
+                            </div>
+                            <h3 class="card-title text-xl">SQL Builder</h3>
+                        </div>
+                        <div class="mb-4">
+                            <img src="screenshots/sql-builder.png" alt="SQL Builder Interface" class="w-full h-40 rounded-lg bg-base-200 border border-base-300 cursor-pointer hover:opacity-80 transition-opacity" onclick="openImageModal('screenshots/sql-builder.png', 'SQL Builder Interface')">
+                        </div>
+                        <p class="text-base-content/70 mb-4">Advanced builder that uses the Cube API SQL endpoint to build tables and visualizations. For power users who need full SQL control.</p>
+                        <div class="text-sm text-base-content/50">
+                            <strong>Sub-components:</strong> SQL editor, Query formatter, Result table, Export tools
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card bg-base-100 shadow-lg hover:shadow-xl transition-all duration-300 border border-base-200 hover:border-primary">
+                    <div class="card-body">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center">
+                                <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path>
+                                </svg>
+                            </div>
+                            <h3 class="card-title text-xl">Schema Visualization</h3>
+                        </div>
+                        <div class="mb-4">
+                            <img src="screenshots/schema-explorer.png" alt="Interactive Schema Explorer" class="w-full h-40 rounded-lg bg-base-200 border border-base-300 cursor-pointer hover:opacity-80 transition-opacity" onclick="openImageModal('screenshots/schema-explorer.png', 'Interactive Schema Explorer')">
+                        </div>
+                        <p class="text-base-content/70 mb-4">Interactive schema explorer with visual cube relationships and detailed metadata. Navigate your data model with connected cube entities, dimensions, measures, and segments - all in a beautiful dark interface.</p>
+                        <div class="text-sm text-base-content/50">
+                            <strong>Sub-components:</strong> Relationship graph, Cube details, Metadata viewer, Navigation controls
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card bg-base-100 shadow-lg hover:shadow-xl transition-all duration-300 border border-base-200 hover:border-primary">
+                    <div class="card-body">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-12 h-12 bg-info/10 rounded-lg flex items-center justify-center">
+                                <svg class="w-6 h-6 text-info" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"></path>
+                                </svg>
+                            </div>
+                            <h3 class="card-title text-xl">Dashboard Builder</h3>
+                        </div>
+                        <div class="mb-4">
+                            <img src="screenshots/dashboard-builder.png" alt="Dashboard Builder Interface" class="w-full h-40 rounded-lg bg-base-200 border border-base-300 cursor-pointer hover:opacity-80 transition-opacity" onclick="openImageModal('screenshots/dashboard-builder.png', 'Dashboard Builder Interface')">
+                        </div>
+                        <p class="text-base-content/70 mb-4">Simple dashboard building tool to collate queries and visualizations into single dashboards. Drag-and-drop interface for easy composition.</p>
+                        <div class="text-sm text-base-content/50">
+                            <strong>Sub-components:</strong> Widget library, Layout grid, Filter controls, Export options
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card bg-base-100 shadow-lg hover:shadow-xl transition-all duration-300 border border-base-200 hover:border-primary lg:col-span-2">
+                    <div class="card-body">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-12 h-12 bg-warning/10 rounded-lg flex items-center justify-center">
+                                <svg class="w-6 h-6 text-warning" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="card-title text-xl">AI Chat Bot</h3>
+                        </div>
+                        <div class="mb-4">
+                            <img src="screenshots/ai-chat-bot.png" alt="AI Chat Bot Interface" class="w-full h-40 rounded-lg bg-base-200 border border-base-300 cursor-pointer hover:opacity-80 transition-opacity" onclick="openImageModal('screenshots/ai-chat-bot.png', 'AI Chat Bot Interface')">
+                        </div>
+                        <p class="text-base-content/70 mb-4">AI-powered chat that generates Cube queries, data summaries, and visualizations from natural language. Ask questions about your data and get instant insights.</p>
+                        <div class="text-sm text-base-content/50">
+                            <strong>Sub-components:</strong> Chat interface, Query generator, Summary cards, Visualization suggestions, Context memory
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <div class="alert alert-info max-w-2xl mx-auto">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <span><strong>Modular Design:</strong> Each high-level component contains multiple sub-components that can be used individually for maximum flexibility.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-20 bg-base-200">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl lg:text-4xl font-bold mb-6">From Simple Cube.dev Setup to Enterprise Analytics Platform</h2>
+                    <p class="text-lg text-base-content/70 mb-8 leading-relaxed">
+                        Transform your Cube.dev instance into a complete analytics platform. No need to build query builders, dashboards, 
+                        or AI interfaces from scratch - CubeKit provides everything you need out of the box.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-6 bg-success text-success-content rounded-full flex items-center justify-center text-sm font-bold">✓</div>
+                            <span class="text-lg"><strong>Save 50+ hours</strong> of development time per project</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-6 bg-success text-success-content rounded-full flex items-center justify-center text-sm font-bold">✓</div>
+                            <span class="text-lg"><strong>30+ DaisyUI themes</strong> for instant visual customization</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-6 bg-success text-success-content rounded-full flex items-center justify-center text-sm font-bold">✓</div>
+                            <span class="text-lg"><strong>AI-powered queries</strong> - describe data needs in natural language</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-6 bg-success text-success-content rounded-full flex items-center justify-center text-sm font-bold">✓</div>
+                            <span class="text-lg"><strong>Recharts integration</strong> for beautiful, interactive visualizations</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-6 bg-success text-success-content rounded-full flex items-center justify-center text-sm font-bold">✓</div>
+                            <span class="text-lg"><strong>Focus on business logic</strong> instead of UI boilerplate</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-6 bg-success text-success-content rounded-full flex items-center justify-center text-sm font-bold">✓</div>
+                            <span class="text-lg"><strong>Faster time to market</strong> for your data products</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-6">
+                    <div class="space-y-6">
+                        <div class="card bg-base-100 border-2 border-error/20 shadow-lg">
+                            <div class="card-header bg-error/5 px-4 py-3 border-b border-error/10">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-3 h-3 rounded-full bg-error"></div>
+                                    <span class="text-sm font-medium text-error">Without CubeKit - Custom Implementation</span>
+                                </div>
+                            </div>
+                            <div class="card-body p-0">
+                                <div class="mockup-code bg-neutral text-neutral-content text-sm">
+                                    <pre data-prefix="1"><code>// Custom query builder implementation - hundreds of lines needed</code></pre>
+                                    <pre data-prefix="2"><code>import { useState, useEffect, useCallback } from 'react';</code></pre>
+                                    <pre data-prefix="3"><code>import { CubeApi } from '@cubejs-client/core';</code></pre>
+                                    <pre data-prefix="4"><code>import { Select, Input, Button, Modal, Tooltip } from 'antd';</code></pre>
+                                    <pre data-prefix="5"><code></code></pre>
+                                    <pre data-prefix="6"><code>function CustomQueryBuilder({ cubeApi, onQueryChange }) {</code></pre>
+                                    <pre data-prefix="7"><code>  const [dimensions, setDimensions] = useState([]);</code></pre>
+                                    <pre data-prefix="8"><code>  const [measures, setMeasures] = useState([]);</code></pre>
+                                    <pre data-prefix="9"><code>  const [timeDimensions, setTimeDimensions] = useState([]);</code></pre>
+                                    <pre data-prefix="10"><code>  const [filters, setFilters] = useState([]);</code></pre>
+                                    <pre data-prefix="11"><code>  const [availableCubes, setAvailableCubes] = useState([]);</code></pre>
+                                    <pre data-prefix="12"><code>  const [loading, setLoading] = useState(false);</code></pre>
+                                    <pre data-prefix="13"><code>  const [error, setError] = useState(null);</code></pre>
+                                    <pre data-prefix="14"><code></code></pre>
+                                    <pre data-prefix="15"><code>  // + 200 more lines of state management, UI rendering, validation...</code></pre>
+                                    <pre data-prefix="16"><code>}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center py-4">
+                            <div class="flex items-center justify-center gap-4">
+                                <div class="h-px bg-base-300 flex-1"></div>
+                                <div class="bg-primary text-primary-content px-4 py-2 rounded-full text-sm font-medium">
+                                    VS
+                                </div>
+                                <div class="h-px bg-base-300 flex-1"></div>
+                            </div>
+                        </div>
+
+                        <div class="card bg-base-100 border-2 border-success/20 shadow-lg">
+                            <div class="card-header bg-success/5 px-4 py-3 border-b border-success/10">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-3 h-3 rounded-full bg-success"></div>
+                                    <span class="text-sm font-medium text-success">With CubeKit - Drop-in Component</span>
+                                </div>
+                            </div>
+                            <div class="card-body p-0">
+                                <div class="mockup-code bg-neutral text-neutral-content text-sm">
+                                    <pre data-prefix="1"><code>// Complete query builder in just a few lines</code></pre>
+                                    <pre data-prefix="2"><code>import { QueryBuilder } from '@cubekit/react';</code></pre>
+                                    <pre data-prefix="3"><code></code></pre>
+                                    <pre data-prefix="4"><code>function MyAnalyticsApp() {</code></pre>
+                                    <pre data-prefix="5"><code>  return (</code></pre>
+                                    <pre data-prefix="6"><code>    &lt;QueryBuilder</code></pre>
+                                    <pre data-prefix="7"><code>      cubeApi={cubeApi}</code></pre>
+                                    <pre data-prefix="8"><code>      onQueryChange={handleQueryChange}</code></pre>
+                                    <pre data-prefix="9"><code>      theme="cubekit"</code></pre>
+                                    <pre data-prefix="10"><code>      enableFilters={true}</code></pre>
+                                    <pre data-prefix="11"><code>      enableTimeDimensions={true}</code></pre>
+                                    <pre data-prefix="12"><code>    /&gt;</code></pre>
+                                    <pre data-prefix="13"><code>  );</code></pre>
+                                    <pre data-prefix="14"><code>}</code></pre>
+                                    <pre data-prefix="15"><code></code></pre>
+                                    <pre data-prefix="16"><code>// ✅ Everything included: state, UI, validation, theming</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="stats stats-horizontal shadow bg-base-100">
+                            <div class="stat">
+                                <div class="stat-figure text-error">
+                                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+                                <div class="stat-title">Custom Build</div>
+                                <div class="stat-value text-error">200+</div>
+                                <div class="stat-desc">Lines of code</div>
+                            </div>
+                            
+                            <div class="stat">
+                                <div class="stat-figure text-success">
+                                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+                                <div class="stat-title">With CubeKit</div>
+                                <div class="stat-value text-success">16</div>
+                                <div class="stat-desc">Lines of code</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-base-100">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-5xl font-bold mb-4">Early Access Pricing</h2>
+                <p class="text-lg text-base-content/70">Join our waiting list for exclusive early bird pricing when we launch.</p>
+            </div>
+            <div class="flex justify-center">
+                <div class="pricing-card card w-full max-w-md bg-base-100 shadow-2xl border-2 border-primary/20">
+                    <div class="card-body text-center">
+                        <div class="w-full h-1 bg-gradient-to-r from-primary to-secondary rounded-full mb-6"></div>
+                        <h3 class="text-2xl font-bold mb-4">Annual License</h3>
+                        <div class="flex items-baseline justify-center mb-2">
+                            <span class="text-2xl font-semibold text-base-content/70">$</span>
+                            <span class="text-6xl font-bold">59</span>
+                            <span class="text-xl text-base-content/70 ml-1">/year</span>
+                        </div>
+                        <p class="text-base-content/70 mb-8">Per developer seat</p>
+                        
+                        <div class="space-y-3 mb-8 text-left">
+                            <div class="flex items-center gap-3">
+                                <div class="w-5 h-5 bg-success text-success-content rounded-full flex items-center justify-center text-xs font-bold">✓</div>
+                                <span>All CubeKit components</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-5 h-5 bg-success text-success-content rounded-full flex items-center justify-center text-xs font-bold">✓</div>
+                                <span>TypeScript definitions</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-5 h-5 bg-success text-success-content rounded-full flex items-center justify-center text-xs font-bold">✓</div>
+                                <span>Full source code access</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-5 h-5 bg-success text-success-content rounded-full flex items-center justify-center text-xs font-bold">✓</div>
+                                <span>Unlimited projects</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-5 h-5 bg-success text-success-content rounded-full flex items-center justify-center text-xs font-bold">✓</div>
+                                <span>1 year of updates</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-5 h-5 bg-success text-success-content rounded-full flex items-center justify-center text-xs font-bold">✓</div>
+                                <span>Email support</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-5 h-5 bg-success text-success-content rounded-full flex items-center justify-center text-xs font-bold">✓</div>
+                                <span>Commercial license</span>
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-primary btn-lg w-full mb-4" onclick="joinWaitingList()">
+                            Join Waiting List
+                        </button>
+                        <p class="text-sm text-base-content/70">30-day money-back guarantee</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-primary to-secondary text-primary-content">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl lg:text-5xl font-bold mb-6">Ready to Save Hours of Development Time?</h2>
+            <p class="text-lg lg:text-xl mb-8 opacity-90">Join our waiting list to be notified when CubeKit launches with early bird pricing.</p>
+            
+            <!-- Embedded Kit.com Form -->
+            <div class="max-w-md mx-auto">
+                <form action="https://app.kit.com/forms/8166876/subscriptions" class="seva-form formkit-form" method="post" data-sv-form="8166876" data-uid="1bed8ab9be" data-format="inline" data-version="5" data-options="{&quot;settings&quot;:{&quot;after_subscribe&quot;:{&quot;action&quot;:&quot;message&quot;,&quot;success_message&quot;:&quot;Success! Now check your email to confirm your subscription.&quot;,&quot;redirect_url&quot;:&quot;&quot;},&quot;analytics&quot;:{&quot;google&quot;:null,&quot;fathom&quot;:null,&quot;facebook&quot;:null,&quot;segment&quot;:null,&quot;pinterest&quot;:null,&quot;sparkloop&quot;:null,&quot;googletagmanager&quot;:null},&quot;modal&quot;:{&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15},&quot;powered_by&quot;:{&quot;show&quot;:true,&quot;url&quot;:&quot;https://kit.com/features/forms?utm_campaign=poweredby&amp;utm_content=form&amp;utm_medium=referral&amp;utm_source=dynamic&quot;},&quot;recaptcha&quot;:{&quot;enabled&quot;:false},&quot;return_visitor&quot;:{&quot;action&quot;:&quot;show&quot;,&quot;custom_content&quot;:&quot;&quot;},&quot;slide_in&quot;:{&quot;display_in&quot;:&quot;bottom_right&quot;,&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15},&quot;sticky_bar&quot;:{&quot;display_in&quot;:&quot;top&quot;,&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15}},&quot;version&quot;:&quot;5&quot;}" min-width="400 500 600 700 800">
+                    <div data-style="clean">
+                        <ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
+                        <div data-element="fields" data-stacked="false" class="seva-fields formkit-fields">
+                            <div class="formkit-field">
+                                <input class="formkit-input" name="email_address" aria-label="Email Address" placeholder="Email Address" required="" type="email" style="color: rgb(0, 0, 0); border-color: rgb(255, 255, 255); border-radius: 8px; font-weight: 400; background-color: white;">
+                            </div>
+                            <button data-element="submit" class="formkit-submit formkit-submit" style="color: rgb(255, 255, 255); background-color: rgb(51, 51, 51); border-radius: 8px; font-weight: 600; padding: 12px 24px;">
+                                <div class="formkit-spinner"><div></div><div></div><div></div></div>
+                                <span class="">Join Waiting List</span>
+                            </button>
+                        </div>
+                        <div class="formkit-powered-by-convertkit-container" style="display: none;">
+                            <a href="https://kit.com/features/forms?utm_campaign=poweredby&amp;utm_content=form&amp;utm_medium=referral&amp;utm_source=dynamic" data-element="powered-by" class="formkit-powered-by-convertkit" data-variant="light" target="_blank" rel="nofollow">Built with Kit</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer footer-center p-10 bg-base-200 text-base-content">
+        <aside>
+            <div class="flex items-center gap-2 mb-4">
+                <img src="logo.svg" alt="CubeKit" class="w-8 h-8">
+                <span class="text-xl font-bold">CubeKit</span>
+            </div>
+            <p class="text-base-content/70">Premium components for Cube.dev applications.</p>
+        </aside>
+        <nav>
+            <div class="grid grid-flow-col gap-8">
+                <div class="flex flex-col gap-2">
+                    <span class="footer-title">Product</span>
+                    <a href="#features" class="link link-hover">Features</a>
+                    <a href="#pricing" class="link link-hover">Pricing</a>
+                    <a href="#docs" class="link link-hover">Documentation</a>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <span class="footer-title">Support</span>
+                    <a href="#contact" class="link link-hover">Contact</a>
+                    <a href="#faq" class="link link-hover">FAQ</a>
+                    <a href="#license" class="link link-hover">License</a>
+                </div>
+            </div>
+        </nav>
+        <aside>
+            <p>&copy; 2024 CubeKit. All rights reserved.</p>
+        </aside>
+    </footer>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+        <div class="modal-box max-w-none w-auto h-auto max-h-full p-0 bg-transparent shadow-none">
+            <div class="relative">
+                <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2 z-50 bg-base-100/80 hover:bg-base-100" onclick="closeImageModal()">✕</button>
+                <img id="modalImage" src="" alt="" class="max-w-full max-h-screen object-contain rounded-lg">
+            </div>
+        </div>
+        <form method="dialog" class="modal-backdrop">
+            <button onclick="closeImageModal()">close</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
