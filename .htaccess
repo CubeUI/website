@@ -1,0 +1,15 @@
+# Enable directory index files
+DirectoryIndex index.html index.php
+
+# Ensure clean URLs work
+RewriteEngine On
+
+# Handle blog directory
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^blog/?$ blog/index.html [L]
+
+# Handle docs
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^docs/?$ docs.html [L] 

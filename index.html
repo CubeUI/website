@@ -79,58 +79,51 @@
 
     <!-- Hero Section -->
     <section class="hero min-h-screen bg-gradient-to-br from-base-200 to-base-300 pt-20">
-        <div class="hero-content max-w-7xl mx-auto px-4">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div class="text-center lg:text-left">
+        <div class="hero-content w-full px-4">
+            <div class="flex flex-col gap-8 items-center max-w-4xl mx-auto w-full text-center">
+                <!-- Hero Title -->
+                <div>
                     <h1 class="text-4xl lg:text-6xl font-bold leading-tight mb-6">
                         Premium Components for <span class="text-primary">Cube.dev</span>
                     </h1>
+                </div>
+                
+                <!-- Description -->
+                <div class="max-w-3xl">
                     <p class="text-lg lg:text-xl text-base-content/70 mb-8 leading-relaxed">
                         Build complete data applications with CubeKit's high-level components: Query Builder, Dashboard Builder, AI Chat, and more. 
                         Turn your Cube.dev instance into a full-featured analytics platform in minutes, not months.
                     </p>
-                    <div class="flex flex-col sm:flex-row gap-4 mb-12">
-                        <button class="btn btn-primary btn-lg" onclick="joinWaitingList()">
-                            Join Waiting List
-                        </button>
-                        <button class="btn btn-outline btn-lg" onclick="openDemo()">
-                            View Demo
-                        </button>
-                    </div>
-                    <div class="stats stats-vertical sm:stats-horizontal shadow">
-                        <div class="stat place-items-center">
-                            <div class="stat-value text-primary">15+</div>
-                            <div class="stat-desc">Components</div>
-                        </div>
-                        <div class="stat place-items-center">
-                            <div class="stat-value text-primary">30+</div>
-                            <div class="stat-desc">DaisyUI Themes</div>
-                        </div>
-                        <div class="stat place-items-center">
-                            <div class="stat-value text-primary">AI</div>
-                            <div class="stat-desc">Query Builder</div>
-                        </div>
-                    </div>
                 </div>
-                <div class="flex justify-center">
-                    <div class="mockup-window border bg-base-300 w-full max-w-md">
-                        <div class="flex justify-center px-4 py-16 bg-base-200">
-                            <div class="card w-full bg-base-100 shadow-xl">
-                                <div class="card-body">
-                                    <div class="flex justify-between items-center mb-4">
-                                        <h3 class="card-title text-sm">Dashboard Component</h3>
-                                        <div class="badge badge-success">Ready to use</div>
-                                    </div>
-                                    <div class="flex items-end justify-between h-24 gap-2">
-                                        <div class="chart-bar bg-primary w-full opacity-0 origin-bottom" style="height: 60%; transform: scaleY(0); transition: all 0.8s ease;"></div>
-                                        <div class="chart-bar bg-primary w-full opacity-0 origin-bottom" style="height: 80%; transform: scaleY(0); transition: all 0.8s ease;"></div>
-                                        <div class="chart-bar bg-primary w-full opacity-0 origin-bottom" style="height: 45%; transform: scaleY(0); transition: all 0.8s ease;"></div>
-                                        <div class="chart-bar bg-primary w-full opacity-0 origin-bottom" style="height: 90%; transform: scaleY(0); transition: all 0.8s ease;"></div>
-                                        <div class="chart-bar bg-primary w-full opacity-0 origin-bottom" style="height: 70%; transform: scaleY(0); transition: all 0.8s ease;"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                
+                <!-- Action Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                    <button class="btn btn-primary btn-lg" onclick="joinWaitingList()">
+                        Join Waiting List
+                    </button>
+                    <a href="docs.html" class="btn btn-outline btn-lg">
+                        View Documentation
+                    </a>
+                </div>
+                
+                <!-- Hero Image -->
+                <div class="w-full max-w-4xl mb-8">
+                    <img src="screenshots/hero-image.png" alt="CubeKit Components Preview" class="w-full h-auto rounded-lg shadow-3xl hover:shadow-4xl transition-all duration-300 transform hover:scale-[1.02]">
+                </div>
+                
+                <!-- Stats -->
+                <div class="stats stats-vertical sm:stats-horizontal shadow">
+                    <div class="stat place-items-center">
+                        <div class="stat-value text-primary">15+</div>
+                        <div class="stat-desc">Components</div>
+                    </div>
+                    <div class="stat place-items-center">
+                        <div class="stat-value text-primary">30+</div>
+                        <div class="stat-desc">DaisyUI Themes</div>
+                    </div>
+                    <div class="stat place-items-center">
+                        <div class="stat-value text-primary">AI</div>
+                        <div class="stat-desc">Query Builder</div>
                     </div>
                 </div>
             </div>
@@ -231,6 +224,17 @@
                         </div>
                         <h3 class="card-title mb-2">Production Ready</h3>
                         <p class="text-base-content/70">Battle-tested components used in production by teams around the world. Reliable and performant.</p>
+                    </div>
+                </div>
+                <div class="feature-card card bg-base-100 shadow-lg hover:shadow-xl transition-all duration-300 border border-base-200 hover:border-primary">
+                    <div class="card-body">
+                        <div class="w-12 h-12 text-primary mb-4">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h4a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h4a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 5a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1V5zM16 15a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 01-1 1h-2a1 1 0 01-1-1v-4z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="card-title mb-2">Modular Design</h3>
+                        <p class="text-base-content/70">Each high-level component contains multiple sub-components that can be used individually for maximum flexibility.</p>
                     </div>
                 </div>
             </div>
@@ -347,12 +351,7 @@
                 </div>
             </div>
             
-            <div class="text-center mt-12">
-                <div class="alert alert-info max-w-2xl mx-auto">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    <span><strong>Modular Design:</strong> Each high-level component contains multiple sub-components that can be used individually for maximum flexibility.</span>
-                </div>
-            </div>
+
         </div>
     </section>
 
