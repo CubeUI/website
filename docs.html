@@ -95,19 +95,51 @@
                             <a class="tab">Yarn</a>
                         </div>
                         <div class="mockup-code mb-4">
-                            <pre data-prefix="$"><code>npm install @cubekit/react @cubekit/core</code></pre>
-                            <pre data-prefix="$"><code>npm install @cube-dev/client-react</code></pre>
+                            <pre data-prefix="$"><code>npm install @cubekit/react</code></pre>
+                            <pre data-prefix="$"><code># or</code></pre>
+                            <pre data-prefix="$"><code>yarn add @cubekit/react</code></pre>
                         </div>
                         
-                        <h4 class="text-lg font-semibold mb-2">Quick Start</h4>
+                        <h4 class="text-lg font-semibold mb-2">Peer Dependencies</h4>
+                        <p class="mb-2">Make sure you have the required peer dependencies installed:</p>
+                        <div class="mockup-code mb-4">
+                            <pre data-prefix="$"><code>npm install react@>=18.0.0 react-dom@>=18.0.0</code></pre>
+                        </div>
+                        
+                        <h4 class="text-lg font-semibold mb-2">Basic Setup</h4>
+                        <p class="mb-2">Wrap your application with the CubeKitProvider to provide Cube.js context to all components:</p>
                         <div class="mockup-code">
-                            <pre data-prefix="1"><code>import { QueryBuilder } from '@cubekit/react';</code></pre>
-                            <pre data-prefix="2"><code>import '@cubekit/react/dist/index.css';</code></pre>
+                            <pre data-prefix="1"><code>import React from 'react';</code></pre>
+                            <pre data-prefix="2"><code>import { CubeKitProvider } from '@cubekit/react';</code></pre>
                             <pre data-prefix="3"><code></code></pre>
-                            <pre data-prefix="4"><code>// Setup Cube API</code></pre>
-                            <pre data-prefix="5"><code>const cubeApi = cubejs('YOUR_TOKEN', {</code></pre>
-                            <pre data-prefix="6"><code>  apiUrl: 'http://localhost:4000/cubejs-api/v1'</code></pre>
-                            <pre data-prefix="7"><code>});</code></pre>
+                            <pre data-prefix="4"><code>const App = () => {</code></pre>
+                            <pre data-prefix="5"><code>  return (</code></pre>
+                            <pre data-prefix="6"><code>    &lt;CubeKitProvider</code></pre>
+                            <pre data-prefix="7"><code>      config={{</code></pre>
+                            <pre data-prefix="8"><code>        cubeApiUrl: 'http://localhost:4000/cubejs-api/v1',</code></pre>
+                            <pre data-prefix="9"><code>        cubeApiToken: 'your-api-token', // Optional</code></pre>
+                            <pre data-prefix="10"><code>        pollInterval: 60000, // Optional: polling interval in ms</code></pre>
+                            <pre data-prefix="11"><code>      }}</code></pre>
+                            <pre data-prefix="12"><code>    &gt;</code></pre>
+                            <pre data-prefix="13"><code>      &lt;YourAppComponents /&gt;</code></pre>
+                            <pre data-prefix="14"><code>    &lt;/CubeKitProvider&gt;</code></pre>
+                            <pre data-prefix="15"><code>  );</code></pre>
+                            <pre data-prefix="16"><code>};</code></pre>
+                            <pre data-prefix="17"><code></code></pre>
+                            <pre data-prefix="18"><code>export default App;</code></pre>
+                        </div>
+                    </div>
+
+                    <div id="configuration" class="mb-8">
+                        <h3 class="text-2xl font-semibold mb-4">Configuration</h3>
+                        <p class="mb-4">The CubeKitConfig interface supports the following options:</p>
+                        <div class="mockup-code">
+                            <pre data-prefix="1"><code>interface CubeKitConfig {</code></pre>
+                            <pre data-prefix="2"><code>  cubeApiUrl: string;           // Your Cube.js API URL</code></pre>
+                            <pre data-prefix="3"><code>  cubeApiToken?: string;        // Optional API token for authentication</code></pre>
+                            <pre data-prefix="4"><code>  pollInterval?: number;        // Optional polling interval in milliseconds</code></pre>
+                            <pre data-prefix="5"><code>  storageAdapter?: StorageAdapter; // Optional custom storage adapter</code></pre>
+                            <pre data-prefix="6"><code>}</code></pre>
                         </div>
                     </div>
                 </section>
@@ -152,208 +184,500 @@
                         <div class="mockup-code mb-8">
                             <pre data-prefix="1"><code>import { QueryBuilder } from '@cubekit/react';</code></pre>
                             <pre data-prefix="2"><code></code></pre>
-                            <pre data-prefix="3"><code>&lt;QueryBuilder</code></pre>
-                            <pre data-prefix="4"><code>  cubeApi={cubeApi}</code></pre>
-                            <pre data-prefix="5"><code>  query={query}</code></pre>
-                            <pre data-prefix="6"><code>  onQueryChange={setQuery}</code></pre>
-                            <pre data-prefix="7"><code>  enableFilters={true}</code></pre>
-                            <pre data-prefix="8"><code>  theme="cubekit"</code></pre>
-                            <pre data-prefix="9"><code>/&gt;</code></pre>
+                            <pre data-prefix="3"><code>function MyApp() {</code></pre>
+                            <pre data-prefix="4"><code>  return (</code></pre>
+                            <pre data-prefix="5"><code>    &lt;div className="p-4"&gt;</code></pre>
+                            <pre data-prefix="6"><code>      &lt;QueryBuilder className="w-full h-screen" /&gt;</code></pre>
+                            <pre data-prefix="7"><code>    &lt;/div&gt;</code></pre>
+                            <pre data-prefix="8"><code>  );</code></pre>
+                            <pre data-prefix="9"><code>}</code></pre>
+                        </div>
+
+                        <div class="alert alert-info mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <div>
+                                <h4 class="font-bold">Features</h4>
+                                <ul class="list-disc list-inside mt-2">
+                                    <li>Interactive cube, measure, and dimension selection</li>
+                                    <li>Filter builder with multiple operators</li>
+                                    <li>Query execution and result visualization</li>
+                                    <li>Multiple chart types (bar, line, pie, area, scatter, radar, treemap, funnel)</li>
+                                    <li>Query history and management</li>
+                                    <li>Sample query suggestions</li>
+                                    <li>Drill-down capabilities</li>
+                                </ul>
+                            </div>
                         </div>
 
                         <!-- Sub-components -->
                         <div class="space-y-8">
-                            <div id="querybuilder-filters" class="border-l-4 border-primary pl-4">
-                                <h4 class="text-xl font-semibold mb-3">Filters</h4>
-                                <p class="mb-3">Advanced filtering capabilities with multiple operators and value types.</p>
-                                <div class="mockup-code">
-                                    <pre data-prefix="1"><code>&lt;QueryBuilder.Filters</code></pre>
-                                    <pre data-prefix="2"><code>  filters={filters}</code></pre>
-                                    <pre data-prefix="3"><code>  onFiltersChange={setFilters}</code></pre>
-                                    <pre data-prefix="4"><code>  operators={['equals', 'contains', 'gt', 'lt']}</code></pre>
-                                    <pre data-prefix="5"><code>/&gt;</code></pre>
+                            <div id="cubeselect" class="border-l-4 border-primary pl-4">
+                                <h4 class="text-xl font-semibold mb-3">CubeSelect</h4>
+                                <p class="mb-3">A dropdown component for selecting Cube.js cubes.</p>
+                                <div class="mockup-code mb-4">
+                                    <pre data-prefix="1"><code>import { CubeSelect } from '@cubekit/react';</code></pre>
+                                    <pre data-prefix="2"><code>import { useCube } from '@cubekit/react';</code></pre>
+                                    <pre data-prefix="3"><code></code></pre>
+                                    <pre data-prefix="4"><code>function CubeSelector() {</code></pre>
+                                    <pre data-prefix="5"><code>  const { meta } = useCube();</code></pre>
+                                    <pre data-prefix="6"><code>  const [selectedCube, setSelectedCube] = useState&lt;string | null&gt;(null);</code></pre>
+                                    <pre data-prefix="7"><code></code></pre>
+                                    <pre data-prefix="8"><code>  const handleCubeSelect = (cubeName: string) =&gt; {</code></pre>
+                                    <pre data-prefix="9"><code>    setSelectedCube(cubeName);</code></pre>
+                                    <pre data-prefix="10"><code>    console.log('Selected cube:', cubeName);</code></pre>
+                                    <pre data-prefix="11"><code>  };</code></pre>
+                                    <pre data-prefix="12"><code></code></pre>
+                                    <pre data-prefix="13"><code>  return (</code></pre>
+                                    <pre data-prefix="14"><code>    &lt;CubeSelect</code></pre>
+                                    <pre data-prefix="15"><code>      cubes={meta?.cubes || []}</code></pre>
+                                    <pre data-prefix="16"><code>      selectedCube={selectedCube}</code></pre>
+                                    <pre data-prefix="17"><code>      onCubeSelect={handleCubeSelect}</code></pre>
+                                    <pre data-prefix="18"><code>      validateJoins={(cubeName) =&gt; true} // Optional validation</code></pre>
+                                    <pre data-prefix="19"><code>    /&gt;</code></pre>
+                                    <pre data-prefix="20"><code>  );</code></pre>
+                                    <pre data-prefix="21"><code>}</code></pre>
+                                </div>
+
+                                <div class="overflow-x-auto">
+                                    <table class="table table-zebra">
+                                        <thead>
+                                            <tr>
+                                                <th>Prop</th>
+                                                <th>Type</th>
+                                                <th>Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><code>cubes</code></td>
+                                                <td><code>CubeMetaItem[]</code></td>
+                                                <td>Array of available cubes from meta</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>selectedCube</code></td>
+                                                <td><code>string | null</code></td>
+                                                <td>Currently selected cube name (null if none)</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>onCubeSelect</code></td>
+                                                <td><code>(cubeName: string) => void</code></td>
+                                                <td>Callback when cube selection changes</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>validateJoins?</code></td>
+                                                <td><code>(cubeName: string) => boolean</code></td>
+                                                <td>Optional function to validate cube joins</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
 
-                            <div id="querybuilder-measures" class="border-l-4 border-secondary pl-4">
-                                <h4 class="text-xl font-semibold mb-3">Measures</h4>
-                                <p class="mb-3">Select and configure measures for your query with aggregation options.</p>
-                                <div class="mockup-code">
-                                    <pre data-prefix="1"><code>&lt;QueryBuilder.Measures</code></pre>
-                                    <pre data-prefix="2"><code>  measures={measures}</code></pre>
-                                    <pre data-prefix="3"><code>  onMeasuresChange={setMeasures}</code></pre>
-                                    <pre data-prefix="4"><code>  showAggregationOptions={true}</code></pre>
-                                    <pre data-prefix="5"><code>/&gt;</code></pre>
+                            <div id="multiselect" class="border-l-4 border-secondary pl-4">
+                                <h4 class="text-xl font-semibold mb-3">MultiSelect</h4>
+                                <p class="mb-3">A generic multi-select dropdown component for selecting measures, dimensions, or segments.</p>
+                                <div class="mockup-code mb-4">
+                                    <pre data-prefix="1"><code>import { MultiSelect } from '@cubekit/react';</code></pre>
+                                    <pre data-prefix="2"><code>import { MeasureIcon } from '@cubekit/react';</code></pre>
+                                    <pre data-prefix="3"><code></code></pre>
+                                    <pre data-prefix="4"><code>function MeasureSelector() {</code></pre>
+                                    <pre data-prefix="5"><code>  const [selectedMeasures, setSelectedMeasures] = useState&lt;string[]&gt;([]);</code></pre>
+                                    <pre data-prefix="6"><code>  const measures = [</code></pre>
+                                    <pre data-prefix="7"><code>    { name: 'Orders.count', title: 'Orders Count', type: 'count' },</code></pre>
+                                    <pre data-prefix="8"><code>    { name: 'Orders.totalAmount', title: 'Total Amount', type: 'sum' }</code></pre>
+                                    <pre data-prefix="9"><code>  ];</code></pre>
+                                    <pre data-prefix="10"><code></code></pre>
+                                    <pre data-prefix="11"><code>  return (</code></pre>
+                                    <pre data-prefix="12"><code>    &lt;MultiSelect</code></pre>
+                                    <pre data-prefix="13"><code>      items={measures}</code></pre>
+                                    <pre data-prefix="14"><code>      selectedItems={selectedMeasures}</code></pre>
+                                    <pre data-prefix="15"><code>      onSelectionChange={setSelectedMeasures}</code></pre>
+                                    <pre data-prefix="16"><code>      getItemName={(item) =&gt; item.name}</code></pre>
+                                    <pre data-prefix="17"><code>      getItemTitle={(item) =&gt; item.title}</code></pre>
+                                    <pre data-prefix="18"><code>      getItemType={(item) =&gt; item.type}</code></pre>
+                                    <pre data-prefix="19"><code>      getItemIcon={(item) =&gt; &lt;MeasureIcon className="w-4 h-4" /&gt;}</code></pre>
+                                    <pre data-prefix="20"><code>      placeholder="Select measures..."</code></pre>
+                                    <pre data-prefix="21"><code>      emptyMessage="No measures available"</code></pre>
+                                    <pre data-prefix="22"><code>      disabled={false}</code></pre>
+                                    <pre data-prefix="23"><code>    /&gt;</code></pre>
+                                    <pre data-prefix="24"><code>  );</code></pre>
+                                    <pre data-prefix="25"><code>}</code></pre>
+                                </div>
+
+                                <div class="overflow-x-auto">
+                                    <table class="table table-zebra">
+                                        <thead>
+                                            <tr>
+                                                <th>Prop</th>
+                                                <th>Type</th>
+                                                <th>Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><code>items</code></td>
+                                                <td><code>T[]</code></td>
+                                                <td>Array of items to select from (generic type)</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>selectedItems</code></td>
+                                                <td><code>string[]</code></td>
+                                                <td>Currently selected item names</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>onSelectionChange</code></td>
+                                                <td><code>(items: string[]) => void</code></td>
+                                                <td>Callback when selection changes</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>getItemName</code></td>
+                                                <td><code>(item: T) => string</code></td>
+                                                <td>Function to get item's unique name/key</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>getItemTitle</code></td>
+                                                <td><code>(item: T) => string</code></td>
+                                                <td>Function to get item's display title</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>getItemIcon</code></td>
+                                                <td><code>(item: T) => React.ReactNode</code></td>
+                                                <td>Function to get item's icon</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>placeholder</code></td>
+                                                <td><code>string</code></td>
+                                                <td>Placeholder text when no items selected</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>emptyMessage</code></td>
+                                                <td><code>string</code></td>
+                                                <td>Message when no items available</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>disabled?</code></td>
+                                                <td><code>boolean</code></td>
+                                                <td>Whether the component is disabled</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
 
-                            <div id="querybuilder-dimensions" class="border-l-4 border-accent pl-4">
-                                <h4 class="text-xl font-semibold mb-3">Dimensions</h4>
-                                <p class="mb-3">Choose dimensions to group and segment your data.</p>
+                            <div id="filterbuilder" class="border-l-4 border-accent pl-4">
+                                <h4 class="text-xl font-semibold mb-3">FilterBuilder</h4>
+                                <p class="mb-3">A comprehensive filter builder component for creating complex query filters.</p>
                                 <div class="mockup-code">
-                                    <pre data-prefix="1"><code>&lt;QueryBuilder.Dimensions</code></pre>
-                                    <pre data-prefix="2"><code>  dimensions={dimensions}</code></pre>
-                                    <pre data-prefix="3"><code>  onDimensionsChange={setDimensions}</code></pre>
-                                    <pre data-prefix="4"><code>  maxDimensions={5}</code></pre>
-                                    <pre data-prefix="5"><code>/&gt;</code></pre>
+                                    <pre data-prefix="1"><code>import { FilterBuilder } from '@cubekit/react';</code></pre>
+                                    <pre data-prefix="2"><code></code></pre>
+                                    <pre data-prefix="3"><code>function QueryFilters() {</code></pre>
+                                    <pre data-prefix="4"><code>  const [filterGroups, setFilterGroups] = useState([]);</code></pre>
+                                    <pre data-prefix="5"><code></code></pre>
+                                    <pre data-prefix="6"><code>  return (</code></pre>
+                                    <pre data-prefix="7"><code>    &lt;FilterBuilder</code></pre>
+                                    <pre data-prefix="8"><code>      availableDimensions={[</code></pre>
+                                    <pre data-prefix="9"><code>        { name: 'Orders.status', title: 'Order Status', type: 'string' },</code></pre>
+                                    <pre data-prefix="10"><code>        { name: 'Orders.createdAt', title: 'Created Date', type: 'time' }</code></pre>
+                                    <pre data-prefix="11"><code>      ]}</code></pre>
+                                    <pre data-prefix="12"><code>      filterGroups={filterGroups}</code></pre>
+                                    <pre data-prefix="13"><code>      onFiltersChange={setFilterGroups}</code></pre>
+                                    <pre data-prefix="14"><code>      className="p-4"</code></pre>
+                                    <pre data-prefix="15"><code>    /&gt;</code></pre>
+                                    <pre data-prefix="16"><code>  );</code></pre>
+                                    <pre data-prefix="17"><code>}</code></pre>
                                 </div>
                             </div>
 
-                            <div id="querybuilder-time" class="border-l-4 border-info pl-4">
-                                <h4 class="text-xl font-semibold mb-3">Time Dimensions</h4>
-                                <p class="mb-3">Configure time-based analysis with granularity and date range controls.</p>
+                            <div id="queryoptions" class="border-l-4 border-info pl-4">
+                                <h4 class="text-xl font-semibold mb-3">QueryOptions</h4>
+                                <p class="mb-3">Component for configuring query options like limit, sorting, and row limits.</p>
                                 <div class="mockup-code">
-                                    <pre data-prefix="1"><code>&lt;QueryBuilder.TimeDimensions</code></pre>
-                                    <pre data-prefix="2"><code>  timeDimensions={timeDimensions}</code></pre>
-                                    <pre data-prefix="3"><code>  onTimeDimensionsChange={setTimeDimensions}</code></pre>
-                                    <pre data-prefix="4"><code>  defaultGranularity="day"</code></pre>
-                                    <pre data-prefix="5"><code>/&gt;</code></pre>
+                                    <pre data-prefix="1"><code>import { QueryOptions } from '@cubekit/react';</code></pre>
+                                    <pre data-prefix="2"><code></code></pre>
+                                    <pre data-prefix="3"><code>function QueryConfiguration() {</code></pre>
+                                    <pre data-prefix="4"><code>  return (</code></pre>
+                                    <pre data-prefix="5"><code>    &lt;QueryOptions</code></pre>
+                                    <pre data-prefix="6"><code>      limit={1000}</code></pre>
+                                    <pre data-prefix="7"><code>      onLimitChange={(limit) =&gt; console.log('Limit:', limit)}</code></pre>
+                                    <pre data-prefix="8"><code>      sortField="Orders.count"</code></pre>
+                                    <pre data-prefix="9"><code>      sortDirection="desc"</code></pre>
+                                    <pre data-prefix="10"><code>      onSortFieldChange={(field) =&gt; console.log('Sort field:', field)}</code></pre>
+                                    <pre data-prefix="11"><code>      onSortDirectionChange={(direction) =&gt; console.log('Direction:', direction)}</code></pre>
+                                    <pre data-prefix="12"><code>      className="mb-4"</code></pre>
+                                    <pre data-prefix="13"><code>    /&gt;</code></pre>
+                                    <pre data-prefix="14"><code>  );</code></pre>
+                                    <pre data-prefix="15"><code>}</code></pre>
+                                </div>
+                            </div>
+
+                            <div id="queryactions" class="border-l-4 border-warning pl-4">
+                                <h4 class="text-xl font-semibold mb-3">QueryActions</h4>
+                                <p class="mb-3">Action buttons for query operations (save, execute, export, etc.).</p>
+                                <div class="mockup-code">
+                                    <pre data-prefix="1"><code>import { QueryActions } from '@cubekit/react';</code></pre>
+                                    <pre data-prefix="2"><code></code></pre>
+                                    <pre data-prefix="3"><code>function QueryControls() {</code></pre>
+                                    <pre data-prefix="4"><code>  return (</code></pre>
+                                    <pre data-prefix="5"><code>    &lt;QueryActions</code></pre>
+                                    <pre data-prefix="6"><code>      onExecute={() =&gt; console.log('Execute query')}</code></pre>
+                                    <pre data-prefix="7"><code>      onSave={() =&gt; console.log('Save query')}</code></pre>
+                                    <pre data-prefix="8"><code>      onExport={() =&gt; console.log('Export results')}</code></pre>
+                                    <pre data-prefix="9"><code>      isExecuting={false}</code></pre>
+                                    <pre data-prefix="10"><code>      className="flex gap-2"</code></pre>
+                                    <pre data-prefix="11"><code>    /&gt;</code></pre>
+                                    <pre data-prefix="12"><code>  );</code></pre>
+                                    <pre data-prefix="13"><code>}</code></pre>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- SQLBuilder -->
-                    <div id="sqlbuilder" class="mb-16">
-                        <h3 class="text-2xl font-bold mb-4">SQLBuilder</h3>
-                        <p class="mb-4">An advanced SQL query builder that works with Cube.dev's SQL API endpoint, featuring syntax highlighting, autocomplete, and validation.</p>
+                    <!-- ConversationBuilder -->
+                    <div id="conversationbuilder" class="mb-16">
+                        <h3 class="text-2xl font-bold mb-4">ConversationBuilder</h3>
+                        <p class="mb-6">An AI-powered chat interface for natural language querying.</p>
                         
                         <div class="card bg-base-100 shadow-xl mb-6">
                             <div class="card-body">
-                                <h4 class="card-title">Live Preview</h4>
-                                <div class="bg-gray-900 text-green-400 p-4 rounded font-mono text-sm">
-                                    <div class="mb-2">SELECT</div>
-                                    <div class="ml-4 mb-2">measure(`Orders.count`) as `orders_count`,</div>
-                                    <div class="ml-4 mb-2">dimension(`Orders.status`) as `orders_status`</div>
-                                    <div class="mb-2">FROM cube(`Orders`)</div>
-                                    <div class="mb-2">WHERE dimension(`Orders.createdAt`) >= '2024-01-01'</div>
-                                    <div>GROUP BY dimension(`Orders.status`)</div>
-                                </div>
+                                <h4 class="card-title mb-4">Live Preview</h4>
+                                <img src="screenshots/ai-chat-bot.png" alt="ConversationBuilder Component" class="w-full rounded-lg border border-base-300">
                             </div>
                         </div>
 
-                        <div class="mockup-code mb-8">
-                            <pre data-prefix="1"><code>import { SQLBuilder } from '@cubekit/react';</code></pre>
+                        <div class="mockup-code mb-6">
+                            <pre data-prefix="1"><code>import { ConversationBuilder } from '@cubekit/react';</code></pre>
                             <pre data-prefix="2"><code></code></pre>
-                            <pre data-prefix="3"><code>&lt;SQLBuilder</code></pre>
-                            <pre data-prefix="4"><code>  cubeApi={cubeApi}</code></pre>
-                            <pre data-prefix="5"><code>  sql={sql}</code></pre>
-                            <pre data-prefix="6"><code>  onSqlChange={setSql}</code></pre>
-                            <pre data-prefix="7"><code>  enableAutocomplete={true}</code></pre>
-                            <pre data-prefix="8"><code>/&gt;</code></pre>
+                            <pre data-prefix="3"><code>function AIQueryInterface() {</code></pre>
+                            <pre data-prefix="4"><code>  return (</code></pre>
+                            <pre data-prefix="5"><code>    &lt;ConversationBuilder</code></pre>
+                            <pre data-prefix="6"><code>      className="w-full h-screen"</code></pre>
+                            <pre data-prefix="7"><code>      aiApiUrl="https://your-ai-api-endpoint"</code></pre>
+                            <pre data-prefix="8"><code>      enableVoiceInput={true}</code></pre>
+                            <pre data-prefix="9"><code>    /&gt;</code></pre>
+                            <pre data-prefix="10"><code>  );</code></pre>
+                            <pre data-prefix="11"><code>}</code></pre>
+                        </div>
+
+                        <div class="alert alert-info mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <div>
+                                <h4 class="font-bold">Features</h4>
+                                <ul class="list-disc list-inside mt-2">
+                                    <li>Natural language query input</li>
+                                    <li>AI-powered query generation</li>
+                                    <li>Conversation history</li>
+                                    <li>Voice input support</li>
+                                    <li>Query explanation and suggestions</li>
+                                </ul>
+                            </div>
                         </div>
 
                         <!-- Sub-components -->
                         <div class="space-y-8">
-                            <div id="sqlbuilder-editor" class="border-l-4 border-primary pl-4">
-                                <h4 class="text-xl font-semibold mb-3">SQL Editor</h4>
-                                <p class="mb-3">Full-featured code editor with syntax highlighting and multiple themes.</p>
+                            <div id="message" class="border-l-4 border-primary pl-4">
+                                <h4 class="text-xl font-semibold mb-3">Message</h4>
+                                <p class="mb-3">Individual message component within conversations.</p>
                                 <div class="mockup-code">
-                                    <pre data-prefix="1"><code>&lt;SQLBuilder.Editor</code></pre>
-                                    <pre data-prefix="2"><code>  value={sql}</code></pre>
-                                    <pre data-prefix="3"><code>  onChange={setSql}</code></pre>
-                                    <pre data-prefix="4"><code>  theme="vs-dark"</code></pre>
-                                    <pre data-prefix="5"><code>/&gt;</code></pre>
+                                    <pre data-prefix="1"><code>import { Message } from '@cubekit/react';</code></pre>
+                                    <pre data-prefix="2"><code></code></pre>
+                                    <pre data-prefix="3"><code>function ChatMessage({ message }) {</code></pre>
+                                    <pre data-prefix="4"><code>  return (</code></pre>
+                                    <pre data-prefix="5"><code>    &lt;Message</code></pre>
+                                    <pre data-prefix="6"><code>      content={message.content}</code></pre>
+                                    <pre data-prefix="7"><code>      type={message.type}</code></pre>
+                                    <pre data-prefix="8"><code>      timestamp={message.timestamp}</code></pre>
+                                    <pre data-prefix="9"><code>      isUser={message.isUser}</code></pre>
+                                    <pre data-prefix="10"><code>      className="mb-4"</code></pre>
+                                    <pre data-prefix="11"><code>    /&gt;</code></pre>
+                                    <pre data-prefix="12"><code>  );</code></pre>
+                                    <pre data-prefix="13"><code>}</code></pre>
                                 </div>
                             </div>
 
-                            <div id="sqlbuilder-autocomplete" class="border-l-4 border-secondary pl-4">
-                                <h4 class="text-xl font-semibold mb-3">Autocomplete</h4>
-                                <p class="mb-3">Intelligent code completion for Cube.dev schema elements.</p>
+                            <div id="conversationsidebar" class="border-l-4 border-secondary pl-4">
+                                <h4 class="text-xl font-semibold mb-3">ConversationSidebar</h4>
+                                <p class="mb-3">Sidebar component for managing conversation history.</p>
                                 <div class="mockup-code">
-                                    <pre data-prefix="1"><code>&lt;SQLBuilder.Autocomplete</code></pre>
-                                    <pre data-prefix="2"><code>  schema={cubeSchema}</code></pre>
-                                    <pre data-prefix="3"><code>  enableSnippets={true}</code></pre>
-                                    <pre data-prefix="4"><code>/&gt;</code></pre>
-                                </div>
-                            </div>
-
-                            <div id="sqlbuilder-validation" class="border-l-4 border-accent pl-4">
-                                <h4 class="text-xl font-semibold mb-3">Validation</h4>
-                                <p class="mb-3">Real-time SQL validation against your Cube.dev schema.</p>
-                                <div class="mockup-code">
-                                    <pre data-prefix="1"><code>&lt;SQLBuilder.Validation</code></pre>
-                                    <pre data-prefix="2"><code>  sql={sql}</code></pre>
-                                    <pre data-prefix="3"><code>  schema={cubeSchema}</code></pre>
-                                    <pre data-prefix="4"><code>  showInlineErrors={true}</code></pre>
-                                    <pre data-prefix="5"><code>/&gt;</code></pre>
+                                    <pre data-prefix="1"><code>import { ConversationSidebar } from '@cubekit/react';</code></pre>
+                                    <pre data-prefix="2"><code></code></pre>
+                                    <pre data-prefix="3"><code>function ChatSidebar() {</code></pre>
+                                    <pre data-prefix="4"><code>  return (</code></pre>
+                                    <pre data-prefix="5"><code>    &lt;ConversationSidebar</code></pre>
+                                    <pre data-prefix="6"><code>      onConversationSelect={(id) =&gt; console.log('Selected:', id)}</code></pre>
+                                    <pre data-prefix="7"><code>      onNewConversation={() =&gt; console.log('New conversation')}</code></pre>
+                                    <pre data-prefix="8"><code>      className="w-64 h-full"</code></pre>
+                                    <pre data-prefix="9"><code>    /&gt;</code></pre>
+                                    <pre data-prefix="10"><code>  );</code></pre>
+                                    <pre data-prefix="11"><code>}</code></pre>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Schema Visualization -->
-                    <div id="schema-visualization" class="mb-16">
-                        <h3 class="text-2xl font-bold mb-4">Schema Visualization</h3>
-                        <p class="mb-4">Interactive schema explorer with visual cube relationships and detailed metadata. Perfect for understanding your data model.</p>
+                    <!-- SqlQueryBuilder -->
+                    <div id="sqlquerybuilder" class="mb-16">
+                        <h3 class="text-2xl font-bold mb-4">SqlQueryBuilder</h3>
+                        <p class="mb-6">Component for building and executing raw SQL queries.</p>
                         
                         <div class="card bg-base-100 shadow-xl mb-6">
                             <div class="card-body">
-                                <h4 class="card-title">Live Preview</h4>
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 bg-base-200 rounded-lg">
-                                    <div class="border-2 border-primary rounded-lg p-4 bg-white">
-                                        <h5 class="font-bold text-primary mb-2">Orders</h5>
-                                        <div class="text-sm space-y-1">
-                                            <div>📊 <span class="font-medium">count</span></div>
-                                            <div>📊 <span class="font-medium">totalAmount</span></div>
-                                            <div>📏 <span class="opacity-70">status</span></div>
-                                            <div>📏 <span class="opacity-70">createdAt</span></div>
-                                        </div>
-                                    </div>
-                                    <div class="border-2 border-secondary rounded-lg p-4 bg-white">
-                                        <h5 class="font-bold text-secondary mb-2">Users</h5>
-                                        <div class="text-sm space-y-1">
-                                            <div>📊 <span class="font-medium">count</span></div>
-                                            <div>📏 <span class="opacity-70">city</span></div>
-                                            <div>📏 <span class="opacity-70">signupDate</span></div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <h4 class="card-title mb-4">Live Preview</h4>
+                                <img src="screenshots/sql-builder.png" alt="SqlQueryBuilder Component" class="w-full rounded-lg border border-base-300">
                             </div>
                         </div>
 
-                        <div class="mockup-code mb-8">
-                            <pre data-prefix="1"><code>import { SchemaVisualization } from '@cubekit/react';</code></pre>
+                        <div class="mockup-code mb-6">
+                            <pre data-prefix="1"><code>import { SqlQueryBuilder } from '@cubekit/react';</code></pre>
                             <pre data-prefix="2"><code></code></pre>
-                            <pre data-prefix="3"><code>&lt;SchemaVisualization</code></pre>
-                            <pre data-prefix="4"><code>  cubeApi={cubeApi}</code></pre>
-                            <pre data-prefix="5"><code>  layout="hierarchical"</code></pre>
-                            <pre data-prefix="6"><code>  showRelationships={true}</code></pre>
-                            <pre data-prefix="7"><code>/&gt;</code></pre>
+                            <pre data-prefix="3"><code>function SqlInterface() {</code></pre>
+                            <pre data-prefix="4"><code>  return (</code></pre>
+                            <pre data-prefix="5"><code>    &lt;SqlQueryBuilder</code></pre>
+                            <pre data-prefix="6"><code>      className="w-full h-screen"</code></pre>
+                            <pre data-prefix="7"><code>      defaultQuery="SELECT * FROM Orders LIMIT 100"</code></pre>
+                            <pre data-prefix="8"><code>      enableSyntaxHighlighting={true}</code></pre>
+                            <pre data-prefix="9"><code>    /&gt;</code></pre>
+                            <pre data-prefix="10"><code>  );</code></pre>
+                            <pre data-prefix="11"><code>}</code></pre>
+                        </div>
+
+                        <div class="alert alert-info mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <div>
+                                <h4 class="font-bold">Features</h4>
+                                <ul class="list-disc list-inside mt-2">
+                                    <li>SQL editor with syntax highlighting</li>
+                                    <li>Query execution and results display</li>
+                                    <li>Query history and favorites</li>
+                                    <li>Export results functionality</li>
+                                    <li>Error handling and validation</li>
+                                </ul>
+                            </div>
                         </div>
 
                         <!-- Sub-components -->
                         <div class="space-y-8">
-                            <div id="schema-explorer" class="border-l-4 border-primary pl-4">
-                                <h4 class="text-xl font-semibold mb-3">Schema Explorer</h4>
-                                <p class="mb-3">Browse and explore your cube schema with an interactive tree view.</p>
+                            <div id="sqleditor" class="border-l-4 border-primary pl-4">
+                                <h4 class="text-xl font-semibold mb-3">SqlEditor</h4>
+                                <p class="mb-3">SQL code editor component.</p>
                                 <div class="mockup-code">
-                                    <pre data-prefix="1"><code>&lt;SchemaVisualization.Explorer</code></pre>
-                                    <pre data-prefix="2"><code>  schema={schema}</code></pre>
-                                    <pre data-prefix="3"><code>  onCubeSelect={handleCubeSelect}</code></pre>
-                                    <pre data-prefix="4"><code>/&gt;</code></pre>
+                                    <pre data-prefix="1"><code>import { SqlEditor } from '@cubekit/react';</code></pre>
+                                    <pre data-prefix="2"><code></code></pre>
+                                    <pre data-prefix="3"><code>function QueryEditor() {</code></pre>
+                                    <pre data-prefix="4"><code>  const [sql, setSql] = useState('SELECT * FROM Orders');</code></pre>
+                                    <pre data-prefix="5"><code></code></pre>
+                                    <pre data-prefix="6"><code>  return (</code></pre>
+                                    <pre data-prefix="7"><code>    &lt;SqlEditor</code></pre>
+                                    <pre data-prefix="8"><code>      value={sql}</code></pre>
+                                    <pre data-prefix="9"><code>      onChange={setSql}</code></pre>
+                                    <pre data-prefix="10"><code>      placeholder="Enter your SQL query..."</code></pre>
+                                    <pre data-prefix="11"><code>      className="h-64 border rounded"</code></pre>
+                                    <pre data-prefix="12"><code>    /&gt;</code></pre>
+                                    <pre data-prefix="13"><code>  );</code></pre>
+                                    <pre data-prefix="14"><code>}</code></pre>
                                 </div>
                             </div>
 
-                            <div id="cube-relationships" class="border-l-4 border-secondary pl-4">
-                                <h4 class="text-xl font-semibold mb-3">Cube Relationships</h4>
-                                <p class="mb-3">Visual representation of relationships between cubes.</p>
+                            <div id="sqlqueryresult" class="border-l-4 border-secondary pl-4">
+                                <h4 class="text-xl font-semibold mb-3">SqlQueryResult</h4>
+                                <p class="mb-3">Component for displaying SQL query results.</p>
                                 <div class="mockup-code">
-                                    <pre data-prefix="1"><code>&lt;SchemaVisualization.Relationships</code></pre>
-                                    <pre data-prefix="2"><code>  cubes={cubes}</code></pre>
-                                    <pre data-prefix="3"><code>  showJoinPaths={true}</code></pre>
-                                    <pre data-prefix="4"><code>/&gt;</code></pre>
+                                    <pre data-prefix="1"><code>import { SqlQueryResult } from '@cubekit/react';</code></pre>
+                                    <pre data-prefix="2"><code></code></pre>
+                                    <pre data-prefix="3"><code>function ResultsDisplay({ results }) {</code></pre>
+                                    <pre data-prefix="4"><code>  return (</code></pre>
+                                    <pre data-prefix="5"><code>    &lt;SqlQueryResult</code></pre>
+                                    <pre data-prefix="6"><code>      results={results}</code></pre>
+                                    <pre data-prefix="7"><code>      enableExport={true}</code></pre>
+                                    <pre data-prefix="8"><code>      pageSize={50}</code></pre>
+                                    <pre data-prefix="9"><code>      className="mt-4"</code></pre>
+                                    <pre data-prefix="10"><code>    /&gt;</code></pre>
+                                    <pre data-prefix="11"><code>  );</code></pre>
+                                    <pre data-prefix="12"><code>}</code></pre>
                                 </div>
                             </div>
 
-                            <div id="metadata-viewer" class="border-l-4 border-accent pl-4">
-                                <h4 class="text-xl font-semibold mb-3">Metadata Viewer</h4>
-                                <p class="mb-3">Detailed metadata display for measures, dimensions, and cubes.</p>
+                            <div id="sqlquerysidebar" class="border-l-4 border-accent pl-4">
+                                <h4 class="text-xl font-semibold mb-3">SqlQuerySidebar</h4>
+                                <p class="mb-3">Sidebar for SQL query management.</p>
                                 <div class="mockup-code">
-                                    <pre data-prefix="1"><code>&lt;SchemaVisualization.Metadata</code></pre>
-                                    <pre data-prefix="2"><code>  selectedCube={selectedCube}</code></pre>
-                                    <pre data-prefix="3"><code>  showDescriptions={true}</code></pre>
-                                    <pre data-prefix="4"><code>/&gt;</code></pre>
+                                    <pre data-prefix="1"><code>import { SqlQuerySidebar } from '@cubekit/react';</code></pre>
+                                    <pre data-prefix="2"><code></code></pre>
+                                    <pre data-prefix="3"><code>function SqlSidebar() {</code></pre>
+                                    <pre data-prefix="4"><code>  return (</code></pre>
+                                    <pre data-prefix="5"><code>    &lt;SqlQuerySidebar</code></pre>
+                                    <pre data-prefix="6"><code>      onQuerySelect={(query) =&gt; console.log('Selected:', query)}</code></pre>
+                                    <pre data-prefix="7"><code>      onNewQuery={() =&gt; console.log('New query')}</code></pre>
+                                    <pre data-prefix="8"><code>      className="w-64 h-full"</code></pre>
+                                    <pre data-prefix="9"><code>    /&gt;</code></pre>
+                                    <pre data-prefix="10"><code>  );</code></pre>
+                                    <pre data-prefix="11"><code>}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SchemaVisualizer -->
+                    <div id="schemavisualizer" class="mb-16">
+                        <h3 class="text-2xl font-bold mb-4">SchemaVisualizer</h3>
+                        <p class="mb-6">Interactive visualization of your Cube.js schema with relationships.</p>
+                        
+                        <div class="card bg-base-100 shadow-xl mb-6">
+                            <div class="card-body">
+                                <h4 class="card-title mb-4">Live Preview</h4>
+                                <img src="screenshots/schema-explorer.png" alt="SchemaVisualizer Component" class="w-full rounded-lg border border-base-300">
+                            </div>
+                        </div>
+
+                        <div class="mockup-code mb-6">
+                            <pre data-prefix="1"><code>import { SchemaVisualizer } from '@cubekit/react';</code></pre>
+                            <pre data-prefix="2"><code></code></pre>
+                            <pre data-prefix="3"><code>function SchemaExplorer() {</code></pre>
+                            <pre data-prefix="4"><code>  return (</code></pre>
+                            <pre data-prefix="5"><code>    &lt;SchemaVisualizer</code></pre>
+                            <pre data-prefix="6"><code>      className="w-full h-screen"</code></pre>
+                            <pre data-prefix="7"><code>      onCubeSelect={(cubeName) =&gt; console.log('Selected cube:', cubeName)}</code></pre>
+                            <pre data-prefix="8"><code>      onMeasureSelect={(measure, cube) =&gt; console.log('Selected measure:', measure, 'from', cube)}</code></pre>
+                            <pre data-prefix="9"><code>      onDimensionSelect={(dimension, cube) =&gt; console.log('Selected dimension:', dimension, 'from', cube)}</code></pre>
+                            <pre data-prefix="10"><code>      showRelationships={true}</code></pre>
+                            <pre data-prefix="11"><code>      enableZoom={true}</code></pre>
+                            <pre data-prefix="12"><code>    /&gt;</code></pre>
+                            <pre data-prefix="13"><code>  );</code></pre>
+                            <pre data-prefix="14"><code>}</code></pre>
+                        </div>
+
+                        <div class="alert alert-info mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <div>
+                                <h4 class="font-bold">Features</h4>
+                                <ul class="list-disc list-inside mt-2">
+                                    <li>Interactive schema visualization</li>
+                                    <li>Cube relationships mapping</li>
+                                    <li>Measure and dimension exploration</li>
+                                    <li>Zoom and pan capabilities</li>
+                                    <li>Schema navigation</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Sub-components -->
+                        <div class="space-y-8">
+                            <div id="cubenode" class="border-l-4 border-primary pl-4">
+                                <h4 class="text-xl font-semibold mb-3">CubeNode</h4>
+                                <p class="mb-3">Individual cube node within the schema visualizer.</p>
+                                <div class="mockup-code">
+                                    <pre data-prefix="1"><code>import { CubeNode } from '@cubekit/react';</code></pre>
+                                    <pre data-prefix="2"><code></code></pre>
+                                    <pre data-prefix="3"><code>function SchemaNode({ cube }) {</code></pre>
+                                    <pre data-prefix="4"><code>  return (</code></pre>
+                                    <pre data-prefix="5"><code>    &lt;CubeNode</code></pre>
+                                    <pre data-prefix="6"><code>      cube={cube}</code></pre>
+                                    <pre data-prefix="7"><code>      position={{ x: 100, y: 100 }}</code></pre>
+                                    <pre data-prefix="8"><code>      onSelect={(cubeName) =&gt; console.log('Selected:', cubeName)}</code></pre>
+                                    <pre data-prefix="9"><code>      isSelected={false}</code></pre>
+                                    <pre data-prefix="10"><code>      className="cursor-pointer"</code></pre>
+                                    <pre data-prefix="11"><code>    /&gt;</code></pre>
+                                    <pre data-prefix="12"><code>  );</code></pre>
+                                    <pre data-prefix="13"><code>}</code></pre>
                                 </div>
                             </div>
                         </div>
@@ -367,151 +691,695 @@
                         <div class="card bg-base-100 shadow-xl mb-6">
                             <div class="card-body">
                                 <h4 class="card-title">Live Preview</h4>
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 bg-base-200 rounded-lg">
-                                    <div class="bg-white border rounded-lg p-4">
-                                        <h5 class="font-semibold mb-2">Revenue Chart</h5>
-                                        <div class="h-24 bg-gradient-to-r from-blue-100 to-blue-200 rounded flex items-end justify-around p-2">
-                                            <div class="bg-blue-500 w-4 h-8 rounded-t"></div>
-                                            <div class="bg-blue-500 w-4 h-12 rounded-t"></div>
-                                            <div class="bg-blue-500 w-4 h-6 rounded-t"></div>
-                                            <div class="bg-blue-500 w-4 h-16 rounded-t"></div>
-                                        </div>
-                                    </div>
-                                    <div class="bg-white border rounded-lg p-4">
-                                        <h5 class="font-semibold mb-2">Key Metrics</h5>
-                                        <div class="space-y-2">
-                                            <div class="stat">
-                                                <div class="stat-value text-lg">1,234</div>
-                                                <div class="stat-desc">Total Orders</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <img src="screenshots/dashboard-builder.png" alt="Dashboard Builder Component" class="w-full rounded-lg border border-base-300">
                             </div>
                         </div>
 
                         <div class="mockup-code mb-8">
                             <pre data-prefix="1"><code>import { DashboardBuilder } from '@cubekit/react';</code></pre>
                             <pre data-prefix="2"><code></code></pre>
-                            <pre data-prefix="3"><code>&lt;DashboardBuilder</code></pre>
-                            <pre data-prefix="4"><code>  cubeApi={cubeApi}</code></pre>
-                            <pre data-prefix="5"><code>  layout={layout}</code></pre>
-                            <pre data-prefix="6"><code>  onLayoutChange={setLayout}</code></pre>
-                            <pre data-prefix="7"><code>  enableDragDrop={true}</code></pre>
-                            <pre data-prefix="8"><code>/&gt;</code></pre>
+                            <pre data-prefix="3"><code>function Dashboard() {</code></pre>
+                            <pre data-prefix="4"><code>  return (</code></pre>
+                            <pre data-prefix="5"><code>    &lt;DashboardBuilder</code></pre>
+                            <pre data-prefix="6"><code>      className="w-full h-screen"</code></pre>
+                            <pre data-prefix="7"><code>      enableEditing={true}</code></pre>
+                            <pre data-prefix="8"><code>      gridSize={12}</code></pre>
+                            <pre data-prefix="9"><code>    /&gt;</code></pre>
+                            <pre data-prefix="10"><code>  );</code></pre>
+                            <pre data-prefix="11"><code>}</code></pre>
+                        </div>
+
+                        <div class="alert alert-info mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <div>
+                                <h4 class="font-bold">Features</h4>
+                                <ul class="list-disc list-inside mt-2">
+                                    <li>Drag-and-drop widget arrangement</li>
+                                    <li>Multiple widget types (charts, tables, stats)</li>
+                                    <li>Real-time data updates</li>
+                                    <li>Dashboard sharing and export</li>
+                                    <li>Responsive grid layout</li>
+                                </ul>
+                            </div>
                         </div>
 
                         <!-- Sub-components -->
                         <div class="space-y-8">
-                            <div id="widget-library" class="border-l-4 border-primary pl-4">
-                                <h4 class="text-xl font-semibold mb-3">Widget Library</h4>
-                                <p class="mb-3">Pre-built widgets for charts, tables, and KPI cards.</p>
+                            <div id="widget" class="border-l-4 border-primary pl-4">
+                                <h4 class="text-xl font-semibold mb-3">Widget</h4>
+                                <p class="mb-3">Individual dashboard widget component.</p>
                                 <div class="mockup-code">
-                                    <pre data-prefix="1"><code>&lt;DashboardBuilder.WidgetLibrary</code></pre>
-                                    <pre data-prefix="2"><code>  availableWidgets={widgets}</code></pre>
-                                    <pre data-prefix="3"><code>  onWidgetAdd={handleWidgetAdd}</code></pre>
-                                    <pre data-prefix="4"><code>/&gt;</code></pre>
+                                    <pre data-prefix="1"><code>import { Widget } from '@cubekit/react';</code></pre>
+                                    <pre data-prefix="2"><code></code></pre>
+                                    <pre data-prefix="3"><code>function DashboardWidget({ widgetConfig }) {</code></pre>
+                                    <pre data-prefix="4"><code>  return (</code></pre>
+                                    <pre data-prefix="5"><code>    &lt;Widget</code></pre>
+                                    <pre data-prefix="6"><code>      id={widgetConfig.id}</code></pre>
+                                    <pre data-prefix="7"><code>      type={widgetConfig.type}</code></pre>
+                                    <pre data-prefix="8"><code>      query={widgetConfig.query}</code></pre>
+                                    <pre data-prefix="9"><code>      title={widgetConfig.title}</code></pre>
+                                    <pre data-prefix="10"><code>      size={{ width: 6, height: 4 }}</code></pre>
+                                    <pre data-prefix="11"><code>      onEdit={(id) =&gt; console.log('Edit widget:', id)}</code></pre>
+                                    <pre data-prefix="12"><code>      onDelete={(id) =&gt; console.log('Delete widget:', id)}</code></pre>
+                                    <pre data-prefix="13"><code>      className="border rounded-lg"</code></pre>
+                                    <pre data-prefix="14"><code>    /&gt;</code></pre>
+                                    <pre data-prefix="15"><code>  );</code></pre>
+                                    <pre data-prefix="16"><code>}</code></pre>
                                 </div>
                             </div>
 
-                            <div id="layout-manager" class="border-l-4 border-secondary pl-4">
-                                <h4 class="text-xl font-semibold mb-3">Layout Manager</h4>
-                                <p class="mb-3">Grid-based layout system with responsive breakpoints.</p>
+                            <div id="dashboardsidebar" class="border-l-4 border-secondary pl-4">
+                                <h4 class="text-xl font-semibold mb-3">DashboardSidebar</h4>
+                                <p class="mb-3">Sidebar for dashboard management and widget library.</p>
                                 <div class="mockup-code">
-                                    <pre data-prefix="1"><code>&lt;DashboardBuilder.LayoutManager</code></pre>
-                                    <pre data-prefix="2"><code>  gridSize={12}</code></pre>
-                                    <pre data-prefix="3"><code>  responsive={true}</code></pre>
-                                    <pre data-prefix="4"><code>/&gt;</code></pre>
-                                </div>
-                            </div>
-
-                            <div id="dashboard-export" class="border-l-4 border-accent pl-4">
-                                <h4 class="text-xl font-semibold mb-3">Export Tools</h4>
-                                <p class="mb-3">Export dashboards as PDF, PNG, or share via URL.</p>
-                                <div class="mockup-code">
-                                    <pre data-prefix="1"><code>&lt;DashboardBuilder.ExportTools</code></pre>
-                                    <pre data-prefix="2"><code>  dashboard={dashboard}</code></pre>
-                                    <pre data-prefix="3"><code>  formats={['pdf', 'png', 'share']}</code></pre>
-                                    <pre data-prefix="4"><code>/&gt;</code></pre>
+                                    <pre data-prefix="1"><code>import { DashboardSidebar } from '@cubekit/react';</code></pre>
+                                    <pre data-prefix="2"><code></code></pre>
+                                    <pre data-prefix="3"><code>function DashboardControls() {</code></pre>
+                                    <pre data-prefix="4"><code>  return (</code></pre>
+                                    <pre data-prefix="5"><code>    &lt;DashboardSidebar</code></pre>
+                                    <pre data-prefix="6"><code>      onAddWidget={(type) =&gt; console.log('Add widget:', type)}</code></pre>
+                                    <pre data-prefix="7"><code>      onSaveDashboard={() =&gt; console.log('Save dashboard')}</code></pre>
+                                    <pre data-prefix="8"><code>      className="w-64 h-full"</code></pre>
+                                    <pre data-prefix="9"><code>    /&gt;</code></pre>
+                                    <pre data-prefix="10"><code>  );</code></pre>
+                                    <pre data-prefix="11"><code>}</code></pre>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- AI ChatBot -->
-                    <div id="ai-chatbot" class="mb-16">
-                        <h3 class="text-2xl font-bold mb-4">AI ChatBot</h3>
-                        <p class="mb-4">Natural language query interface powered by AI that converts conversational requests into Cube.dev queries.</p>
+                </section>
+
+                <!-- Shared Components -->
+                <section id="shared-components" class="mb-16">
+                    <h2 class="text-3xl font-bold mb-8">Shared Components</h2>
+
+                    <!-- ChartVisualization -->
+                    <div id="chartvisualization" class="mb-12">
+                        <h3 class="text-2xl font-bold mb-4">ChartVisualization</h3>
+                        <p class="mb-6">Versatile chart component supporting multiple visualization types.</p>
                         
                         <div class="card bg-base-100 shadow-xl mb-6">
                             <div class="card-body">
-                                <h4 class="card-title">Live Preview</h4>
-                                <div class="bg-base-100 rounded-lg p-4 space-y-4">
-                                    <div class="chat chat-end">
-                                        <div class="chat-bubble chat-bubble-primary">
-                                            Show me total sales by month for the last 6 months
+                                <h4 class="card-title mb-4">Live Preview</h4>
+                                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-4 bg-base-200 rounded-lg">
+                                    <div class="bg-white border rounded-lg p-3 text-center">
+                                        <div class="text-xs text-gray-500 mb-2">Bar Chart</div>
+                                        <div class="h-12 flex items-end justify-center space-x-1">
+                                            <div class="bg-blue-500 w-2 h-6"></div>
+                                            <div class="bg-blue-500 w-2 h-8"></div>
+                                            <div class="bg-blue-500 w-2 h-4"></div>
+                                            <div class="bg-blue-500 w-2 h-10"></div>
                                         </div>
                                     </div>
-                                    <div class="chat chat-start">
-                                        <div class="chat-bubble">
-                                            I'll create a query to show monthly sales data. Here's what I found:
-                                            <div class="mt-2 p-2 bg-base-200 rounded text-xs font-mono">
-                                                SELECT SUM(amount) as total_sales, DATE_TRUNC('month', created_at) as month<br/>
-                                                FROM orders WHERE created_at >= NOW() - INTERVAL '6 months'<br/>
-                                                GROUP BY month
-                                            </div>
+                                    <div class="bg-white border rounded-lg p-3 text-center">
+                                        <div class="text-xs text-gray-500 mb-2">Line Chart</div>
+                                        <div class="h-12 flex items-center justify-center">
+                                            <svg class="w-full h-8" viewBox="0 0 40 20">
+                                                <polyline points="2,15 10,8 20,12 30,5 38,10" stroke="#3b82f6" stroke-width="2" fill="none"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white border rounded-lg p-3 text-center">
+                                        <div class="text-xs text-gray-500 mb-2">Pie Chart</div>
+                                        <div class="h-12 flex items-center justify-center">
+                                            <div class="w-8 h-8 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-green-500"></div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white border rounded-lg p-3 text-center">
+                                        <div class="text-xs text-gray-500 mb-2">Area Chart</div>
+                                        <div class="h-12 flex items-end justify-center">
+                                            <svg class="w-full h-8" viewBox="0 0 40 20">
+                                                <polygon points="2,18 10,12 20,14 30,8 38,12 38,18" fill="#3b82f6" opacity="0.3"/>
+                                            </svg>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="mockup-code mb-8">
-                            <pre data-prefix="1"><code>import { AIChatBot } from '@cubekit/react';</code></pre>
+                        <div class="mockup-code mb-6">
+                            <pre data-prefix="1"><code>import { ChartVisualization } from '@cubekit/react';</code></pre>
                             <pre data-prefix="2"><code></code></pre>
-                            <pre data-prefix="3"><code>&lt;AIChatBot</code></pre>
-                            <pre data-prefix="4"><code>  cubeApi={cubeApi}</code></pre>
-                            <pre data-prefix="5"><code>  aiApiKey={process.env.REACT_APP_AI_API_KEY}</code></pre>
-                            <pre data-prefix="6"><code>  onQueryGenerated={handleQueryGenerated}</code></pre>
-                            <pre data-prefix="7"><code>  enableQuerySuggestions={true}</code></pre>
-                            <pre data-prefix="8"><code>/&gt;</code></pre>
+                            <pre data-prefix="3"><code>function DataChart({ resultSet }) {</code></pre>
+                            <pre data-prefix="4"><code>  return (</code></pre>
+                            <pre data-prefix="5"><code>    &lt;ChartVisualization</code></pre>
+                            <pre data-prefix="6"><code>      resultSet={resultSet}</code></pre>
+                            <pre data-prefix="7"><code>      type="bar"</code></pre>
+                            <pre data-prefix="8"><code>      title="Sales Overview"</code></pre>
+                            <pre data-prefix="9"><code>      width={800}</code></pre>
+                            <pre data-prefix="10"><code>      height={400}</code></pre>
+                            <pre data-prefix="11"><code>      showLegend={true}</code></pre>
+                            <pre data-prefix="12"><code>      enableDrillDown={true}</code></pre>
+                            <pre data-prefix="13"><code>      className="border rounded-lg p-4"</code></pre>
+                            <pre data-prefix="14"><code>    /&gt;</code></pre>
+                            <pre data-prefix="15"><code>  );</code></pre>
+                            <pre data-prefix="16"><code>}</code></pre>
                         </div>
 
-                        <!-- Sub-components -->
-                        <div class="space-y-8">
-                            <div id="chat-interface" class="border-l-4 border-primary pl-4">
-                                <h4 class="text-xl font-semibold mb-3">Chat Interface</h4>
-                                <p class="mb-3">Conversational UI for natural language queries.</p>
-                                <div class="mockup-code">
-                                    <pre data-prefix="1"><code>&lt;AIChatBot.ChatInterface</code></pre>
-                                    <pre data-prefix="2"><code>  messages={messages}</code></pre>
-                                    <pre data-prefix="3"><code>  onSendMessage={handleSendMessage}</code></pre>
-                                    <pre data-prefix="4"><code>/&gt;</code></pre>
-                                </div>
+                        <div class="alert alert-info mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <div>
+                                <h4 class="font-bold">Features</h4>
+                                <ul class="list-disc list-inside mt-2">
+                                    <li>Multiple chart types with consistent API</li>
+                                    <li>Drill-down capabilities for Cube.js results</li>
+                                    <li>Responsive design</li>
+                                    <li>Theme-aware styling</li>
+                                    <li>Interactive tooltips and legends</li>
+                                </ul>
                             </div>
+                        </div>
+                    </div>
 
-                            <div id="query-suggestions" class="border-l-4 border-secondary pl-4">
-                                <h4 class="text-xl font-semibold mb-3">Query Suggestions</h4>
-                                <p class="mb-3">AI-powered suggestions for common queries.</p>
-                                <div class="mockup-code">
-                                    <pre data-prefix="1"><code>&lt;AIChatBot.QuerySuggestions</code></pre>
-                                    <pre data-prefix="2"><code>  schema={schema}</code></pre>
-                                    <pre data-prefix="3"><code>  onSuggestionSelect={handleSuggestion}</code></pre>
-                                    <pre data-prefix="4"><code>/&gt;</code></pre>
-                                </div>
-                            </div>
+                    <!-- QueryResultTable -->
+                    <div id="queryresulttable" class="mb-12">
+                        <h3 class="text-2xl font-bold mb-4">QueryResultTable</h3>
+                        <p class="mb-6">Table component for displaying query results in tabular format.</p>
+                        
+                        <div class="mockup-code mb-6">
+                            <pre data-prefix="1"><code>import { QueryResultTable } from '@cubekit/react';</code></pre>
+                            <pre data-prefix="2"><code></code></pre>
+                            <pre data-prefix="3"><code>function ResultsTable({ data }) {</code></pre>
+                            <pre data-prefix="4"><code>  return (</code></pre>
+                            <pre data-prefix="5"><code>    &lt;QueryResultTable</code></pre>
+                            <pre data-prefix="6"><code>      data={data}</code></pre>
+                            <pre data-prefix="7"><code>      pagination={true}</code></pre>
+                            <pre data-prefix="8"><code>      pageSize={25}</code></pre>
+                            <pre data-prefix="9"><code>      sortable={true}</code></pre>
+                            <pre data-prefix="10"><code>      exportable={true}</code></pre>
+                            <pre data-prefix="11"><code>      className="w-full"</code></pre>
+                            <pre data-prefix="12"><code>    /&gt;</code></pre>
+                            <pre data-prefix="13"><code>  );</code></pre>
+                            <pre data-prefix="14"><code>}</code></pre>
+                        </div>
+                    </div>
 
-                            <div id="natural-language" class="border-l-4 border-accent pl-4">
-                                <h4 class="text-xl font-semibold mb-3">Natural Language Processor</h4>
-                                <p class="mb-3">Converts natural language to Cube.dev queries.</p>
-                                <div class="mockup-code">
-                                    <pre data-prefix="1"><code>&lt;AIChatBot.NaturalLanguage</code></pre>
-                                    <pre data-prefix="2"><code>  input={userInput}</code></pre>
-                                    <pre data-prefix="3"><code>  schema={schema}</code></pre>
-                                    <pre data-prefix="4"><code>  onQueryGenerated={handleQuery}</code></pre>
-                                    <pre data-prefix="5"><code>/&gt;</code></pre>
-                                </div>
-                            </div>
+                    <!-- StatCard -->
+                    <div id="statcard" class="mb-12">
+                        <h3 class="text-2xl font-bold mb-4">StatCard</h3>
+                        <p class="mb-6">Card component for displaying key metrics and statistics.</p>
+                        
+                        <div class="mockup-code mb-6">
+                            <pre data-prefix="1"><code>import { StatCard } from '@cubekit/react';</code></pre>
+                            <pre data-prefix="2"><code></code></pre>
+                            <pre data-prefix="3"><code>function MetricCard() {</code></pre>
+                            <pre data-prefix="4"><code>  return (</code></pre>
+                            <pre data-prefix="5"><code>    &lt;StatCard</code></pre>
+                            <pre data-prefix="6"><code>      title="Total Revenue"</code></pre>
+                            <pre data-prefix="7"><code>      value="$125,430"</code></pre>
+                            <pre data-prefix="8"><code>      change="+12.5%"</code></pre>
+                            <pre data-prefix="9"><code>      trend="up"</code></pre>
+                            <pre data-prefix="10"><code>      icon="💰"</code></pre>
+                            <pre data-prefix="11"><code>      className="bg-white shadow-lg rounded-lg p-6"</code></pre>
+                            <pre data-prefix="12"><code>    /&gt;</code></pre>
+                            <pre data-prefix="13"><code>  );</code></pre>
+                            <pre data-prefix="14"><code>}</code></pre>
+                        </div>
+                    </div>
+
+                    <!-- CubeConnection -->
+                    <div id="cubeconnection" class="mb-12">
+                        <h3 class="text-2xl font-bold mb-4">CubeConnection</h3>
+                        <p class="mb-6">Component for managing and testing Cube.js connections.</p>
+                        
+                        <div class="mockup-code mb-6">
+                            <pre data-prefix="1"><code>import { CubeConnection } from '@cubekit/react';</code></pre>
+                            <pre data-prefix="2"><code></code></pre>
+                            <pre data-prefix="3"><code>function ConnectionManager() {</code></pre>
+                            <pre data-prefix="4"><code>  return (</code></pre>
+                            <pre data-prefix="5"><code>    &lt;CubeConnection</code></pre>
+                            <pre data-prefix="6"><code>      onConnectionTest={(result) =&gt; console.log('Connection test:', result)}</code></pre>
+                            <pre data-prefix="7"><code>      onMetaRefresh={() =&gt; console.log('Refreshing metadata...')}</code></pre>
+                            <pre data-prefix="8"><code>      showStatus={true}</code></pre>
+                            <pre data-prefix="9"><code>      className="p-4 border rounded"</code></pre>
+                            <pre data-prefix="10"><code>    /&gt;</code></pre>
+                            <pre data-prefix="11"><code>  );</code></pre>
+                            <pre data-prefix="12"><code>}</code></pre>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Hooks -->
+                <section id="hooks" class="mb-16">
+                    <h2 class="text-3xl font-bold mb-8">Hooks</h2>
+
+                    <!-- useCube -->
+                    <div id="usecube" class="mb-12">
+                        <h3 class="text-2xl font-bold mb-4">useCube</h3>
+                        <p class="mb-6">Hook for accessing Cube.js context and functionality.</p>
+                        
+                        <div class="mockup-code mb-6">
+                            <pre data-prefix="1"><code>import { useCube } from '@cubekit/react';</code></pre>
+                            <pre data-prefix="2"><code></code></pre>
+                            <pre data-prefix="3"><code>function MyComponent() {</code></pre>
+                            <pre data-prefix="4"><code>  const {</code></pre>
+                            <pre data-prefix="5"><code>    meta,</code></pre>
+                            <pre data-prefix="6"><code>    isLoading,</code></pre>
+                            <pre data-prefix="7"><code>    error,</code></pre>
+                            <pre data-prefix="8"><code>    executeQuery,</code></pre>
+                            <pre data-prefix="9"><code>    executeSqlQuery,</code></pre>
+                            <pre data-prefix="10"><code>    refetchMeta</code></pre>
+                            <pre data-prefix="11"><code>  } = useCube();</code></pre>
+                            <pre data-prefix="12"><code></code></pre>
+                            <pre data-prefix="13"><code>  // Use cube data and methods</code></pre>
+                            <pre data-prefix="14"><code>  if (isLoading) return &lt;div&gt;Loading...&lt;/div&gt;;</code></pre>
+                            <pre data-prefix="15"><code>  if (error) return &lt;div&gt;Error: {error}&lt;/div&gt;;</code></pre>
+                            <pre data-prefix="16"><code></code></pre>
+                            <pre data-prefix="17"><code>  return (</code></pre>
+                            <pre data-prefix="18"><code>    &lt;div&gt;</code></pre>
+                            <pre data-prefix="19"><code>      &lt;h3&gt;Available Cubes: {meta?.cubes?.length}&lt;/h3&gt;</code></pre>
+                            <pre data-prefix="20"><code>      &lt;button onClick={refetchMeta}&gt;Refresh Schema&lt;/button&gt;</code></pre>
+                            <pre data-prefix="21"><code>    &lt;/div&gt;</code></pre>
+                            <pre data-prefix="22"><code>  );</code></pre>
+                            <pre data-prefix="23"><code>}</code></pre>
+                        </div>
+
+                        <div class="overflow-x-auto mb-6">
+                            <table class="table table-zebra">
+                                <thead>
+                                    <tr>
+                                        <th>Return Value</th>
+                                        <th>Type</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><code>meta</code></td>
+                                        <td><code>CubeMeta | null</code></td>
+                                        <td>Cube schema metadata</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>cubes</code></td>
+                                        <td><code>any[] | null</code></td>
+                                        <td>Available cubes</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>isLoading</code></td>
+                                        <td><code>boolean</code></td>
+                                        <td>Loading state</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>error</code></td>
+                                        <td><code>string | null</code></td>
+                                        <td>Error message</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>executeQuery</code></td>
+                                        <td><code>(query: CubeQuery) => Promise&lt;QueryResult&gt;</code></td>
+                                        <td>Execute Cube.js query</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>executeSqlQuery</code></td>
+                                        <td><code>(sql: string) => Promise&lt;SqlQueryResult&gt;</code></td>
+                                        <td>Execute SQL query</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>refetchMeta</code></td>
+                                        <td><code>() => Promise&lt;void&gt;</code></td>
+                                        <td>Refresh metadata</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>cubeApi</code></td>
+                                        <td><code>string</code></td>
+                                        <td>API URL</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- useQuery -->
+                    <div id="usequery" class="mb-12">
+                        <h3 class="text-2xl font-bold mb-4">useQuery</h3>
+                        <p class="mb-6">Hook for managing query builder state.</p>
+                        
+                        <div class="mockup-code mb-6">
+                            <pre data-prefix="1"><code>import { useQuery } from '@cubekit/react';</code></pre>
+                            <pre data-prefix="2"><code></code></pre>
+                            <pre data-prefix="3"><code>function QueryManager() {</code></pre>
+                            <pre data-prefix="4"><code>  const {</code></pre>
+                            <pre data-prefix="5"><code>    state,</code></pre>
+                            <pre data-prefix="6"><code>    updateQuery,</code></pre>
+                            <pre data-prefix="7"><code>    createQuery,</code></pre>
+                            <pre data-prefix="8"><code>    deleteQuery,</code></pre>
+                            <pre data-prefix="9"><code>    setCurrentResults</code></pre>
+                            <pre data-prefix="10"><code>  } = useQuery();</code></pre>
+                            <pre data-prefix="11"><code></code></pre>
+                            <pre data-prefix="12"><code>  const handleCreateQuery = () =&gt; {</code></pre>
+                            <pre data-prefix="13"><code>    const queryId = createQuery('My New Query');</code></pre>
+                            <pre data-prefix="14"><code>    updateQuery(queryId, {</code></pre>
+                            <pre data-prefix="15"><code>      query: {</code></pre>
+                            <pre data-prefix="16"><code>        measures: ['Orders.count'],</code></pre>
+                            <pre data-prefix="17"><code>        dimensions: ['Orders.status'],</code></pre>
+                            <pre data-prefix="18"><code>        segments: [],</code></pre>
+                            <pre data-prefix="19"><code>        timeDimensions: [],</code></pre>
+                            <pre data-prefix="20"><code>        filters: [],</code></pre>
+                            <pre data-prefix="21"><code>        limit: 1000,</code></pre>
+                            <pre data-prefix="22"><code>        order: {}</code></pre>
+                            <pre data-prefix="23"><code>      }</code></pre>
+                            <pre data-prefix="24"><code>    });</code></pre>
+                            <pre data-prefix="25"><code>  };</code></pre>
+                            <pre data-prefix="26"><code></code></pre>
+                            <pre data-prefix="27"><code>  return (</code></pre>
+                            <pre data-prefix="28"><code>    &lt;div&gt;</code></pre>
+                            <pre data-prefix="29"><code>      &lt;button onClick={handleCreateQuery}&gt;Create Query&lt;/button&gt;</code></pre>
+                            <pre data-prefix="30"><code>      &lt;p&gt;Active queries: {state.savedQueries.length}&lt;/p&gt;</code></pre>
+                            <pre data-prefix="31"><code>    &lt;/div&gt;</code></pre>
+                            <pre data-prefix="32"><code>  );</code></pre>
+                            <pre data-prefix="33"><code>}</code></pre>
+                        </div>
+                    </div>
+
+                    <!-- useConversation -->
+                    <div id="useconversation" class="mb-12">
+                        <h3 class="text-2xl font-bold mb-4">useConversation</h3>
+                        <p class="mb-6">Hook for managing conversation state in AI chat interface.</p>
+                        
+                        <div class="mockup-code mb-6">
+                            <pre data-prefix="1"><code>import { useConversation } from '@cubekit/react';</code></pre>
+                            <pre data-prefix="2"><code></code></pre>
+                            <pre data-prefix="3"><code>function ChatManager() {</code></pre>
+                            <pre data-prefix="4"><code>  const {</code></pre>
+                            <pre data-prefix="5"><code>    state,</code></pre>
+                            <pre data-prefix="6"><code>    sendMessage,</code></pre>
+                            <pre data-prefix="7"><code>    createConversation,</code></pre>
+                            <pre data-prefix="8"><code>    deleteConversation</code></pre>
+                            <pre data-prefix="9"><code>  } = useConversation();</code></pre>
+                            <pre data-prefix="10"><code></code></pre>
+                            <pre data-prefix="11"><code>  const handleSendMessage = async (content: string) =&gt; {</code></pre>
+                            <pre data-prefix="12"><code>    await sendMessage(content, 'user');</code></pre>
+                            <pre data-prefix="13"><code>    // AI response would be handled internally</code></pre>
+                            <pre data-prefix="14"><code>  };</code></pre>
+                            <pre data-prefix="15"><code></code></pre>
+                            <pre data-prefix="16"><code>  return (</code></pre>
+                            <pre data-prefix="17"><code>    &lt;div&gt;</code></pre>
+                            <pre data-prefix="18"><code>      &lt;button onClick={() =&gt; createConversation('New Chat')}&gt;</code></pre>
+                            <pre data-prefix="19"><code>        New Conversation</code></pre>
+                            <pre data-prefix="20"><code>      &lt;/button&gt;</code></pre>
+                            <pre data-prefix="21"><code>      &lt;p&gt;Conversations: {state.conversations.length}&lt;/p&gt;</code></pre>
+                            <pre data-prefix="22"><code>    &lt;/div&gt;</code></pre>
+                            <pre data-prefix="23"><code>  );</code></pre>
+                            <pre data-prefix="24"><code>}</code></pre>
+                        </div>
+                    </div>
+
+                    <!-- useDashboard -->
+                    <div id="usedashboard" class="mb-12">
+                        <h3 class="text-2xl font-bold mb-4">useDashboard</h3>
+                        <p class="mb-6">Hook for managing dashboard state and widgets.</p>
+                        
+                        <div class="mockup-code mb-6">
+                            <pre data-prefix="1"><code>import { useDashboard } from '@cubekit/react';</code></pre>
+                            <pre data-prefix="2"><code></code></pre>
+                            <pre data-prefix="3"><code>function DashboardManager() {</code></pre>
+                            <pre data-prefix="4"><code>  const {</code></pre>
+                            <pre data-prefix="5"><code>    state,</code></pre>
+                            <pre data-prefix="6"><code>    createDashboard,</code></pre>
+                            <pre data-prefix="7"><code>    addWidget,</code></pre>
+                            <pre data-prefix="8"><code>    updateWidget,</code></pre>
+                            <pre data-prefix="9"><code>    deleteWidget</code></pre>
+                            <pre data-prefix="10"><code>  } = useDashboard();</code></pre>
+                            <pre data-prefix="11"><code></code></pre>
+                            <pre data-prefix="12"><code>  const handleAddChart = () =&gt; {</code></pre>
+                            <pre data-prefix="13"><code>    if (state.activeDashboardId) {</code></pre>
+                            <pre data-prefix="14"><code>      addWidget(state.activeDashboardId, {</code></pre>
+                            <pre data-prefix="15"><code>        type: 'chart',</code></pre>
+                            <pre data-prefix="16"><code>        title: 'New Chart',</code></pre>
+                            <pre data-prefix="17"><code>        query: { measures: ['Orders.count'], dimensions: [] },</code></pre>
+                            <pre data-prefix="18"><code>        visualization: { type: 'bar' },</code></pre>
+                            <pre data-prefix="19"><code>        size: { width: 6, height: 4 },</code></pre>
+                            <pre data-prefix="20"><code>        position: { x: 0, y: 0 }</code></pre>
+                            <pre data-prefix="21"><code>      });</code></pre>
+                            <pre data-prefix="22"><code>    }</code></pre>
+                            <pre data-prefix="23"><code>  };</code></pre>
+                            <pre data-prefix="24"><code></code></pre>
+                            <pre data-prefix="25"><code>  return (</code></pre>
+                            <pre data-prefix="26"><code>    &lt;div&gt;</code></pre>
+                            <pre data-prefix="27"><code>      &lt;button onClick={handleAddChart}&gt;Add Chart Widget&lt;/button&gt;</code></pre>
+                            <pre data-prefix="28"><code>      &lt;p&gt;Dashboards: {state.dashboards.length}&lt;/p&gt;</code></pre>
+                            <pre data-prefix="29"><code>    &lt;/div&gt;</code></pre>
+                            <pre data-prefix="30"><code>  );</code></pre>
+                            <pre data-prefix="31"><code>}</code></pre>
+                        </div>
+                    </div>
+
+                    <!-- useSqlQuery -->
+                    <div id="usesqlquery" class="mb-12">
+                        <h3 class="text-2xl font-bold mb-4">useSqlQuery</h3>
+                        <p class="mb-6">Hook for managing SQL query state.</p>
+                        
+                        <div class="mockup-code mb-6">
+                            <pre data-prefix="1"><code>import { useSqlQuery } from '@cubekit/react';</code></pre>
+                            <pre data-prefix="2"><code></code></pre>
+                            <pre data-prefix="3"><code>function SqlManager() {</code></pre>
+                            <pre data-prefix="4"><code>  const {</code></pre>
+                            <pre data-prefix="5"><code>    state,</code></pre>
+                            <pre data-prefix="6"><code>    executeQuery,</code></pre>
+                            <pre data-prefix="7"><code>    saveQuery,</code></pre>
+                            <pre data-prefix="8"><code>    updateQuery</code></pre>
+                            <pre data-prefix="9"><code>  } = useSqlQuery();</code></pre>
+                            <pre data-prefix="10"><code></code></pre>
+                            <pre data-prefix="11"><code>  const handleExecuteQuery = async () =&gt; {</code></pre>
+                            <pre data-prefix="12"><code>    const sql = "SELECT * FROM Orders LIMIT 10";</code></pre>
+                            <pre data-prefix="13"><code>    await executeQuery(sql);</code></pre>
+                            <pre data-prefix="14"><code>  };</code></pre>
+                            <pre data-prefix="15"><code></code></pre>
+                            <pre data-prefix="16"><code>  return (</code></pre>
+                            <pre data-prefix="17"><code>    &lt;div&gt;</code></pre>
+                            <pre data-prefix="18"><code>      &lt;button onClick={handleExecuteQuery}&gt;Execute Query&lt;/button&gt;</code></pre>
+                            <pre data-prefix="19"><code>      &lt;p&gt;Query history: {state.queryHistory.length}&lt;/p&gt;</code></pre>
+                            <pre data-prefix="20"><code>    &lt;/div&gt;</code></pre>
+                            <pre data-prefix="21"><code>  );</code></pre>
+                            <pre data-prefix="22"><code>}</code></pre>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Examples -->
+                <section id="examples" class="mb-16">
+                    <h2 class="text-3xl font-bold mb-8">Examples</h2>
+
+                    <!-- Complete Query Builder Application -->
+                    <div id="example-querybuilder" class="mb-12">
+                        <h3 class="text-2xl font-bold mb-4">Complete Query Builder Application</h3>
+                        
+                        <div class="mockup-code">
+                            <pre data-prefix="1"><code>import React from 'react';</code></pre>
+                            <pre data-prefix="2"><code>import {</code></pre>
+                            <pre data-prefix="3"><code>  CubeKitProvider,</code></pre>
+                            <pre data-prefix="4"><code>  QueryBuilder,</code></pre>
+                            <pre data-prefix="5"><code>  QuerySidebar,</code></pre>
+                            <pre data-prefix="6"><code>  ChartVisualization,</code></pre>
+                            <pre data-prefix="7"><code>  QueryResultTable,</code></pre>
+                            <pre data-prefix="8"><code>  useCube,</code></pre>
+                            <pre data-prefix="9"><code>  useQuery</code></pre>
+                            <pre data-prefix="10"><code>} from '@cubekit/react';</code></pre>
+                            <pre data-prefix="11"><code></code></pre>
+                            <pre data-prefix="12"><code>function App() {</code></pre>
+                            <pre data-prefix="13"><code>  return (</code></pre>
+                            <pre data-prefix="14"><code>    &lt;CubeKitProvider config={{ cubeApiUrl: 'http://localhost:4000/cubejs-api/v1' }}&gt;</code></pre>
+                            <pre data-prefix="15"><code>      &lt;div className="flex h-screen"&gt;</code></pre>
+                            <pre data-prefix="16"><code>        &lt;QuerySidebar className="w-64 border-r" /&gt;</code></pre>
+                            <pre data-prefix="17"><code>        &lt;div className="flex-1 flex flex-col"&gt;</code></pre>
+                            <pre data-prefix="18"><code>          &lt;QueryBuilder className="flex-1" /&gt;</code></pre>
+                            <pre data-prefix="19"><code>        &lt;/div&gt;</code></pre>
+                            <pre data-prefix="20"><code>      &lt;/div&gt;</code></pre>
+                            <pre data-prefix="21"><code>    &lt;/CubeKitProvider&gt;</code></pre>
+                            <pre data-prefix="22"><code>  );</code></pre>
+                            <pre data-prefix="23"><code>}</code></pre>
+                            <pre data-prefix="24"><code></code></pre>
+                            <pre data-prefix="25"><code>export default App;</code></pre>
+                        </div>
+                    </div>
+
+                    <!-- Dashboard with Multiple Widgets -->
+                    <div id="example-dashboard" class="mb-12">
+                        <h3 class="text-2xl font-bold mb-4">Dashboard with Multiple Widgets</h3>
+                        
+                        <div class="mockup-code">
+                            <pre data-prefix="1"><code>import React from 'react';</code></pre>
+                            <pre data-prefix="2"><code>import {</code></pre>
+                            <pre data-prefix="3"><code>  CubeKitProvider,</code></pre>
+                            <pre data-prefix="4"><code>  DashboardBuilder,</code></pre>
+                            <pre data-prefix="5"><code>  DashboardSidebar</code></pre>
+                            <pre data-prefix="6"><code>} from '@cubekit/react';</code></pre>
+                            <pre data-prefix="7"><code></code></pre>
+                            <pre data-prefix="8"><code>function DashboardApp() {</code></pre>
+                            <pre data-prefix="9"><code>  return (</code></pre>
+                            <pre data-prefix="10"><code>    &lt;CubeKitProvider config={{ cubeApiUrl: 'http://localhost:4000/cubejs-api/v1' }}&gt;</code></pre>
+                            <pre data-prefix="11"><code>      &lt;div className="flex h-screen"&gt;</code></pre>
+                            <pre data-prefix="12"><code>        &lt;DashboardSidebar className="w-64 border-r" /&gt;</code></pre>
+                            <pre data-prefix="13"><code>        &lt;DashboardBuilder className="flex-1" /&gt;</code></pre>
+                            <pre data-prefix="14"><code>      &lt;/div&gt;</code></pre>
+                            <pre data-prefix="15"><code>    &lt;/CubeKitProvider&gt;</code></pre>
+                            <pre data-prefix="16"><code>  );</code></pre>
+                            <pre data-prefix="17"><code>}</code></pre>
+                            <pre data-prefix="18"><code></code></pre>
+                            <pre data-prefix="19"><code>export default DashboardApp;</code></pre>
+                        </div>
+                    </div>
+
+                    <!-- AI-Powered Analytics Interface -->
+                    <div id="example-ai" class="mb-12">
+                        <h3 class="text-2xl font-bold mb-4">AI-Powered Analytics Interface</h3>
+                        
+                        <div class="mockup-code">
+                            <pre data-prefix="1"><code>import React from 'react';</code></pre>
+                            <pre data-prefix="2"><code>import {</code></pre>
+                            <pre data-prefix="3"><code>  CubeKitProvider,</code></pre>
+                            <pre data-prefix="4"><code>  ConversationBuilder,</code></pre>
+                            <pre data-prefix="5"><code>  ConversationSidebar</code></pre>
+                            <pre data-prefix="6"><code>} from '@cubekit/react';</code></pre>
+                            <pre data-prefix="7"><code></code></pre>
+                            <pre data-prefix="8"><code>function AIAnalyticsApp() {</code></pre>
+                            <pre data-prefix="9"><code>  return (</code></pre>
+                            <pre data-prefix="10"><code>    &lt;CubeKitProvider config={{ cubeApiUrl: 'http://localhost:4000/cubejs-api/v1' }}&gt;</code></pre>
+                            <pre data-prefix="11"><code>      &lt;div className="flex h-screen"&gt;</code></pre>
+                            <pre data-prefix="12"><code>        &lt;ConversationSidebar className="w-64 border-r" /&gt;</code></pre>
+                            <pre data-prefix="13"><code>        &lt;ConversationBuilder</code></pre>
+                            <pre data-prefix="14"><code>          className="flex-1"</code></pre>
+                            <pre data-prefix="15"><code>          aiApiUrl="https://your-ai-api.com/chat"</code></pre>
+                            <pre data-prefix="16"><code>          enableVoiceInput={true}</code></pre>
+                            <pre data-prefix="17"><code>        /&gt;</code></pre>
+                            <pre data-prefix="18"><code>      &lt;/div&gt;</code></pre>
+                            <pre data-prefix="19"><code>    &lt;/CubeKitProvider&gt;</code></pre>
+                            <pre data-prefix="20"><code>  );</code></pre>
+                            <pre data-prefix="21"><code>}</code></pre>
+                            <pre data-prefix="22"><code></code></pre>
+                            <pre data-prefix="23"><code>export default AIAnalyticsApp;</code></pre>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- TypeScript Support -->
+                <section id="typescript" class="mb-16">
+                    <h2 class="text-3xl font-bold mb-8">TypeScript Support</h2>
+                    <p class="mb-6">CubeKit React is built with TypeScript and provides comprehensive type definitions:</p>
+                    
+                    <div class="mockup-code mb-6">
+                        <pre data-prefix="1"><code>import {</code></pre>
+                        <pre data-prefix="2"><code>  CubeQuery,</code></pre>
+                        <pre data-prefix="3"><code>  QueryResult,</code></pre>
+                        <pre data-prefix="4"><code>  CubeMeta,</code></pre>
+                        <pre data-prefix="5"><code>  CubeDimension,</code></pre>
+                        <pre data-prefix="6"><code>  CubeMeasure,</code></pre>
+                        <pre data-prefix="7"><code>  FilterOperator,</code></pre>
+                        <pre data-prefix="8"><code>  TimeGranularity</code></pre>
+                        <pre data-prefix="9"><code>} from '@cubekit/react';</code></pre>
+                        <pre data-prefix="10"><code></code></pre>
+                        <pre data-prefix="11"><code>// All components and hooks are fully typed</code></pre>
+                        <pre data-prefix="12"><code>const query: CubeQuery = {</code></pre>
+                        <pre data-prefix="13"><code>  measures: ['Orders.count'],</code></pre>
+                        <pre data-prefix="14"><code>  dimensions: ['Orders.status'],</code></pre>
+                        <pre data-prefix="15"><code>  timeDimensions: [],</code></pre>
+                        <pre data-prefix="16"><code>  filters: [{</code></pre>
+                        <pre data-prefix="17"><code>    member: 'Orders.status',</code></pre>
+                        <pre data-prefix="18"><code>    operator: 'equals',</code></pre>
+                        <pre data-prefix="19"><code>    values: ['completed']</code></pre>
+                        <pre data-prefix="20"><code>  }],</code></pre>
+                        <pre data-prefix="21"><code>  segments: [],</code></pre>
+                        <pre data-prefix="22"><code>  limit: 1000,</code></pre>
+                        <pre data-prefix="23"><code>  order: { 'Orders.count': 'desc' }</code></pre>
+                        <pre data-prefix="24"><code>};</code></pre>
+                    </div>
+                </section>
+
+                <!-- Storage Adapters -->
+                <section id="storage" class="mb-16">
+                    <h2 class="text-3xl font-bold mb-8">Storage Adapters</h2>
+                    <p class="mb-6">Customize how CubeKit stores data (queries, conversations, dashboards):</p>
+                    
+                    <div class="mockup-code mb-6">
+                        <pre data-prefix="1"><code>import { StorageAdapter, BrowserStorageAdapter } from '@cubekit/react';</code></pre>
+                        <pre data-prefix="2"><code></code></pre>
+                        <pre data-prefix="3"><code>// Use default browser storage</code></pre>
+                        <pre data-prefix="4"><code>const defaultAdapter = new BrowserStorageAdapter();</code></pre>
+                        <pre data-prefix="5"><code></code></pre>
+                        <pre data-prefix="6"><code>// Or implement custom storage</code></pre>
+                        <pre data-prefix="7"><code>class CustomStorageAdapter implements StorageAdapter {</code></pre>
+                        <pre data-prefix="8"><code>  async getItem(key: string): Promise&lt;string | null&gt; {</code></pre>
+                        <pre data-prefix="9"><code>    // Your custom storage logic</code></pre>
+                        <pre data-prefix="10"><code>    return localStorage.getItem(key);</code></pre>
+                        <pre data-prefix="11"><code>  }</code></pre>
+                        <pre data-prefix="12"><code></code></pre>
+                        <pre data-prefix="13"><code>  async setItem(key: string, value: string): Promise&lt;void&gt; {</code></pre>
+                        <pre data-prefix="14"><code>    // Your custom storage logic</code></pre>
+                        <pre data-prefix="15"><code>    localStorage.setItem(key, value);</code></pre>
+                        <pre data-prefix="16"><code>  }</code></pre>
+                        <pre data-prefix="17"><code></code></pre>
+                        <pre data-prefix="18"><code>  async removeItem(key: string): Promise&lt;void&gt; {</code></pre>
+                        <pre data-prefix="19"><code>    localStorage.removeItem(key);</code></pre>
+                        <pre data-prefix="20"><code>  }</code></pre>
+                        <pre data-prefix="21"><code>}</code></pre>
+                        <pre data-prefix="22"><code></code></pre>
+                        <pre data-prefix="23"><code>// Use in provider</code></pre>
+                        <pre data-prefix="24"><code>&lt;CubeKitProvider</code></pre>
+                        <pre data-prefix="25"><code>  config={{</code></pre>
+                        <pre data-prefix="26"><code>    cubeApiUrl: 'your-api-url',</code></pre>
+                        <pre data-prefix="27"><code>    storageAdapter: new CustomStorageAdapter()</code></pre>
+                        <pre data-prefix="28"><code>  }}</code></pre>
+                        <pre data-prefix="29"><code>&gt;</code></pre>
+                        <pre data-prefix="30"><code>  &lt;App /&gt;</code></pre>
+                        <pre data-prefix="31"><code>&lt;/CubeKitProvider&gt;</code></pre>
+                    </div>
+                </section>
+
+                <!-- Best Practices -->
+                <section id="best-practices" class="mb-16">
+                    <h2 class="text-3xl font-bold mb-8">Best Practices</h2>
+
+                    <div id="component-composition" class="mb-8">
+                        <h3 class="text-2xl font-semibold mb-4">1. Component Composition</h3>
+                        <p class="mb-4">Build complex interfaces by composing smaller components:</p>
+                        <div class="mockup-code">
+                            <pre data-prefix="1"><code>function CustomQueryBuilder() {</code></pre>
+                            <pre data-prefix="2"><code>  return (</code></pre>
+                            <pre data-prefix="3"><code>    &lt;div className="flex"&gt;</code></pre>
+                            <pre data-prefix="4"><code>      &lt;QuerySidebar className="w-64" /&gt;</code></pre>
+                            <pre data-prefix="5"><code>      &lt;div className="flex-1"&gt;</code></pre>
+                            <pre data-prefix="6"><code>        &lt;QueryBuilder className="h-full" /&gt;</code></pre>
+                            <pre data-prefix="7"><code>      &lt;/div&gt;</code></pre>
+                            <pre data-prefix="8"><code>    &lt;/div&gt;</code></pre>
+                            <pre data-prefix="9"><code>  );</code></pre>
+                            <pre data-prefix="10"><code>}</code></pre>
+                        </div>
+                    </div>
+
+                    <div id="error-handling" class="mb-8">
+                        <h3 class="text-2xl font-semibold mb-4">2. Error Handling</h3>
+                        <p class="mb-4">Always handle loading and error states:</p>
+                        <div class="mockup-code">
+                            <pre data-prefix="1"><code>function SafeQueryBuilder() {</code></pre>
+                            <pre data-prefix="2"><code>  const { isLoading, error } = useCube();</code></pre>
+                            <pre data-prefix="3"><code></code></pre>
+                            <pre data-prefix="4"><code>  if (isLoading) return &lt;div&gt;Loading schema...&lt;/div&gt;;</code></pre>
+                            <pre data-prefix="5"><code>  if (error) return &lt;div&gt;Error: {error}&lt;/div&gt;;</code></pre>
+                            <pre data-prefix="6"><code></code></pre>
+                            <pre data-prefix="7"><code>  return &lt;QueryBuilder /&gt;;</code></pre>
+                            <pre data-prefix="8"><code>}</code></pre>
+                        </div>
+                    </div>
+
+                    <div id="performance" class="mb-8">
+                        <h3 class="text-2xl font-semibold mb-4">3. Performance Optimization</h3>
+                        <p class="mb-4">Use React.memo for expensive components:</p>
+                        <div class="mockup-code">
+                            <pre data-prefix="1"><code>import React from 'react';</code></pre>
+                            <pre data-prefix="2"><code></code></pre>
+                            <pre data-prefix="3"><code>const OptimizedChart = React.memo(ChartVisualization);</code></pre>
+                        </div>
+                    </div>
+
+                    <div id="accessibility" class="mb-8">
+                        <h3 class="text-2xl font-semibold mb-4">4. Accessibility</h3>
+                        <p class="mb-4">Ensure components are accessible:</p>
+                        <div class="mockup-code">
+                            <pre data-prefix="1"><code>&lt;QueryBuilder</code></pre>
+                            <pre data-prefix="2"><code>  className="focus:outline-none focus:ring-2 focus:ring-blue-500"</code></pre>
+                            <pre data-prefix="3"><code>  aria-label="Query Builder Interface"</code></pre>
+                            <pre data-prefix="4"><code>/&gt;</code></pre>
                         </div>
                     </div>
                 </section>
@@ -525,61 +1393,81 @@
                 <div class="p-4">
                     <ul class="menu">
                         <li class="menu-title">Getting Started</li>
-                        <li><a href="#what-is-cubekit">What is CubeKit?</a></li>
                         <li><a href="#installation">Installation</a></li>
+                        <li><a href="#configuration">Configuration</a></li>
                         
                         <li class="menu-title">Components</li>
                         <li>
                             <details open>
                                 <summary><a href="#querybuilder">QueryBuilder</a></summary>
                                 <ul>
-                                    <li><a href="#querybuilder-filters">Filters</a></li>
-                                    <li><a href="#querybuilder-measures">Measures</a></li>
-                                    <li><a href="#querybuilder-dimensions">Dimensions</a></li>
-                                    <li><a href="#querybuilder-time">Time Dimensions</a></li>
+                                    <li><a href="#cubeselect">CubeSelect</a></li>
+                                    <li><a href="#multiselect">MultiSelect</a></li>
+                                    <li><a href="#filterbuilder">FilterBuilder</a></li>
+                                    <li><a href="#queryoptions">QueryOptions</a></li>
+                                    <li><a href="#queryactions">QueryActions</a></li>
                                 </ul>
                             </details>
                         </li>
                         <li>
                             <details>
-                                <summary><a href="#sqlbuilder">SQLBuilder</a></summary>
+                                <summary><a href="#conversationbuilder">ConversationBuilder</a></summary>
                                 <ul>
-                                    <li><a href="#sqlbuilder-editor">SQL Editor</a></li>
-                                    <li><a href="#sqlbuilder-autocomplete">Autocomplete</a></li>
-                                    <li><a href="#sqlbuilder-validation">Validation</a></li>
+                                    <li><a href="#message">Message</a></li>
+                                    <li><a href="#conversationsidebar">ConversationSidebar</a></li>
                                 </ul>
                             </details>
                         </li>
                         <li>
                             <details>
-                                <summary><a href="#schema-visualization">Schema Visualization</a></summary>
+                                <summary><a href="#dashboardbuilder">DashboardBuilder</a></summary>
                                 <ul>
-                                    <li><a href="#schema-explorer">Schema Explorer</a></li>
-                                    <li><a href="#cube-relationships">Cube Relationships</a></li>
-                                    <li><a href="#metadata-viewer">Metadata Viewer</a></li>
+                                    <li><a href="#widget">Widget</a></li>
+                                    <li><a href="#dashboardsidebar">DashboardSidebar</a></li>
                                 </ul>
                             </details>
                         </li>
                         <li>
                             <details>
-                                <summary><a href="#dashboard-builder">Dashboard Builder</a></summary>
+                                <summary><a href="#sqlquerybuilder">SqlQueryBuilder</a></summary>
                                 <ul>
-                                    <li><a href="#widget-library">Widget Library</a></li>
-                                    <li><a href="#layout-manager">Layout Manager</a></li>
-                                    <li><a href="#dashboard-export">Export Tools</a></li>
+                                    <li><a href="#sqleditor">SqlEditor</a></li>
+                                    <li><a href="#sqlqueryresult">SqlQueryResult</a></li>
+                                    <li><a href="#sqlquerysidebar">SqlQuerySidebar</a></li>
                                 </ul>
                             </details>
                         </li>
                         <li>
                             <details>
-                                <summary><a href="#ai-chatbot">AI ChatBot</a></summary>
+                                <summary><a href="#schemavisualizer">SchemaVisualizer</a></summary>
                                 <ul>
-                                    <li><a href="#chat-interface">Chat Interface</a></li>
-                                    <li><a href="#query-suggestions">Query Suggestions</a></li>
-                                    <li><a href="#natural-language">Natural Language</a></li>
+                                    <li><a href="#cubenode">CubeNode</a></li>
                                 </ul>
                             </details>
                         </li>
+                        
+                        <li class="menu-title">Shared Components</li>
+                        <li><a href="#chartvisualization">ChartVisualization</a></li>
+                        <li><a href="#queryresulttable">QueryResultTable</a></li>
+                        <li><a href="#statcard">StatCard</a></li>
+                        <li><a href="#cubeconnection">CubeConnection</a></li>
+                        
+                        <li class="menu-title">Hooks</li>
+                        <li><a href="#usecube">useCube</a></li>
+                        <li><a href="#usequery">useQuery</a></li>
+                        <li><a href="#useconversation">useConversation</a></li>
+                        <li><a href="#usedashboard">useDashboard</a></li>
+                        <li><a href="#usesqlquery">useSqlQuery</a></li>
+                        
+                        <li class="menu-title">Advanced</li>
+                        <li><a href="#typescript">TypeScript Support</a></li>
+                        <li><a href="#storage">Storage Adapters</a></li>
+                        <li><a href="#best-practices">Best Practices</a></li>
+                        
+                        <li class="menu-title">Examples</li>
+                        <li><a href="#example-querybuilder">Query Builder App</a></li>
+                        <li><a href="#example-dashboard">Dashboard App</a></li>
+                        <li><a href="#example-ai">AI Analytics App</a></li>
                     </ul>
                 </div>
             </aside>

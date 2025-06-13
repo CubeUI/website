@@ -249,109 +249,173 @@
                 <p class="text-lg text-base-content/70">Complete, ready-to-use components for building analytics applications</p>
             </div>
             
-            <div class="grid lg:grid-cols-2 gap-8 mb-12">
-                <div class="card bg-base-100 shadow-lg hover:shadow-xl transition-all duration-300 border border-base-200 hover:border-primary">
-                    <div class="card-body">
-                        <div class="flex items-center gap-3 mb-4">
-                            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <div class="space-y-20">
+                <!-- Query Builder -->
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center">
+                                <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
                                 </svg>
                             </div>
-                            <h3 class="card-title text-xl">Query Builder</h3>
+                            <h3 class="text-2xl lg:text-3xl font-bold">Query Builder</h3>
                         </div>
-                        <div class="mb-4">
-                            <img src="screenshots/query-builder.png" alt="Query Builder Interface" class="w-full h-40 rounded-lg bg-base-200 border border-base-300 cursor-pointer hover:opacity-80 transition-opacity" onclick="openImageModal('screenshots/query-builder.png', 'Query Builder Interface')">
+                        <p class="text-lg text-base-content/70 mb-6 leading-relaxed">
+                            No-code interface for business users to build queries. Drag-and-drop dimensions, measures, and filters to create insights without technical knowledge.
+                        </p>
+                        <div class="bg-base-100/50 p-4 rounded-lg border border-base-300">
+                            <p class="text-sm text-base-content/60 mb-2">
+                                <strong>Sub-components:</strong>
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="badge badge-primary badge-outline">Dimension picker</span>
+                                <span class="badge badge-primary badge-outline">Measure selector</span>
+                                <span class="badge badge-primary badge-outline">Filter builder</span>
+                                <span class="badge badge-primary badge-outline">Preview panel</span>
+                            </div>
                         </div>
-                        <p class="text-base-content/70 mb-4">No-code interface for business users to build queries. Drag-and-drop dimensions, measures, and filters to create insights without technical knowledge.</p>
-                        <div class="text-sm text-base-content/50">
-                            <strong>Sub-components:</strong> Dimension picker, Measure selector, Filter builder, Preview panel
+                    </div>
+                    <div class="lg:order-last">
+                        <div class="relative overflow-hidden rounded-xl shadow-2xl bg-base-100 border border-base-300">
+                            <img src="screenshots/query-builder.png" alt="Query Builder Interface" class="w-full h-auto transition-transform duration-300 hover:scale-105">
                         </div>
                     </div>
                 </div>
 
-                <div class="card bg-base-100 shadow-lg hover:shadow-xl transition-all duration-300 border border-base-200 hover:border-primary">
-                    <div class="card-body">
-                        <div class="flex items-center gap-3 mb-4">
-                            <div class="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center">
-                                <svg class="w-6 h-6 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <!-- SQL Builder -->
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="lg:order-last">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-16 h-16 bg-secondary/10 rounded-xl flex items-center justify-center">
+                                <svg class="w-8 h-8 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path>
                                 </svg>
                             </div>
-                            <h3 class="card-title text-xl">SQL Builder</h3>
+                            <h3 class="text-2xl lg:text-3xl font-bold">SQL Builder</h3>
                         </div>
-                        <div class="mb-4">
-                            <img src="screenshots/sql-builder.png" alt="SQL Builder Interface" class="w-full h-40 rounded-lg bg-base-200 border border-base-300 cursor-pointer hover:opacity-80 transition-opacity" onclick="openImageModal('screenshots/sql-builder.png', 'SQL Builder Interface')">
+                        <p class="text-lg text-base-content/70 mb-6 leading-relaxed">
+                            Advanced builder that uses the Cube API SQL endpoint to build tables and visualizations. For power users who need full SQL control.
+                        </p>
+                        <div class="bg-base-100/50 p-4 rounded-lg border border-base-300">
+                            <p class="text-sm text-base-content/60 mb-2">
+                                <strong>Sub-components:</strong>
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="badge badge-secondary badge-outline">SQL editor</span>
+                                <span class="badge badge-secondary badge-outline">Query formatter</span>
+                                <span class="badge badge-secondary badge-outline">Result table</span>
+                                <span class="badge badge-secondary badge-outline">Export tools</span>
+                            </div>
                         </div>
-                        <p class="text-base-content/70 mb-4">Advanced builder that uses the Cube API SQL endpoint to build tables and visualizations. For power users who need full SQL control.</p>
-                        <div class="text-sm text-base-content/50">
-                            <strong>Sub-components:</strong> SQL editor, Query formatter, Result table, Export tools
+                    </div>
+                    <div>
+                        <div class="relative overflow-hidden rounded-xl shadow-2xl bg-base-100 border border-base-300">
+                            <img src="screenshots/sql-builder.png" alt="SQL Builder Interface" class="w-full h-auto transition-transform duration-300 hover:scale-105">
                         </div>
                     </div>
                 </div>
 
-                <div class="card bg-base-100 shadow-lg hover:shadow-xl transition-all duration-300 border border-base-200 hover:border-primary">
-                    <div class="card-body">
-                        <div class="flex items-center gap-3 mb-4">
-                            <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center">
-                                <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <!-- Schema Visualization -->
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-16 h-16 bg-accent/10 rounded-xl flex items-center justify-center">
+                                <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path>
                                 </svg>
                             </div>
-                            <h3 class="card-title text-xl">Schema Visualization</h3>
+                            <h3 class="text-2xl lg:text-3xl font-bold">Schema Visualization</h3>
                         </div>
-                        <div class="mb-4">
-                            <img src="screenshots/schema-explorer.png" alt="Interactive Schema Explorer" class="w-full h-40 rounded-lg bg-base-200 border border-base-300 cursor-pointer hover:opacity-80 transition-opacity" onclick="openImageModal('screenshots/schema-explorer.png', 'Interactive Schema Explorer')">
+                        <p class="text-lg text-base-content/70 mb-6 leading-relaxed">
+                            Interactive schema explorer with visual cube relationships and detailed metadata. Navigate your data model with connected cube entities, dimensions, measures, and segments.
+                        </p>
+                        <div class="bg-base-100/50 p-4 rounded-lg border border-base-300">
+                            <p class="text-sm text-base-content/60 mb-2">
+                                <strong>Sub-components:</strong>
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="badge badge-accent badge-outline">Relationship graph</span>
+                                <span class="badge badge-accent badge-outline">Cube details</span>
+                                <span class="badge badge-accent badge-outline">Metadata viewer</span>
+                                <span class="badge badge-accent badge-outline">Navigation controls</span>
+                            </div>
                         </div>
-                        <p class="text-base-content/70 mb-4">Interactive schema explorer with visual cube relationships and detailed metadata. Navigate your data model with connected cube entities, dimensions, measures, and segments - all in a beautiful dark interface.</p>
-                        <div class="text-sm text-base-content/50">
-                            <strong>Sub-components:</strong> Relationship graph, Cube details, Metadata viewer, Navigation controls
+                    </div>
+                    <div class="lg:order-last">
+                        <div class="relative overflow-hidden rounded-xl shadow-2xl bg-base-100 border border-base-300">
+                            <img src="screenshots/schema-explorer.png" alt="Interactive Schema Explorer" class="w-full h-auto transition-transform duration-300 hover:scale-105">
                         </div>
                     </div>
                 </div>
 
-                <div class="card bg-base-100 shadow-lg hover:shadow-xl transition-all duration-300 border border-base-200 hover:border-primary">
-                    <div class="card-body">
-                        <div class="flex items-center gap-3 mb-4">
-                            <div class="w-12 h-12 bg-info/10 rounded-lg flex items-center justify-center">
-                                <svg class="w-6 h-6 text-info" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <!-- Dashboard Builder -->
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="lg:order-last">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-16 h-16 bg-info/10 rounded-xl flex items-center justify-center">
+                                <svg class="w-8 h-8 text-info" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"></path>
                                 </svg>
                             </div>
-                            <h3 class="card-title text-xl">Dashboard Builder</h3>
+                            <h3 class="text-2xl lg:text-3xl font-bold">Dashboard Builder</h3>
                         </div>
-                        <div class="mb-4">
-                            <img src="screenshots/dashboard-builder.png" alt="Dashboard Builder Interface" class="w-full h-40 rounded-lg bg-base-200 border border-base-300 cursor-pointer hover:opacity-80 transition-opacity" onclick="openImageModal('screenshots/dashboard-builder.png', 'Dashboard Builder Interface')">
+                        <p class="text-lg text-base-content/70 mb-6 leading-relaxed">
+                            Simple dashboard building tool to collate queries and visualizations into single dashboards. Drag-and-drop interface for easy composition.
+                        </p>
+                        <div class="bg-base-100/50 p-4 rounded-lg border border-base-300">
+                            <p class="text-sm text-base-content/60 mb-2">
+                                <strong>Sub-components:</strong>
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="badge badge-info badge-outline">Widget library</span>
+                                <span class="badge badge-info badge-outline">Layout grid</span>
+                                <span class="badge badge-info badge-outline">Filter controls</span>
+                                <span class="badge badge-info badge-outline">Export options</span>
+                            </div>
                         </div>
-                        <p class="text-base-content/70 mb-4">Simple dashboard building tool to collate queries and visualizations into single dashboards. Drag-and-drop interface for easy composition.</p>
-                        <div class="text-sm text-base-content/50">
-                            <strong>Sub-components:</strong> Widget library, Layout grid, Filter controls, Export options
+                    </div>
+                    <div>
+                        <div class="relative overflow-hidden rounded-xl shadow-2xl bg-base-100 border border-base-300">
+                            <img src="screenshots/dashboard-builder.png" alt="Dashboard Builder Interface" class="w-full h-auto transition-transform duration-300 hover:scale-105">
                         </div>
                     </div>
                 </div>
 
-                <div class="card bg-base-100 shadow-lg hover:shadow-xl transition-all duration-300 border border-base-200 hover:border-primary lg:col-span-2">
-                    <div class="card-body">
-                        <div class="flex items-center gap-3 mb-4">
-                            <div class="w-12 h-12 bg-warning/10 rounded-lg flex items-center justify-center">
-                                <svg class="w-6 h-6 text-warning" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <!-- AI Chat Bot -->
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-16 h-16 bg-warning/10 rounded-xl flex items-center justify-center">
+                                <svg class="w-8 h-8 text-warning" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
                                 </svg>
                             </div>
-                            <h3 class="card-title text-xl">AI Chat Bot</h3>
+                            <h3 class="text-2xl lg:text-3xl font-bold">AI Chat Bot</h3>
                         </div>
-                        <div class="mb-4">
-                            <img src="screenshots/ai-chat-bot.png" alt="AI Chat Bot Interface" class="w-full h-40 rounded-lg bg-base-200 border border-base-300 cursor-pointer hover:opacity-80 transition-opacity" onclick="openImageModal('screenshots/ai-chat-bot.png', 'AI Chat Bot Interface')">
+                        <p class="text-lg text-base-content/70 mb-6 leading-relaxed">
+                            AI-powered chat that generates Cube queries, data summaries, and visualizations from natural language. Ask questions about your data and get instant insights.
+                        </p>
+                        <div class="bg-base-100/50 p-4 rounded-lg border border-base-300">
+                            <p class="text-sm text-base-content/60 mb-2">
+                                <strong>Sub-components:</strong>
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="badge badge-warning badge-outline">Chat interface</span>
+                                <span class="badge badge-warning badge-outline">Query generator</span>
+                                <span class="badge badge-warning badge-outline">Summary cards</span>
+                                <span class="badge badge-warning badge-outline">Visualization suggestions</span>
+                                <span class="badge badge-warning badge-outline">Context memory</span>
+                            </div>
                         </div>
-                        <p class="text-base-content/70 mb-4">AI-powered chat that generates Cube queries, data summaries, and visualizations from natural language. Ask questions about your data and get instant insights.</p>
-                        <div class="text-sm text-base-content/50">
-                            <strong>Sub-components:</strong> Chat interface, Query generator, Summary cards, Visualization suggestions, Context memory
+                    </div>
+                    <div class="lg:order-last">
+                        <div class="relative overflow-hidden rounded-xl shadow-2xl bg-base-100 border border-base-300">
+                            <img src="screenshots/ai-chat-bot.png" alt="AI Chat Bot Interface" class="w-full h-auto transition-transform duration-300 hover:scale-105">
                         </div>
                     </div>
                 </div>
             </div>
-            
-
         </div>
     </section>
 
