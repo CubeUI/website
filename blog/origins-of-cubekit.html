@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cubekit">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Origins of CubeKit: Born from Real-World Cube.dev Experience - CubeKit Blog</title>
+    <meta name="description" content="Discover how CubeKit was born from years of building analytics platforms with Cube.dev, and why we created the components that developers actually need.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../icons/cubekit_logo.png">
+    <link rel="apple-touch-icon" href="../icons/cubekit_logo.png">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FWLNLJBYD6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-FWLNLJBYD6');
+    </script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans">
+    <!-- Navigation -->
+    <div class="navbar bg-base-100 border-b border-base-200 sticky top-0 z-50">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16"></path>
+                    </svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <li><a href="../index.html#features">Features</a></li>
+                    <li><a href="../index.html#pricing">Pricing</a></li>
+                    <li><a href="../docs.html">Docs</a></li>
+                    <li><a href="../blog/">Blog</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <a href="../index.html" class="btn btn-ghost">
+                <img src="../icons/cubekit_logo.png" alt="CubeKit" class="h-12">
+            </a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+                <li><a href="../index.html#features" class="hover:text-primary">Features</a></li>
+                <li><a href="../index.html#pricing" class="hover:text-primary">Pricing</a></li>
+                <li><a href="../docs.html" class="hover:text-primary">Docs</a></li>
+                <li><a href="../blog/" class="hover:text-primary">Blog</a></li>
+                <li><a href="../index.html#contact" class="hover:text-primary">Contact</a></li>
+            </ul>
+        </div>
+        <div class="navbar-end">
+            <a href="../index.html" class="btn btn-primary">Join Waiting List</a>
+        </div>
+    </div>
+
+    <!-- Article Header -->
+    <article class="max-w-4xl mx-auto px-4 py-8">
+        <header class="mb-8">
+            <div class="flex items-center gap-2 text-sm text-base-content/60 mb-4">
+                <a href="index.html" class="hover:text-primary transition-colors">← Back to Blog</a>
+                <span>•</span>
+                <time datetime="2024-01-29">January 29, 2024</time>
+                <span>•</span>
+                <span class="badge badge-accent badge-outline">Origin Story</span>
+            </div>
+            <h1 class="text-4xl lg:text-5xl font-bold mb-4 leading-tight">
+                The Origins of CubeKit: Born from Real-World Cube.dev Experience
+            </h1>
+            <p class="text-xl text-base-content/70 mb-6">
+                CubeKit wasn't built in a vacuum. It's the result of years spent in the trenches, building analytics 
+                platforms with Cube.dev, learning what works, what doesn't, and what developers actually need. 
+                Here's the story of how real-world experience shaped every component we've created.
+            </p>
+            <div class="flex items-center gap-3">
+                <div class="avatar placeholder">
+                    <div class="bg-primary text-primary-content rounded-full w-12">
+                        <span class="text-sm font-bold">CK</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="font-medium">CubeKit Team</div>
+                    <div class="text-sm text-base-content/60">8 min read</div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Article Content -->
+        <div class="prose prose-lg max-w-none">
+            <h2>The Journey Begins: Our First Cube.dev Project</h2>
+            <p>
+                Two years ago, we embarked on building a comprehensive analytics platform for enterprise clients. 
+                We chose Cube.dev as our semantic layer – and for good reason. The caching, the API design, 
+                the way it handles complex data modeling – Cube.dev is genuinely excellent at what it does.
+            </p>
+            
+            <p>
+                But as we started building the frontend, we quickly realized that while Cube.dev provides incredible 
+                backend capabilities, the frontend was entirely up to us. And that's where the real work began.
+            </p>
+
+            <div class="alert alert-info mb-6">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <span><strong>The Reality Check:</strong> Cube.dev gives you amazing APIs and data modeling capabilities, but building user-friendly interfaces that leverage these APIs effectively? That's a whole different challenge.</span>
+            </div>
+
+            <h2>The First Challenge: Query Building</h2>
+            <p>
+                Our first major hurdle was creating a query builder that business users could actually use. 
+                We needed something that would let non-technical users explore data without writing code, 
+                but also powerful enough for analysts to create complex queries.
+            </p>
+
+            <p>
+                We started simple – dropdowns for measures and dimensions, basic filtering. But as we tested 
+                with real users, we discovered the nuances that make or break a query builder:
+            </p>
+
+            <div class="bg-base-200 p-6 rounded-lg mb-6">
+                <h4 class="font-semibold mb-3">What we learned about query builders:</h4>
+                <ul class="list-disc list-inside space-y-2 text-sm">
+                    <li><strong>Context matters:</strong> Users need to understand what measures work with which dimensions</li>
+                    <li><strong>Visual feedback is crucial:</strong> Real-time query preview prevents frustration</li>
+                    <li><strong>Drag & drop feels natural:</strong> But only when it's implemented thoughtfully</li>
+                    <li><strong>Filtering is complex:</strong> Users want AND/OR logic, date ranges, and custom operators</li>
+                    <li><strong>Performance perception:</strong> Loading states and progressive enhancement are essential</li>
+                    <li><strong>Mobile matters:</strong> Analytics aren't just for desktop anymore</li>
+                </ul>
+            </div>
+
+            <p>
+                After months of iteration, we had a query builder that users loved. But we realized we'd spent 
+                more time on the UI than on our actual business logic. That was our first hint that something 
+                was missing in the Cube.dev ecosystem.
+            </p>
+
+            <h2>The Schema Visualization Revelation</h2>
+            <p>
+                As our data model grew more complex, we faced another challenge: helping users understand 
+                what data was available and how it all connected. Cube.dev's schema is powerful, but it's 
+                not immediately intuitive to business users.
+            </p>
+
+            <p>
+                We built an interactive schema visualizer that showed cubes, their relationships, measures, 
+                and dimensions in a way that made sense to humans. The impact was immediate – user adoption 
+                increased dramatically when people could actually see and understand the data structure.
+            </p>
+
+            <div class="stats shadow w-full my-8">
+                <div class="stat">
+                    <div class="stat-figure text-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-8 h-8 stroke-current">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <div class="stat-title">User Adoption</div>
+                    <div class="stat-value text-primary">+340%</div>
+                    <div class="stat-desc">After adding schema visualization</div>
+                </div>
+                
+                <div class="stat">
+                    <div class="stat-figure text-secondary">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-8 h-8 stroke-current">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"></path>
+                        </svg>
+                    </div>
+                    <div class="stat-title">Support Tickets</div>
+                    <div class="stat-value text-secondary">-60%</div>
+                    <div class="stat-desc">"How do I find X data?" questions</div>
+                </div>
+            </div>
+
+            <h2>The Dashboard Dilemma</h2>
+            <p>
+                Individual queries were great, but users wanted dashboards. They wanted to combine multiple 
+                visualizations, create interactive filters that affected multiple charts, and arrange everything 
+                in layouts that made sense for their workflows.
+            </p>
+
+            <p>
+                Building a dashboard system that works well with Cube.dev's caching and query optimization 
+                turned out to be an art form. We learned about query coordination, state management, and 
+                layout flexibility through countless iterations.
+            </p>
+
+            <div class="mockup-code mb-6">
+                <pre data-prefix="// Our dashboard evolution"><code>Version 1: Fixed layouts (users hated it)</code></pre>
+                <pre data-prefix="// "><code>Version 2: Complete freedom (too chaotic)</code></pre>
+                <pre data-prefix="// "><code>Version 3: Guided flexibility (just right)</code></pre>
+            </div>
+
+            <h2>The AI Breakthrough</h2>
+            <p>
+                As AI capabilities matured, we saw an opportunity to bridge the gap between natural language 
+                and data queries. We built an AI chat interface that could translate questions like 
+                "What were our top-selling products last quarter?" into proper Cube queries.
+            </p>
+
+            <p>
+                The magic wasn't just in the AI – it was in how we integrated it with Cube.dev's semantic 
+                layer. The AI understands our data model, knows about measure definitions and dimension 
+                relationships, and can generate queries that actually make sense.
+            </p>
+
+            <div class="alert alert-success mb-6">
+                <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span><strong>The AI Advantage:</strong> By understanding Cube.dev's semantic layer, our AI can generate queries that are not just syntactically correct, but semantically meaningful.</span>
+            </div>
+
+            <h2>The "Aha!" Moment</h2>
+            <p>
+                The turning point came when we started our second major project. We found ourselves rebuilding 
+                many of the same components – query builders, dashboard layouts, schema explorers. But this 
+                time, we knew exactly what worked and what didn't.
+            </p>
+
+            <p>
+                That's when we realized: every team building with Cube.dev faces these same challenges. 
+                Everyone needs query builders, everyone struggles with dashboard layouts, everyone wants 
+                to make their schema more accessible to users.
+            </p>
+
+            <div class="bg-gradient-to-r from-primary/10 to-secondary/10 p-6 rounded-lg mb-6 border border-primary/20">
+                <h4 class="font-semibold mb-3 text-primary">💡 The CubeKit Vision</h4>
+                <p class="text-sm mb-0">
+                    What if we could package all our hard-won knowledge about building Cube.dev frontends 
+                    into reusable components? What if other teams could skip the months of iteration we went 
+                    through and jump straight to building their unique business logic?
+                </p>
+            </div>
+
+            <h2>Why CubeKit Components Are Different</h2>
+            <p>
+                CubeKit isn't just another UI library. Every component is designed specifically for Cube.dev, 
+                with deep understanding of how the APIs work and how users actually interact with analytics data.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+                <div class="card bg-base-100 shadow-xl border border-primary/20">
+                    <div class="card-body">
+                        <h3 class="card-title text-primary">QueryBuilder</h3>
+                        <p class="text-sm">
+                            Born from countless user testing sessions and iterations. Handles the complexity 
+                            of Cube.dev queries while remaining intuitive for business users.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="card bg-base-100 shadow-xl border border-secondary/20">
+                    <div class="card-body">
+                        <h3 class="card-title text-secondary">SchemaVisualizer</h3>
+                        <p class="text-sm">
+                            Makes complex data models accessible. Users can explore and understand your 
+                            Cube.dev schema without technical documentation.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="card bg-base-100 shadow-xl border border-accent/20">
+                    <div class="card-body">
+                        <h3 class="card-title text-accent">DashboardBuilder</h3>
+                        <p class="text-sm">
+                            Balances flexibility with usability. Learned from building dozens of different 
+                            dashboard layouts for various use cases.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="card bg-base-100 shadow-xl border border-info/20">
+                    <div class="card-body">
+                        <h3 class="card-title text-info">ConversationBuilder</h3>
+                        <p class="text-sm">
+                            AI-powered natural language queries that understand your Cube.dev semantic layer. 
+                            Makes data accessible to everyone.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <h2>What's Next</h2>
+            <p>
+                CubeKit is just the beginning. We're continuing to build and learn, and we want to share 
+                that journey with the Cube.dev community. Every new project teaches us something new about 
+                what developers need and how Cube.dev can be leveraged most effectively.
+            </p>
+
+            <p>
+                We're excited to see what you build with CubeKit, and we're even more excited to learn 
+                from your experiences. The best components come from real-world usage, and we want CubeKit 
+                to evolve based on the needs of the entire Cube.dev community.
+            </p>
+
+            <div class="text-center mt-12">
+                <a href="../index.html" class="btn btn-primary btn-lg">
+                    Join the CubeKit Community
+                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </article>
+
+    <!-- Related Posts -->
+    <section class="py-16 bg-base-200">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 text-center">Related Posts</h2>
+            <div class="grid gap-6 md:grid-cols-2">
+                <article class="card bg-base-100 shadow-xl">
+                    <div class="card-body">
+                        <div class="flex items-center gap-2 text-sm text-base-content/60 mb-3">
+                            <time datetime="2024-01-22">January 22, 2024</time>
+                            <span>•</span>
+                            <span class="badge badge-secondary badge-outline">Development</span>
+                        </div>
+                        <h3 class="card-title">
+                            <a href="shipping-code-fast.html" class="hover:text-primary transition-colors">
+                                The Value of Shipping Your Code Fast
+                            </a>
+                        </h3>
+                        <p class="text-base-content/80">
+                            Learn why shipping fast matters and how CubeKit helps you focus on data insights.
+                        </p>
+                        <div class="card-actions justify-end">
+                            <a href="shipping-code-fast.html" class="btn btn-primary btn-sm">Read More</a>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="card bg-base-100 shadow-xl">
+                    <div class="card-body">
+                        <div class="flex items-center gap-2 text-sm text-base-content/60 mb-3">
+                            <time datetime="2024-01-15">January 15, 2024</time>
+                            <span>•</span>
+                            <span class="badge badge-primary badge-outline">Getting Started</span>
+                        </div>
+                        <h3 class="card-title">
+                            <a href="getting-started-with-cubekit.html" class="hover:text-primary transition-colors">
+                                Getting Started with CubeKit
+                            </a>
+                        </h3>
+                        <p class="text-base-content/80">
+                            Learn how CubeKit's components can transform your Cube.dev development workflow.
+                        </p>
+                        <div class="card-actions justify-end">
+                            <a href="getting-started-with-cubekit.html" class="btn btn-primary btn-sm">Read More</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter CTA -->
+    <section class="py-16 bg-gradient-to-r from-primary to-secondary text-primary-content">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">Stay Updated</h2>
+            <p class="text-lg mb-6 opacity-90">
+                Get the latest CubeKit tutorials, best practices, and product updates delivered to your inbox.
+            </p>
+            <a href="../index.html" class="btn btn-lg bg-base-100 text-primary hover:bg-base-200 border-none">
+                Join Waiting List
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer footer-center p-10 bg-base-200 text-base-content">
+        <aside>
+            <div class="flex justify-center mb-4">
+                <img src="../icons/cubekit_logo.png" alt="CubeKit" class="h-12">
+            </div>
+            <p class="text-base-content/70">Premium components for Cube.dev applications.</p>
+        </aside>
+        <nav>
+            <div class="grid grid-flow-col gap-8">
+                <div class="flex flex-col gap-2">
+                    <span class="footer-title">Product</span>
+                    <a href="../index.html#features" class="link link-hover">Features</a>
+                    <a href="../index.html#pricing" class="link link-hover">Pricing</a>
+                    <a href="../docs.html" class="link link-hover">Documentation</a>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <span class="footer-title">Resources</span>
+                    <a href="../blog/" class="link link-hover">Blog</a>
+                    <a href="../index.html#contact" class="link link-hover">Contact</a>
+                    <a href="#" class="link link-hover">Support</a>
+                </div>
+            </div>
+        </nav>
+        <aside>
+            <p>&copy; 2024 CubeKit. All rights reserved.</p>
+        </aside>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html> 
