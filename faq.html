@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cubekit">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CubeKit FAQ - Frequently Asked Questions | Cube UI Components</title>
+    <meta name="description" content="Find answers to common questions about CubeKit Cube UI components, pricing, installation, technical support, and more. Get help with React Query Builder and SQL Editor.">
+    <meta name="keywords" content="CubeKit FAQ, Cube UI help, React components support, technical questions, pricing FAQ, installation help">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cube-kit.com/faq.html">
+    <meta property="og:title" content="CubeKit FAQ - Frequently Asked Questions | Cube UI Components">
+    <meta property="og:description" content="Find answers to common questions about CubeKit Cube UI components, pricing, installation, and technical support.">
+    <meta property="og:image" content="https://cube-kit.com/screenshots/hero-image.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://cube-kit.com/faq.html">
+    <meta property="twitter:title" content="CubeKit FAQ - Frequently Asked Questions | Cube UI Components">
+    <meta property="twitter:description" content="Find answers to common questions about CubeKit Cube UI components, pricing, installation, and technical support.">
+    <meta property="twitter:image" content="https://cube-kit.com/screenshots/hero-image.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://cube-kit.com/faq.html">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="icons/cubekit_logo.png">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FWLNLJBYD6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FWLNLJBYD6');
+    </script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "name": "CubeKit FAQ",
+        "description": "Frequently asked questions about CubeKit - Premium Cube UI components",
+        "url": "https://cube-kit.com/faq.html",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is CubeKit?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "CubeKit is a comprehensive collection of high-level React components designed specifically for Cube.dev applications. It provides ready-to-use components that help you build sophisticated analytics interfaces in minutes."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How much does CubeKit cost?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "CubeKit is available for $59/year per developer. This includes all components, updates, and email support."
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body class="font-sans">
+    <!-- Navigation -->
+    <div class="navbar bg-base-100 border-b border-base-200 sticky top-0 z-50">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16"></path>
+                    </svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <li><a href="index.html#features">Features</a></li>
+                    <li><a href="index.html#pricing">Pricing</a></li>
+                    <li><a href="docs.html">Docs</a></li>
+                    <li><a href="blog/">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <a href="index.html" class="btn btn-ghost">
+                <img src="icons/cubekit_logo.png" alt="CubeKit" class="h-12">
+            </a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+                <li><a href="index.html#features" class="hover:text-primary">Features</a></li>
+                <li><a href="index.html#pricing" class="hover:text-primary">Pricing</a></li>
+                <li><a href="docs.html" class="hover:text-primary">Docs</a></li>
+                <li><a href="blog/" class="hover:text-primary">Blog</a></li>
+                <li><a href="contact.html" class="hover:text-primary">Contact</a></li>
+            </ul>
+        </div>
+        <div class="navbar-end">
+            <a href="index.html" class="btn btn-primary">Join Waiting List</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="py-20 bg-gradient-to-br from-base-200 to-base-300">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <div class="breadcrumbs text-sm mb-4 justify-center">
+                <ul>
+                    <li><a href="index.html" class="text-primary">CubeKit</a></li>
+                    <li>FAQ</li>
+                </ul>
+            </div>
+            <h1 class="text-4xl lg:text-6xl font-bold leading-tight mb-6">
+                Frequently Asked <span class="text-primary">Questions</span>
+            </h1>
+            <p class="text-xl text-base-content/70 mb-8 leading-relaxed max-w-2xl mx-auto">
+                Find answers to common questions about CubeKit, our Cube UI components, pricing, installation, and technical support.
+            </p>
+        </div>
+    </section>
+
+    <!-- Search -->
+    <section class="py-12 bg-base-100">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="form-control max-w-md mx-auto">
+                <div class="input-group">
+                    <input type="text" placeholder="Search FAQ..." class="input input-bordered w-full" id="faq-search">
+                    <button class="btn btn-square btn-primary">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Categories -->
+    <section class="py-20 bg-base-100">
+        <div class="max-w-6xl mx-auto px-4">
+            <!-- Category Navigation -->
+            <div class="tabs tabs-boxed justify-center mb-12">
+                <a class="tab tab-active" data-category="general">General</a>
+                <a class="tab" data-category="pricing">Pricing</a>
+                <a class="tab" data-category="technical">Technical</a>
+                <a class="tab" data-category="support">Support</a>
+            </div>
+
+            <!-- General Questions -->
+            <div id="general" class="faq-category">
+                <h2 class="text-3xl font-bold mb-8 text-center">General Questions</h2>
+                <div class="space-y-4">
+                    <div class="collapse collapse-plus bg-base-200">
+                        <input type="radio" name="general-accordion" checked="checked">
+                        <div class="collapse-title text-lg font-medium">
+                            What is CubeKit?
+                        </div>
+                        <div class="collapse-content">
+                            <p>CubeKit is a comprehensive collection of high-level React components designed specifically for Cube.dev applications. It provides ready-to-use components like QueryBuilder, SqlQueryBuilder, SchemaVisualizer, DashboardBuilder, and ConversationBuilder that help you build sophisticated analytics interfaces in minutes, not months.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="collapse collapse-plus bg-base-200">
+                        <input type="radio" name="general-accordion">
+                        <div class="collapse-title text-lg font-medium">
+                            What makes CubeKit different from other UI libraries?
+                        </div>
+                        <div class="collapse-content">
+                            <p>Unlike generic UI libraries, CubeKit is specifically designed for Cube.dev applications. Every component understands Cube queries, measures, dimensions, and filters natively. This means less configuration, better integration, and components that work seamlessly with your Cube.dev setup out of the box.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="collapse collapse-plus bg-base-200">
+                        <input type="radio" name="general-accordion">
+                        <div class="collapse-title text-lg font-medium">
+                            Do I need to know Cube.dev to use CubeKit?
+                        </div>
+                        <div class="collapse-content">
+                            <p>Yes, CubeKit is designed as an extension to Cube.dev. You'll need a working Cube.dev setup with your data schema defined. CubeKit then provides the UI components to interact with your Cube.dev API. If you're new to Cube.dev, we recommend starting with their excellent documentation first.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="collapse collapse-plus bg-base-200">
+                        <input type="radio" name="general-accordion">
+                        <div class="collapse-title text-lg font-medium">
+                            What React versions are supported?
+                        </div>
+                        <div class="collapse-content">
+                            <p>CubeKit supports React 18.0.0 and above. We recommend using the latest stable version of React for the best experience and access to all features.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="collapse collapse-plus bg-base-200">
+                        <input type="radio" name="general-accordion">
+                        <div class="collapse-title text-lg font-medium">
+                            Can I customize the appearance of CubeKit components?
+                        </div>
+                        <div class="collapse-content">
+                            <p>Absolutely! CubeKit is built on DaisyUI, giving you access to 30+ professionally designed themes. You can also create custom themes that match your brand perfectly. All components accept standard CSS classes and can be styled using Tailwind CSS utilities.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pricing Questions -->
+            <div id="pricing" class="faq-category hidden">
+                <h2 class="text-3xl font-bold mb-8 text-center">Pricing & Licensing</h2>
+                <div class="space-y-4">
+                    <div class="collapse collapse-plus bg-base-200">
+                        <input type="radio" name="pricing-accordion" checked="checked">
+                        <div class="collapse-title text-lg font-medium">
+                            How much does CubeKit cost?
+                        </div>
+                        <div class="collapse-content">
+                            <p>CubeKit is available for $59/year per developer. This includes all components, regular updates, bug fixes, and email support. We're currently in beta and accepting users for our waiting list with special early-bird pricing.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="collapse collapse-plus bg-base-200">
+                        <input type="radio" name="pricing-accordion">
+                        <div class="collapse-title text-lg font-medium">
+                            Is there a free trial available?
+                        </div>
+                        <div class="collapse-content">
+                            <p>We're currently in beta and accepting users for our waiting list. Early users will get access to CubeKit with special pricing and the opportunity to influence the product direction. Join our waiting list to be notified when the trial becomes available.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="collapse collapse-plus bg-base-200">
+                        <input type="radio" name="pricing-accordion">
+                        <div class="collapse-title text-lg font-medium">
+                            Do you offer team or enterprise pricing?
+                        </div>
+                        <div class="collapse-content">
+                            <p>Yes! We offer volume discounts for teams and custom enterprise solutions. Contact our sales team at sales@cube-kit.com to discuss your specific needs and get a custom quote.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="collapse collapse-plus bg-base-200">
+                        <input type="radio" name="pricing-accordion">
+                        <div class="collapse-title text-lg font-medium">
+                            What's included in the license?
+                        </div>
+                        <div class="collapse-content">
+                            <p>Your license includes access to all CubeKit components, regular updates, bug fixes, email support, and the right to use CubeKit in commercial projects. You can deploy applications using CubeKit without additional licensing fees.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="collapse collapse-plus bg-base-200">
+                        <input type="radio" name="pricing-accordion">
+                        <div class="collapse-title text-lg font-medium">
+                            Can I use CubeKit in open source projects?
+                        </div>
+                        <div class="collapse-content">
+                            <p>CubeKit requires a paid license for all usage, including open source projects. However, we offer special pricing for qualifying open source projects and educational institutions. Contact us to discuss your specific case.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technical Questions -->
+            <div id="technical" class="faq-category hidden">
+                <h2 class="text-3xl font-bold mb-8 text-center">Technical Questions</h2>
+                <div class="space-y-4">
+                    <div class="collapse collapse-plus bg-base-200">
+                        <input type="radio" name="technical-accordion" checked="checked">
+                        <div class="collapse-title text-lg font-medium">
+                            How do I install CubeKit?
+                        </div>
+                        <div class="collapse-content">
+                            <p>Install CubeKit using npm or yarn:</p>
+                            <div class="mockup-code mt-2">
+                                <pre><code>npm install @cubekit/react</code></pre>
+                                <pre><code># or</code></pre>
+                                <pre><code>yarn add @cubekit/react</code></pre>
+                            </div>
+                            <p class="mt-2">Make sure you have React 18+ installed as a peer dependency.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="collapse collapse-plus bg-base-200">
+                        <input type="radio" name="technical-accordion">
+                        <div class="collapse-title text-lg font-medium">
+                            How do I set up CubeKit with my Cube.dev instance?
+                        </div>
+                        <div class="collapse-content">
+                            <p>Wrap your application with the CubeKitProvider and provide your Cube.dev configuration:</p>
+                            <div class="mockup-code mt-2">
+                                <pre><code>import { CubeKitProvider } from '@cubekit/react';</code></pre>
+                                <pre><code></code></pre>
+                                <pre><code>&lt;CubeKitProvider</code></pre>
+                                <pre><code>  config={{</code></pre>
+                                <pre><code>    cubeApiUrl: 'http://localhost:4000/cubejs-api/v1',</code></pre>
+                                <pre><code>    cubeApiToken: 'your-api-token'</code></pre>
+                                <pre><code>  }}</code></pre>
+                                <pre><code>&gt;</code></pre>
+                                <pre><code>  &lt;YourApp /&gt;</code></pre>
+                                <pre><code>&lt;/CubeKitProvider&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="collapse collapse-plus bg-base-200">
+                        <input type="radio" name="technical-accordion">
+                        <div class="collapse-title text-lg font-medium">
+                            Does CubeKit work with TypeScript?
+                        </div>
+                        <div class="collapse-content">
+                            <p>Yes! CubeKit is built with TypeScript and provides full type safety. You'll get IntelliSense support and type checking for all components and their props.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="collapse collapse-plus bg-base-200">
+                        <input type="radio" name="technical-accordion">
+                        <div class="collapse-title text-lg font-medium">
+                            Can I use CubeKit with Next.js?
+                        </div>
+                        <div class="collapse-content">
+                            <p>Yes, CubeKit works great with Next.js. Make sure to use dynamic imports for components that require browser APIs, and configure your Next.js app to handle the CubeKit dependencies properly.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="collapse collapse-plus bg-base-200">
+                        <input type="radio" name="technical-accordion">
+                        <div class="collapse-title text-lg font-medium">
+                            What about server-side rendering (SSR)?
+                        </div>
+                        <div class="collapse-content">
+                            <p>CubeKit components are designed to work with SSR frameworks like Next.js. Some components that require browser APIs should be dynamically imported or wrapped in client-side only components.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="collapse collapse-plus bg-base-200">
+                        <input type="radio" name="technical-accordion">
+                        <div class="collapse-title text-lg font-medium">
+                            How do I handle authentication with CubeKit?
+                        </div>
+                        <div class="collapse-content">
+                            <p>CubeKit uses your existing Cube.dev authentication setup. Pass your API token through the CubeKitProvider configuration, and CubeKit will handle the rest. For dynamic tokens, you can update the provider configuration as needed.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Support Questions -->
+            <div id="support" class="faq-category hidden">
+                <h2 class="text-3xl font-bold mb-8 text-center">Support & Help</h2>
+                <div class="space-y-4">
+                    <div class="collapse collapse-plus bg-base-200">
+                        <input type="radio" name="support-accordion" checked="checked">
+                        <div class="collapse-title text-lg font-medium">
+                            What kind of support do you provide?
+                        </div>
+                        <div class="collapse-content">
+                            <p>We provide email support for all licensed users, comprehensive documentation, code examples, and a growing collection of tutorials. Enterprise customers can access priority support and custom development services.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="collapse collapse-plus bg-base-200">
+                        <input type="radio" name="support-accordion">
+                        <div class="collapse-title text-lg font-medium">
+                            What is your response time for support requests?
+                        </div>
+                        <div class="collapse-content">
+                            <p>We aim to respond to all support requests within 24 hours during business days. Critical issues are prioritized and typically receive responses within 4-6 hours. Enterprise customers get faster response times.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="collapse collapse-plus bg-base-200">
+                        <input type="radio" name="support-accordion">
+                        <div class="collapse-title text-lg font-medium">
+                            Do you offer custom development services?
+                        </div>
+                        <div class="collapse-content">
+                            <p>Yes, we offer custom development services for enterprise clients. This includes custom components, integrations, and consulting services. Contact our sales team to discuss your specific requirements.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="collapse collapse-plus bg-base-200">
+                        <input type="radio" name="support-accordion">
+                        <div class="collapse-title text-lg font-medium">
+                            Where can I find documentation and examples?
+                        </div>
+                        <div class="collapse-content">
+                            <p>Our comprehensive documentation is available at <a href="docs.html" class="link link-primary">docs.html</a>. We also publish tutorials and best practices on our <a href="blog/" class="link link-primary">blog</a>. All components include code examples and live previews.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="collapse collapse-plus bg-base-200">
+                        <input type="radio" name="support-accordion">
+                        <div class="collapse-title text-lg font-medium">
+                            How do I report bugs or request features?
+                        </div>
+                        <div class="collapse-content">
+                            <p>You can report bugs or request features by contacting our support team at support@cube-kit.com. Please include as much detail as possible, including your CubeKit version, React version, and steps to reproduce any issues.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="collapse collapse-plus bg-base-200">
+                        <input type="radio" name="support-accordion">
+                        <div class="collapse-title text-lg font-medium">
+                            Do you have a community or forum?
+                        </div>
+                        <div class="collapse-content">
+                            <p>We're building our community! Currently, the best way to get help and connect with other CubeKit users is through our email support. We're planning to launch a community forum and Discord server in the near future.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Still Have Questions -->
+    <section class="py-20 bg-base-200">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Still Have Questions?</h2>
+            <p class="text-lg text-base-content/70 mb-8">
+                Can't find what you're looking for? Our team is here to help you succeed with CubeKit.
+            </p>
+            <div class="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
+                <a href="contact.html" class="btn btn-primary btn-lg">
+                    Contact Support
+                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                </a>
+                <a href="docs.html" class="btn btn-outline btn-lg">
+                    View Documentation
+                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer footer-center p-10 bg-base-200 text-base-content">
+        <aside>
+            <div class="flex justify-center mb-4">
+                <img src="icons/cubekit_logo.png" alt="CubeKit" class="h-12">
+            </div>
+            <p class="text-base-content/70">Professional Cube UI components for enhanced user experience.</p>
+        </aside>
+        <nav>
+            <div class="grid grid-flow-col gap-8">
+                <div class="flex flex-col gap-2">
+                    <span class="footer-title">Product</span>
+                    <a href="index.html#features" class="link link-hover">Features</a>
+                    <a href="index.html#pricing" class="link link-hover">Pricing</a>
+                    <a href="docs.html" class="link link-hover">Documentation</a>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <span class="footer-title">Support</span>
+                    <a href="contact.html" class="link link-hover">Contact</a>
+                    <a href="faq.html" class="link link-hover">FAQ</a>
+                    <a href="license.html" class="link link-hover">License</a>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <span class="footer-title">Resources</span>
+                    <a href="blog/" class="link link-hover">Blog</a>
+                    <a href="docs.html" class="link link-hover">Documentation</a>
+                </div>
+            </div>
+        </nav>
+        <aside>
+            <p>&copy; 2024 CubeKit. All rights reserved.</p>
+        </aside>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // FAQ Category switching
+        document.querySelectorAll('[data-category]').forEach(tab => {
+            tab.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                // Update active tab
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('tab-active'));
+                tab.classList.add('tab-active');
+                
+                // Show corresponding category
+                document.querySelectorAll('.faq-category').forEach(cat => cat.classList.add('hidden'));
+                document.getElementById(tab.dataset.category).classList.remove('hidden');
+            });
+        });
+
+        // Simple search functionality
+        document.getElementById('faq-search').addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            const questions = document.querySelectorAll('.collapse-title');
+            
+            questions.forEach(question => {
+                const text = question.textContent.toLowerCase();
+                const collapse = question.closest('.collapse');
+                
+                if (text.includes(searchTerm) || searchTerm === '') {
+                    collapse.style.display = 'block';
+                } else {
+                    collapse.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

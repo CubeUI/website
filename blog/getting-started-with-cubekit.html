@@ -51,7 +51,7 @@
                     <li><a href="../index.html#pricing">Pricing</a></li>
                     <li><a href="../docs.html">Docs</a></li>
                     <li><a href="../blog/">Blog</a></li>
-                    <li><a href="../index.html#contact">Contact</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
                 </ul>
             </div>
             <a href="../index.html" class="btn btn-ghost">
@@ -64,7 +64,7 @@
                 <li><a href="../index.html#pricing" class="hover:text-primary">Pricing</a></li>
                 <li><a href="../docs.html" class="hover:text-primary">Docs</a></li>
                 <li><a href="../blog/" class="hover:text-primary">Blog</a></li>
-                <li><a href="../index.html#contact" class="hover:text-primary">Contact</a></li>
+                <li><a href="../contact.html" class="hover:text-primary">Contact</a></li>
             </ul>
         </div>
         <div class="navbar-end">
@@ -144,8 +144,8 @@
             </p>
             
             <div class="mockup-code mb-6">
-                <pre data-prefix="$"><code>npm install @cubekit/query-builder</code></pre>
-                <pre data-prefix=">" class="text-warning"><code>Installing QueryBuilder components...</code></pre>
+                <pre data-prefix="$"><code>npm install @cubekit/react</code></pre>
+                <pre data-prefix=">" class="text-warning"><code>Installing CubeKit components...</code></pre>
                 <pre data-prefix=">" class="text-success"><code>Ready to use!</code></pre>
             </div>
 
@@ -160,15 +160,15 @@
                 </ul>
             </div>
 
-            <h3>2. SQL Builder</h3>
+            <h3>2. SqlQueryBuilder</h3>
             <p>
-                For power users who prefer writing SQL, the SQL Builder provides a sophisticated code editor with 
+                For power users who prefer writing SQL, the SqlQueryBuilder provides a sophisticated code editor with 
                 syntax highlighting, auto-completion, and direct integration with Cube's SQL API endpoint.
             </p>
 
-            <h3>3. Schema Visualization</h3>
+            <h3>3. SchemaVisualizer</h3>
             <p>
-                The Schema Visualization component creates an interactive explorer that shows cube relationships, 
+                The SchemaVisualizer component creates an interactive explorer that shows cube relationships, 
                 measures, dimensions, and metadata. Perfect for helping users understand your data model.
             </p>
 
@@ -178,11 +178,22 @@
                 arrange layouts, and create interactive filters that affect multiple charts simultaneously.
             </p>
 
-            <h3>5. AI Chat Bot</h3>
+            <h3>5. ConversationBuilder</h3>
             <p>
-                The AI Chat Bot allows users to ask questions in natural language and get back relevant data insights. 
+                The ConversationBuilder allows users to ask questions in natural language and get back relevant data insights. 
                 It translates natural language queries into Cube queries and presents results in an intuitive format.
             </p>
+
+            <h2>Installation & Setup</h2>
+            <p>
+                Getting started with CubeKit is straightforward. First, install the package and set up the provider:
+            </p>
+            
+            <div class="mockup-code mb-6">
+                <pre data-prefix="$"><code>npm install @cubekit/react</code></pre>
+                <pre data-prefix="$"><code># Peer dependencies (if not already installed)</code></pre>
+                <pre data-prefix="$"><code>npm install react@>=18.0.0 react-dom@>=18.0.0</code></pre>
+            </div>
 
             <h2>Quick Start Example</h2>
             <p>
@@ -190,19 +201,21 @@
             </p>
 
             <div class="mockup-code mb-6">
-                <pre data-prefix="1"><code>import { QueryBuilder } from '@cubekit/query-builder';</code></pre>
-                <pre data-prefix="2"><code>import { DashboardBuilder } from '@cubekit/dashboard';</code></pre>
+                <pre data-prefix="1"><code>import { QueryBuilder, DashboardBuilder } from '@cubekit/react';</code></pre>
+                <pre data-prefix="2"><code>import { CubeKitProvider } from '@cubekit/react';</code></pre>
                 <pre data-prefix="3"><code></code></pre>
                 <pre data-prefix="4"><code>function AnalyticsDashboard() {</code></pre>
                 <pre data-prefix="5"><code>  return (</code></pre>
-                <pre data-prefix="6"><code>    &lt;DashboardBuilder</code></pre>
-                <pre data-prefix="7"><code>      cubeApi={cubeApi}</code></pre>
-                <pre data-prefix="8"><code>      defaultQueries={[</code></pre>
-                <pre data-prefix="9"><code>        { measures: ['Orders.count'] }</code></pre>
-                <pre data-prefix="10"><code>      ]}</code></pre>
-                <pre data-prefix="11"><code>    /&gt;</code></pre>
-                <pre data-prefix="12"><code>  );</code></pre>
-                <pre data-prefix="13"><code>}</code></pre>
+                <pre data-prefix="6"><code>    &lt;CubeKitProvider</code></pre>
+                <pre data-prefix="7"><code>      config={{</code></pre>
+                <pre data-prefix="8"><code>        cubeApiUrl: 'http://localhost:4000/cubejs-api/v1',</code></pre>
+                <pre data-prefix="9"><code>        cubeApiToken: 'your-api-token'</code></pre>
+                <pre data-prefix="10"><code>      }}</code></pre>
+                <pre data-prefix="11"><code>    &gt;</code></pre>
+                <pre data-prefix="12"><code>      &lt;DashboardBuilder /&gt;</code></pre>
+                <pre data-prefix="13"><code>    &lt;/CubeKitProvider&gt;</code></pre>
+                <pre data-prefix="14"><code>  );</code></pre>
+                <pre data-prefix="15"><code>}</code></pre>
             </div>
 
             <p>
@@ -345,7 +358,7 @@
                 <div class="flex flex-col gap-2">
                     <span class="footer-title">Resources</span>
                     <a href="../blog/" class="link link-hover">Blog</a>
-                    <a href="../index.html#contact" class="link link-hover">Contact</a>
+                    <a href="../contact.html" class="link link-hover">Contact</a>
                     <a href="#" class="link link-hover">Support</a>
                 </div>
             </div>
