@@ -61,6 +61,35 @@
         }
     </script>
     
+    <script>
+        // Mouse-following zoom effect for screenshots
+        document.addEventListener('DOMContentLoaded', function() {
+            const screenshotContainers = document.querySelectorAll('.screenshot-container');
+            
+            screenshotContainers.forEach(container => {
+                const img = container.querySelector('img');
+                
+                container.addEventListener('mousemove', function(e) {
+                    const rect = container.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    
+                    // Calculate the percentage position
+                    const xPercent = (x / rect.width) * 100;
+                    const yPercent = (y / rect.height) * 100;
+                    
+                    // Set transform origin based on mouse position
+                    img.style.transformOrigin = `${xPercent}% ${yPercent}%`;
+                });
+                
+                container.addEventListener('mouseleave', function() {
+                    // Reset transform origin when mouse leaves
+                    img.style.transformOrigin = 'center';
+                });
+            });
+        });
+    </script>
+    
     <!-- Structured Data for SEO -->
     <script type="application/ld+json">
     {
@@ -336,8 +365,8 @@
                         </div>
                     </div>
                     <div class="lg:order-last">
-                        <div class="relative overflow-hidden rounded-xl shadow-2xl bg-base-100 border border-base-300">
-                            <img src="screenshots/query-builder.png" alt="Query Builder Interface" class="w-full h-auto transition-transform duration-300 hover:scale-105">
+                        <div class="relative rounded-xl shadow-2xl bg-base-100 border border-base-300 overflow-hidden screenshot-container">
+                            <img src="screenshots/query-builder.png" alt="Query Builder Interface" class="w-full h-auto object-contain">
                         </div>
                     </div>
                 </div>
@@ -369,8 +398,8 @@
                         </div>
                     </div>
                     <div>
-                        <div class="relative overflow-hidden rounded-xl shadow-2xl bg-base-100 border border-base-300">
-                            <img src="screenshots/sql-builder.png" alt="SQL Builder Interface" class="w-full h-auto transition-transform duration-300 hover:scale-105">
+                        <div class="relative rounded-xl shadow-2xl bg-base-100 border border-base-300 overflow-hidden screenshot-container">
+                            <img src="screenshots/sql-builder.png" alt="SQL Builder Interface" class="w-full h-auto object-contain">
                         </div>
                     </div>
                 </div>
@@ -402,8 +431,8 @@
                         </div>
                     </div>
                     <div class="lg:order-last">
-                        <div class="relative overflow-hidden rounded-xl shadow-2xl bg-base-100 border border-base-300">
-                            <img src="screenshots/schema-explorer.png" alt="Interactive Schema Explorer" class="w-full h-auto transition-transform duration-300 hover:scale-105">
+                        <div class="relative rounded-xl shadow-2xl bg-base-100 border border-base-300 overflow-hidden screenshot-container">
+                            <img src="screenshots/schema-explorer.png" alt="Interactive Schema Explorer" class="w-full h-auto object-contain">
                         </div>
                     </div>
                 </div>
@@ -435,8 +464,8 @@
                         </div>
                     </div>
                     <div>
-                        <div class="relative overflow-hidden rounded-xl shadow-2xl bg-base-100 border border-base-300">
-                            <img src="screenshots/dashboard-builder.png" alt="Dashboard Builder Interface" class="w-full h-auto transition-transform duration-300 hover:scale-105">
+                        <div class="relative rounded-xl shadow-2xl bg-base-100 border border-base-300 overflow-hidden screenshot-container">
+                            <img src="screenshots/dashboard-builder.png" alt="Dashboard Builder Interface" class="w-full h-auto object-contain">
                         </div>
                     </div>
                 </div>
@@ -469,8 +498,8 @@
                         </div>
                     </div>
                     <div class="lg:order-last">
-                        <div class="relative overflow-hidden rounded-xl shadow-2xl bg-base-100 border border-base-300">
-                            <img src="screenshots/ai-chat-bot.png" alt="AI Chat Bot Interface" class="w-full h-auto transition-transform duration-300 hover:scale-105">
+                        <div class="relative rounded-xl shadow-2xl bg-base-100 border border-base-300 overflow-hidden screenshot-container">
+                            <img src="screenshots/ai-chat-bot.png" alt="AI Chat Bot Interface" class="w-full h-auto object-contain">
                         </div>
                     </div>
                 </div>
@@ -479,7 +508,7 @@
     </section>
 
     <!-- Benefits Section -->
-    <section class="py-20 bg-base-200">
+    <section class="py-20 bg-base-200 benefits-section">
         <div class="max-w-7xl mx-auto px-4">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <div>

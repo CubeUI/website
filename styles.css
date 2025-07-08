@@ -130,50 +130,202 @@ img.cursor-pointer:hover {
   filter: brightness(1.05);
 }
 
-/* Better image cropping for screenshots */
-.object-cover {
-  object-fit: none;
+/* Better image display for screenshots */
+.object-contain {
+  object-fit: contain;
   object-position: center;
 }
 
-.object-top {
-  object-position: center top;
+/* Screenshot hover zoom effect that follows mouse */
+.screenshot-container {
+  cursor: zoom-in;
+  position: relative;
+  overflow: hidden;
 }
 
-.object-center {
-  object-position: center center;
+.screenshot-container img {
+  transition: transform 0.1s ease;
+  transform-origin: center;
 }
 
-/* Custom positioning for specific components - showing actual pixel windows */
-img[src*="query-builder"] {
-  object-fit: none;
-  object-position: 0px -100px;
+.screenshot-container:hover img {
+  transform: scale(2);
 }
 
-img[src*="schema-explorer"] {
-  object-fit: none;
-  object-position: 0px -50px;
+/* Responsive mockup-code elements */
+.mockup-code {
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+  font-size: 0.875rem; /* 14px */
 }
 
-img[src*="dashboard-builder"] {
-  object-fit: none;
-  object-position: 0px -150px;
+.mockup-code pre {
+  white-space: pre;
+  overflow-x: visible;
+  min-width: max-content;
+  padding: 0.5rem 1rem;
+  margin: 0;
+  line-height: 1.5;
 }
 
-img[src*="sql-builder"] {
-  object-fit: none;
-  object-position: 0px -80px;
+.mockup-code pre code {
+  font-family: 'Courier New', monospace;
+  font-size: inherit;
+  white-space: pre;
+  word-break: normal;
+  overflow-wrap: normal;
 }
 
-img[src*="ai-chat-bot"] {
-  object-fit: none;
-  object-position: 0px -120px;
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .mockup-code {
+    font-size: 0.75rem; /* 12px on mobile */
+    border-radius: 0.5rem;
+    margin: 0 -1rem; /* Extend to card edges on mobile */
+  }
+  
+  .mockup-code pre {
+    padding: 0.375rem 1rem;
+  }
+  
+  /* Ensure horizontal scrolling works on mobile */
+  .mockup-code::-webkit-scrollbar {
+    height: 4px;
+  }
+  
+  .mockup-code::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+  }
+  
+  .mockup-code::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+  }
+  
+  .mockup-code::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+  }
+  
+  /* Make comparison cards stack better on mobile */
+  .grid.lg\\:grid-cols-2 {
+    gap: 1rem;
+  }
+  
+  /* Ensure stats component is responsive */
+  .stats-horizontal {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .stats-horizontal .stat {
+    min-width: 100%;
+    padding: 1rem;
+  }
+  
+  /* Benefits Section mobile fixes */
+  .benefits-section {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+  
+  .benefits-section .max-w-7xl {
+    max-width: 100% !important;
+    padding: 0 1rem !important;
+  }
+  
+  .benefits-section h2 {
+    font-size: 1.875rem !important; /* 30px instead of larger desktop size */
+    line-height: 1.2;
+    word-wrap: break-word;
+    hyphens: auto;
+  }
+  
+  .benefits-section p {
+    font-size: 1rem !important; /* 16px instead of 18px */
+    line-height: 1.5;
+  }
+  
+  .benefits-section .space-y-4 {
+    gap: 0.75rem;
+  }
+  
+  .benefits-section .flex.items-center {
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  
+  .benefits-section .flex.items-center span {
+    font-size: 0.875rem !important; /* 14px */
+    line-height: 1.4;
+    word-wrap: break-word;
+    hyphens: auto;
+  }
+  
+  /* Card header responsive fixes */
+  .card-header {
+    padding: 0.75rem 1rem;
+  }
+  
+  .card-header .flex.items-center {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .card-header span {
+    font-size: 0.75rem !important;
+    line-height: 1.3;
+    word-wrap: break-word;
+  }
+  
+  /* Ensure all text content respects container bounds */
+  .benefits-section * {
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+  }
+  
+  /* Grid layout improvements for mobile */
+  .benefits-section .grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+  
+  /* Specifically target the main benefits grid */
+  .benefits-section .grid.lg\\:grid-cols-2 {
+    gap: 1rem !important;
+  }
+  
+  .benefits-section .flex.flex-col {
+    gap: 1rem;
+    max-width: 100%;
+    min-width: 0;
+  }
+  
+  /* Ensure all flex containers respect mobile bounds */
+  .benefits-section .flex {
+    max-width: 100%;
+    min-width: 0;
+  }
+  
+  /* Ensure cards don't overflow */
+  .benefits-section .card {
+    margin: 0;
+    min-width: 0;
+    width: 100%;
+  }
+  
+  /* VS divider responsive */
+  .benefits-section .text-center.py-4 {
+    padding: 1rem 0;
+  }
+  
+  .benefits-section .flex.items-center.justify-center {
+    margin: 0 1rem;
+  }
 }
 
-/* Better image containment for screenshots */
-.object-contain {
-  object-fit: contain;
-  background: linear-gradient(135deg, 
-    oklch(98% 0 0) 0%, 
-    oklch(96% 0.001 286.375) 100%);
-} 
+ 
