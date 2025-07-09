@@ -156,28 +156,8 @@
                         <div class="card bg-base-100 shadow-xl mb-6">
                             <div class="card-body">
                                 <h4 class="card-title">Live Preview</h4>
-                                <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 p-4 bg-base-200 rounded-lg">
-                                    <div class="space-y-3">
-                                        <h5 class="font-medium text-sm opacity-70">MEASURES</h5>
-                                        <div class="space-y-2">
-                                            <div class="badge badge-primary">Orders.count</div>
-                                            <div class="badge badge-outline">Orders.totalAmount</div>
-                                        </div>
-                                    </div>
-                                    <div class="space-y-3">
-                                        <h5 class="font-medium text-sm opacity-70">DIMENSIONS</h5>
-                                        <div class="space-y-2">
-                                            <div class="badge badge-secondary">Orders.status</div>
-                                            <div class="badge badge-outline">Users.city</div>
-                                        </div>
-                                    </div>
-                                    <div class="space-y-3">
-                                        <h5 class="font-medium text-sm opacity-70">TIME DIMENSIONS</h5>
-                                        <div class="space-y-2">
-                                            <div class="badge badge-accent">Orders.createdAt</div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <img src="screenshots/docs/query-builder.png" alt="QueryBuilder Component" class="w-full max-w-4xl rounded-lg border border-base-300 mb-4">
+                                
                             </div>
                         </div>
 
@@ -214,6 +194,9 @@
                             <div id="cubeselect" class="border-l-4 border-primary pl-4">
                                 <h4 class="text-xl font-semibold mb-3">CubeSelect</h4>
                                 <p class="mb-3">A dropdown component for selecting Cube.js cubes.</p>
+                                <div class="mb-4">
+                                    <img src="screenshots/docs/cube-select.png" alt="CubeSelect Component" class="w-full max-w-lg rounded-lg border border-base-300">
+                                </div>
                                 <div class="mockup-code mb-4">
                                     <pre data-prefix="1"><code>import { CubeSelect } from '@cubekit/react';</code></pre>
                                     <pre data-prefix="2"><code>import { useCube } from '@cubekit/react';</code></pre>
@@ -276,6 +259,9 @@
                             <div id="multiselect" class="border-l-4 border-secondary pl-4">
                                 <h4 class="text-xl font-semibold mb-3">MultiSelect</h4>
                                 <p class="mb-3">A generic multi-select dropdown component for selecting measures, dimensions, or segments.</p>
+                                <div class="mb-4">
+                                    <img src="screenshots/docs/multi-select.png" alt="MultiSelect Component" class="w-full max-w-lg rounded-lg border border-base-300">
+                                </div>
                                 <div class="mockup-code mb-4">
                                     <pre data-prefix="1"><code>import { MultiSelect } from '@cubekit/react';</code></pre>
                                     <pre data-prefix="2"><code>import { MeasureIcon } from '@cubekit/react';</code></pre>
@@ -367,6 +353,9 @@
                             <div id="filterbuilder" class="border-l-4 border-accent pl-4">
                                 <h4 class="text-xl font-semibold mb-3">FilterBuilder</h4>
                                 <p class="mb-3">A comprehensive filter builder component for creating complex query filters.</p>
+                                <div class="mb-4">
+                                    <img src="screenshots/docs/filter-builder.png" alt="FilterBuilder Component" class="w-full max-w-5xl rounded-lg border border-base-300">
+                                </div>
                                 <div class="mockup-code">
                                     <pre data-prefix="1"><code>import { FilterBuilder } from '@cubekit/react';</code></pre>
                                     <pre data-prefix="2"><code></code></pre>
@@ -391,6 +380,9 @@
                             <div id="queryoptions" class="border-l-4 border-info pl-4">
                                 <h4 class="text-xl font-semibold mb-3">QueryOptions</h4>
                                 <p class="mb-3">Component for configuring query options like limit, sorting, and row limits.</p>
+                                <div class="mb-4">
+                                    <img src="screenshots/docs/query-options.png" alt="QueryOptions Component" class="w-full max-w-5xl rounded-lg border border-base-300">
+                                </div>
                                 <div class="mockup-code">
                                     <pre data-prefix="1"><code>import { QueryOptions } from '@cubekit/react';</code></pre>
                                     <pre data-prefix="2"><code></code></pre>
@@ -413,6 +405,9 @@
                             <div id="queryactions" class="border-l-4 border-warning pl-4">
                                 <h4 class="text-xl font-semibold mb-3">QueryActions</h4>
                                 <p class="mb-3">Action buttons for query operations (save, execute, export, etc.).</p>
+                                <div class="mb-4">
+                                    <img src="screenshots/docs/query-actions.png" alt="QueryActions Component" class="w-full max-w-sm rounded-lg border border-base-300">
+                                </div>
                                 <div class="mockup-code">
                                     <pre data-prefix="1"><code>import { QueryActions } from '@cubekit/react';</code></pre>
                                     <pre data-prefix="2"><code></code></pre>
@@ -440,7 +435,7 @@
                         <div class="card bg-base-100 shadow-xl mb-6">
                             <div class="card-body">
                                 <h4 class="card-title mb-4">Live Preview</h4>
-                                <img src="screenshots/ai-chat-bot.png" alt="ConversationBuilder Component" class="w-full rounded-lg border border-base-300">
+                                <img src="screenshots/docs/conversation-builder.png" alt="ConversationBuilder Component" class="w-full max-w-5xl rounded-lg border border-base-300">
                             </div>
                         </div>
 
@@ -475,8 +470,11 @@
                         <!-- Sub-components -->
                         <div class="space-y-8">
                             <div id="message" class="border-l-4 border-primary pl-4">
-                                <h4 class="text-xl font-semibold mb-3">Message</h4>
+                                <h4 class="text-xl font-semibold mb-3">Conversation Message</h4>
                                 <p class="mb-3">Individual message component within conversations.</p>
+                                <div class="mb-4">
+                                    <img src="screenshots/docs/conversation-message.png" alt="Conversation Message Component" class="w-full max-w-2xl rounded-lg border border-base-300">
+                                </div>
                                 <div class="mockup-code">
                                     <pre data-prefix="1"><code>import { Message } from '@cubekit/react';</code></pre>
                                     <pre data-prefix="2"><code></code></pre>
@@ -497,6 +495,9 @@
                             <div id="conversationsidebar" class="border-l-4 border-secondary pl-4">
                                 <h4 class="text-xl font-semibold mb-3">ConversationSidebar</h4>
                                 <p class="mb-3">Sidebar component for managing conversation history.</p>
+                                <div class="mb-4">
+                                    <img src="screenshots/docs/conversation-sidebar.png" alt="ConversationSidebar Component" class="w-full max-w-xs rounded-lg border border-base-300">
+                                </div>
                                 <div class="mockup-code">
                                     <pre data-prefix="1"><code>import { ConversationSidebar } from '@cubekit/react';</code></pre>
                                     <pre data-prefix="2"><code></code></pre>
@@ -522,7 +523,7 @@
                         <div class="card bg-base-100 shadow-xl mb-6">
                             <div class="card-body">
                                 <h4 class="card-title mb-4">Live Preview</h4>
-                                <img src="screenshots/sql-builder.png" alt="SqlQueryBuilder Component" class="w-full rounded-lg border border-base-300">
+                                <img src="screenshots/docs/sql-query-builder.png" alt="SqlQueryBuilder Component" class="w-full max-w-5xl rounded-lg border border-base-300">
                             </div>
                         </div>
 
@@ -557,8 +558,11 @@
                         <!-- Sub-components -->
                         <div class="space-y-8">
                             <div id="sqleditor" class="border-l-4 border-primary pl-4">
-                                <h4 class="text-xl font-semibold mb-3">SqlEditor</h4>
+                                <h4 class="text-xl font-semibold mb-3">Sql Query Editor</h4>
                                 <p class="mb-3">SQL code editor component.</p>
+                                <div class="mb-4">
+                                    <img src="screenshots/docs/sql-query-editor.png" alt="Sql Query Editor Component" class="w-full max-w-4xl rounded-lg border border-base-300">
+                                </div>
                                 <div class="mockup-code">
                                     <pre data-prefix="1"><code>import { SqlEditor } from '@cubekit/react';</code></pre>
                                     <pre data-prefix="2"><code></code></pre>
@@ -580,6 +584,9 @@
                             <div id="sqlqueryresult" class="border-l-4 border-secondary pl-4">
                                 <h4 class="text-xl font-semibold mb-3">SqlQueryResult</h4>
                                 <p class="mb-3">Component for displaying SQL query results.</p>
+                                <div class="mb-4">
+                                    <img src="screenshots/docs/sql-query-result.png" alt="SqlQueryResult Component" class="w-full max-w-4xl rounded-lg border border-base-300">
+                                </div>
                                 <div class="mockup-code">
                                     <pre data-prefix="1"><code>import { SqlQueryResult } from '@cubekit/react';</code></pre>
                                     <pre data-prefix="2"><code></code></pre>
@@ -599,6 +606,9 @@
                             <div id="sqlquerysidebar" class="border-l-4 border-accent pl-4">
                                 <h4 class="text-xl font-semibold mb-3">SqlQuerySidebar</h4>
                                 <p class="mb-3">Sidebar for SQL query management.</p>
+                                <div class="mb-4">
+                                    <img src="screenshots/docs/sql-query-sidebar.png" alt="SqlQuerySidebar Component" class="w-full max-w-xs rounded-lg border border-base-300">
+                                </div>
                                 <div class="mockup-code">
                                     <pre data-prefix="1"><code>import { SqlQuerySidebar } from '@cubekit/react';</code></pre>
                                     <pre data-prefix="2"><code></code></pre>
@@ -624,7 +634,7 @@
                         <div class="card bg-base-100 shadow-xl mb-6">
                             <div class="card-body">
                                 <h4 class="card-title mb-4">Live Preview</h4>
-                                <img src="screenshots/schema-explorer.png" alt="SchemaVisualizer Component" class="w-full rounded-lg border border-base-300">
+                                <img src="screenshots/docs/schema-visualiser.png" alt="SchemaVisualizer Component" class="w-full max-w-5xl rounded-lg border border-base-300">
                             </div>
                         </div>
 
@@ -664,6 +674,9 @@
                             <div id="cubenode" class="border-l-4 border-primary pl-4">
                                 <h4 class="text-xl font-semibold mb-3">CubeNode</h4>
                                 <p class="mb-3">Individual cube node within the schema visualizer.</p>
+                                <div class="mb-4">
+                                    <img src="screenshots/docs/cube-node.png" alt="CubeNode Component" class="w-full max-w-lg rounded-lg border border-base-300">
+                                </div>
                                 <div class="mockup-code">
                                     <pre data-prefix="1"><code>import { CubeNode } from '@cubekit/react';</code></pre>
                                     <pre data-prefix="2"><code></code></pre>
@@ -691,7 +704,7 @@
                         <div class="card bg-base-100 shadow-xl mb-6">
                             <div class="card-body">
                                 <h4 class="card-title">Live Preview</h4>
-                                <img src="screenshots/dashboard-builder.png" alt="Dashboard Builder Component" class="w-full rounded-lg border border-base-300">
+                                <img src="screenshots/docs/dashboard-builder.png" alt="Dashboard Builder Component" class="w-full max-w-5xl rounded-lg border border-base-300">
                             </div>
                         </div>
 
@@ -726,8 +739,11 @@
                         <!-- Sub-components -->
                         <div class="space-y-8">
                             <div id="widget" class="border-l-4 border-primary pl-4">
-                                <h4 class="text-xl font-semibold mb-3">Widget</h4>
+                                <h4 class="text-xl font-semibold mb-3">Dashboard Widget</h4>
                                 <p class="mb-3">Individual dashboard widget component.</p>
+                                <div class="mb-4">
+                                    <img src="screenshots/docs/dashboard-widget.png" alt="Dashboard Widget Component" class="w-full max-w-lg rounded-lg border border-base-300">
+                                </div>
                                 <div class="mockup-code">
                                     <pre data-prefix="1"><code>import { Widget } from '@cubekit/react';</code></pre>
                                     <pre data-prefix="2"><code></code></pre>
@@ -751,6 +767,9 @@
                             <div id="dashboardsidebar" class="border-l-4 border-secondary pl-4">
                                 <h4 class="text-xl font-semibold mb-3">DashboardSidebar</h4>
                                 <p class="mb-3">Sidebar for dashboard management and widget library.</p>
+                                <div class="mb-4">
+                                    <img src="screenshots/docs/dashboard-sidebar.png" alt="DashboardSidebar Component" class="w-full max-w-xs rounded-lg border border-base-300">
+                                </div>
                                 <div class="mockup-code">
                                     <pre data-prefix="1"><code>import { DashboardSidebar } from '@cubekit/react';</code></pre>
                                     <pre data-prefix="2"><code></code></pre>
@@ -782,6 +801,7 @@
                         <div class="card bg-base-100 shadow-xl mb-6">
                             <div class="card-body">
                                 <h4 class="card-title mb-4">Live Preview</h4>
+                                <img src="screenshots/docs/line-chart.png" alt="ChartVisualization Component" class="w-full max-w-2xl rounded-lg border border-base-300 mb-4">
                                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-4 bg-base-200 rounded-lg">
                                     <div class="bg-white border rounded-lg p-3 text-center">
                                         <div class="text-xs text-gray-500 mb-2">Bar Chart</div>
@@ -857,6 +877,10 @@
                         <h3 class="text-2xl font-bold mb-4">QueryResultTable</h3>
                         <p class="mb-6">Table component for displaying query results in tabular format.</p>
                         
+                        <div class="mb-6">
+                            <img src="screenshots/docs/query-result-table.png" alt="QueryResultTable Component" class="w-full max-w-2xl rounded-lg border border-base-300">
+                        </div>
+                        
                         <div class="mockup-code mb-6">
                             <pre data-prefix="1"><code>import { QueryResultTable } from '@cubekit/react';</code></pre>
                             <pre data-prefix="2"><code></code></pre>
@@ -880,6 +904,10 @@
                         <h3 class="text-2xl font-bold mb-4">StatCard</h3>
                         <p class="mb-6">Card component for displaying key metrics and statistics.</p>
                         
+                        <div class="mb-6">
+                            <img src="screenshots/docs/stat-card.png" alt="StatCard Component" class="w-full max-w-2xl rounded-lg border border-base-300">
+                        </div>
+                        
                         <div class="mockup-code mb-6">
                             <pre data-prefix="1"><code>import { StatCard } from '@cubekit/react';</code></pre>
                             <pre data-prefix="2"><code></code></pre>
@@ -902,6 +930,10 @@
                     <div id="cubeconnection" class="mb-12">
                         <h3 class="text-2xl font-bold mb-4">CubeConnection</h3>
                         <p class="mb-6">Component for managing and testing Cube.js connections.</p>
+                        
+                        <div class="mb-6">
+                            <img src="screenshots/docs/cube-connection.png" alt="CubeConnection Component" class="w-full max-w-xs rounded-lg border border-base-300">
+                        </div>
                         
                         <div class="mockup-code mb-6">
                             <pre data-prefix="1"><code>import { CubeConnection } from '@cubekit/react';</code></pre>
@@ -1413,7 +1445,7 @@
                             <details>
                                 <summary><a href="#conversationbuilder">ConversationBuilder</a></summary>
                                 <ul>
-                                    <li><a href="#message">Message</a></li>
+                                    <li><a href="#message">Conversation Message</a></li>
                                     <li><a href="#conversationsidebar">ConversationSidebar</a></li>
                                 </ul>
                             </details>
@@ -1422,7 +1454,7 @@
                             <details>
                                 <summary><a href="#dashboardbuilder">DashboardBuilder</a></summary>
                                 <ul>
-                                    <li><a href="#widget">Widget</a></li>
+                                    <li><a href="#widget">Dashboard Widget</a></li>
                                     <li><a href="#dashboardsidebar">DashboardSidebar</a></li>
                                 </ul>
                             </details>
@@ -1431,7 +1463,7 @@
                             <details>
                                 <summary><a href="#sqlquerybuilder">SqlQueryBuilder</a></summary>
                                 <ul>
-                                    <li><a href="#sqleditor">SqlEditor</a></li>
+                                    <li><a href="#sqleditor">Sql Query Editor</a></li>
                                     <li><a href="#sqlqueryresult">SqlQueryResult</a></li>
                                     <li><a href="#sqlquerysidebar">SqlQuerySidebar</a></li>
                                 </ul>
