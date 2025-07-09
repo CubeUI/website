@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cubekit">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building Modern Cube UI Components: The Complete Guide to React Components for Cube.dev - CubeKit Blog</title>
+    <meta name="description" content="Discover how to build professional Cube UI components with React. Learn about seamless Cube.dev integration, AI-powered interfaces, and simple builder components for modern analytics applications.">
+    <meta name="keywords" content="Cube UI, Cube.dev components, React Cube components, Cube.dev UI library, analytics UI components, data visualization React, Cube.dev dashboard, AI chat interface">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../icons/cubekit_logo.png">
+    <link rel="apple-touch-icon" href="../icons/cubekit_logo.png">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FWLNLJBYD6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-FWLNLJBYD6');
+    </script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans">
+    <!-- Navigation -->
+    <div class="navbar bg-base-100 border-b border-base-200 sticky top-0 z-50">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16"></path>
+                    </svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <li><a href="../index.html#features">Features</a></li>
+                    <li><a href="../index.html#pricing">Pricing</a></li>
+                    <li><a href="../docs.html">Docs</a></li>
+                    <li><a href="../blog/">Blog</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <a href="../index.html" class="btn btn-ghost">
+                <img src="../icons/cubekit_logo.png" alt="CubeKit" class="h-12">
+            </a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+                <li><a href="../index.html#features" class="hover:text-primary">Features</a></li>
+                <li><a href="../index.html#pricing" class="hover:text-primary">Pricing</a></li>
+                <li><a href="../docs.html" class="hover:text-primary">Docs</a></li>
+                <li><a href="../blog/" class="hover:text-primary">Blog</a></li>
+                <li><a href="../contact.html" class="hover:text-primary">Contact</a></li>
+            </ul>
+        </div>
+        <div class="navbar-end">
+            <a href="../index.html" class="btn btn-primary">Join Waiting List</a>
+        </div>
+    </div>
+
+    <!-- Article Header -->
+    <article class="max-w-4xl mx-auto px-4 py-8">
+        <header class="mb-8">
+            <div class="flex items-center gap-2 text-sm text-base-content/60 mb-4">
+                <a href="index.html" class="hover:text-primary transition-colors">← Back to Blog</a>
+                <span>•</span>
+                <time datetime="2024-01-20">January 20, 2024</time>
+                <span>•</span>
+                <span class="badge badge-primary badge-outline">Cube UI</span>
+            </div>
+            <h1 class="text-4xl lg:text-5xl font-bold mb-4 leading-tight">
+                Building Modern Cube UI Components: The Complete Guide to React Components for Cube.dev
+            </h1>
+            <p class="text-xl text-base-content/70 mb-6">
+                Discover how to build professional Cube UI components that work seamlessly with Cube.dev. 
+                From simple builder interfaces to AI-powered chat components, learn how modern React components 
+                can transform your analytics applications and accelerate development.
+            </p>
+            <div class="flex items-center gap-3">
+                <div class="avatar placeholder">
+                    <div class="bg-primary text-primary-content rounded-full w-12">
+                        <span class="text-sm font-bold">CK</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="font-medium">CubeKit Team</div>
+                    <div class="text-sm text-base-content/60">8 min read</div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Article Content -->
+        <div class="prose prose-lg max-w-none">
+            <h2>What is Cube UI?</h2>
+            <p>
+                <strong>Cube UI</strong> represents the next evolution in building analytics interfaces for Cube.dev applications. 
+                Instead of writing custom components from scratch every time, Cube UI provides a comprehensive library of 
+                pre-built, production-ready React components that understand Cube.dev's data model natively.
+            </p>
+            
+            <p>
+                Whether you're building a simple dashboard or a complex analytics platform, Cube UI components handle the 
+                heavy lifting of data visualization, query building, and user interaction, allowing you to focus on your 
+                business logic and user experience.
+            </p>
+
+            <div class="border-2 border-info rounded-lg p-4 mb-6">
+                <div class="flex items-start gap-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6 text-info">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <div>
+                        <h4 class="font-bold text-info">Why Cube UI Matters</h4>
+                        <p class="mt-2 mb-0">Traditional UI libraries don't understand Cube.dev's semantic layer, measures, dimensions, or query structure. Cube UI components are specifically designed to work with Cube.dev's API, providing seamless integration and reducing development time by 70%.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Creating React Components That Work Seamlessly with Cube.dev</h2>
+            <p>
+                The key to successful Cube UI development lies in understanding how React components can integrate naturally 
+                with Cube.dev's architecture. Here's how modern Cube UI components are structured:
+            </p>
+
+            <h3>1. Native Cube.dev Integration</h3>
+            <p>
+                The best Cube UI components don't just display data—they understand Cube.dev's semantic layer. This means 
+                they can automatically handle:
+            </p>
+
+            <ul>
+                <li><strong>Schema awareness:</strong> Components automatically discover available cubes, measures, and dimensions</li>
+                <li><strong>Query optimization:</strong> Smart caching and batching of Cube.dev API requests</li>
+                <li><strong>Type safety:</strong> Full TypeScript support with auto-generated types from your Cube schema</li>
+                <li><strong>Real-time updates:</strong> Automatic re-fetching when underlying data changes</li>
+            </ul>
+
+            <div class="mockup-code mb-6">
+                <pre data-prefix="1"><code>import { QueryBuilder } from '@cubekit/react';</code></pre>
+                <pre data-prefix="2"><code>import { CubeProvider } from '@cubekit/react';</code></pre>
+                <pre data-prefix="3"><code></code></pre>
+                <pre data-prefix="4"><code>function App() {</code></pre>
+                <pre data-prefix="5"><code>  return (</code></pre>
+                <pre data-prefix="6"><code>    &lt;CubeProvider</code></pre>
+                <pre data-prefix="7"><code>      cubeApiUrl="http://localhost:4000/cubejs-api/v1"</code></pre>
+                <pre data-prefix="8"><code>      cubeApiToken="your-token"</code></pre>
+                <pre data-prefix="9"><code>    &gt;</code></pre>
+                <pre data-prefix="10"><code>      &lt;QueryBuilder</code></pre>
+                <pre data-prefix="11"><code>        onQueryChange={(query) => console.log(query)}</code></pre>
+                <pre data-prefix="12"><code>        defaultQuery={{</code></pre>
+                <pre data-prefix="13"><code>          measures: ['Orders.count'],</code></pre>
+                <pre data-prefix="14"><code>          dimensions: ['Orders.status']</code></pre>
+                <pre data-prefix="15"><code>        }}</code></pre>
+                <pre data-prefix="16"><code>      /&gt;</code></pre>
+                <pre data-prefix="17"><code>    &lt;/CubeProvider&gt;</code></pre>
+                <pre data-prefix="18"><code>  );</code></pre>
+                <pre data-prefix="19"><code>}</code></pre>
+            </div>
+
+            <h3>2. Component Architecture Best Practices</h3>
+            <p>
+                Modern Cube UI components follow a composable architecture that makes them flexible and reusable:
+            </p>
+
+            <div class="bg-base-200 p-6 rounded-lg mb-6">
+                <h4 class="font-semibold mb-3">Key Architecture Principles:</h4>
+                <ul class="list-disc list-inside space-y-2 text-sm">
+                    <li><strong>Compound Components:</strong> Main components composed of smaller, focused sub-components</li>
+                    <li><strong>Render Props:</strong> Flexible rendering patterns for customization</li>
+                    <li><strong>Context API:</strong> Shared state management across component hierarchies</li>
+                    <li><strong>Custom Hooks:</strong> Reusable logic for Cube.dev interactions</li>
+                    <li><strong>Responsive Design:</strong> Mobile-first approach with breakpoint-aware layouts</li>
+                </ul>
+            </div>
+
+            <h2>Making Data Access Easy with Simple Builder Interfaces</h2>
+            <p>
+                One of the biggest challenges in analytics applications is making complex data accessible to non-technical users. 
+                Cube UI solves this with intuitive builder interfaces that abstract away the complexity of query construction.
+            </p>
+
+            <h3>The Visual Query Builder Approach</h3>
+            <p>
+                Instead of requiring users to understand SQL or Cube.dev's query format, modern Cube UI components provide 
+                visual interfaces that feel natural and intuitive:
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                <div class="card bg-base-100 shadow-lg">
+                    <div class="card-body">
+                        <h4 class="card-title text-lg">Traditional Approach</h4>
+                        <div class="mockup-code text-xs">
+                            <pre data-prefix="$"><code>SELECT orders.status,</code></pre>
+                            <pre data-prefix="$"><code>       COUNT(*) as count</code></pre>
+                            <pre data-prefix="$"><code>FROM orders</code></pre>
+                            <pre data-prefix="$"><code>WHERE created_at >= '2024-01-01'</code></pre>
+                            <pre data-prefix="$"><code>GROUP BY orders.status</code></pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="card bg-base-100 shadow-lg">
+                    <div class="card-body">
+                        <h4 class="card-title text-lg">Cube UI Approach</h4>
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-2">
+                                <span class="badge badge-primary">Orders.count</span>
+                                <span class="text-sm text-base-content/60">Measure</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="badge badge-secondary">Orders.status</span>
+                                <span class="text-sm text-base-content/60">Dimension</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="badge badge-accent">Last 30 days</span>
+                                <span class="text-sm text-base-content/60">Time Range</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Key Builder Interface Features</h3>
+            <p>
+                Effective Cube UI builder interfaces share several important characteristics:
+            </p>
+
+            <ul>
+                <li><strong>Drag & Drop:</strong> Intuitive interaction patterns that feel natural</li>
+                <li><strong>Smart Suggestions:</strong> Context-aware recommendations based on selected data</li>
+                <li><strong>Real-time Preview:</strong> Immediate feedback as users build their queries</li>
+                <li><strong>Validation:</strong> Prevent invalid combinations and guide users toward valid queries</li>
+                <li><strong>Templates:</strong> Pre-built query templates for common use cases</li>
+            </ul>
+
+            <div class="mockup-code mb-6">
+                <pre data-prefix="1"><code>// Example: Simple builder interface with validation</code></pre>
+                <pre data-prefix="2"><code>const [query, setQuery] = useState({</code></pre>
+                <pre data-prefix="3"><code>  measures: [],</code></pre>
+                <pre data-prefix="4"><code>  dimensions: [],</code></pre>
+                <pre data-prefix="5"><code>  filters: []</code></pre>
+                <pre data-prefix="6"><code>});</code></pre>
+                <pre data-prefix="7"><code></code></pre>
+                <pre data-prefix="8"><code>&lt;QueryBuilder</code></pre>
+                <pre data-prefix="9"><code>  query={query}</code></pre>
+                <pre data-prefix="10"><code>  onQueryChange={setQuery}</code></pre>
+                <pre data-prefix="11"><code>  enableValidation={true}</code></pre>
+                <pre data-prefix="12"><code>  showPreview={true}</code></pre>
+                <pre data-prefix="13"><code>  suggestionsEnabled={true}</code></pre>
+                <pre data-prefix="14"><code>/&gt;</code></pre>
+            </div>
+
+            <h2>Using CubeKit AI Service to Power AI Chat Interfaces</h2>
+            <p>
+                The future of data interaction is conversational. CubeKit's AI service transforms natural language questions 
+                into Cube.dev queries, making analytics accessible to everyone in your organization.
+            </p>
+
+            <h3>How the AI Service Works</h3>
+            <p>
+                The CubeKit AI service understands your Cube.dev schema and can translate natural language into optimized queries:
+            </p>
+
+            <div class="steps steps-vertical lg:steps-horizontal mb-6">
+                <div class="step step-primary">
+                    <div class="step-content">
+                        <h4 class="font-semibold">1. Schema Understanding</h4>
+                        <p class="text-sm text-base-content/60">AI analyzes your Cube.dev schema to understand available data</p>
+                    </div>
+                </div>
+                <div class="step step-primary">
+                    <div class="step-content">
+                        <h4 class="font-semibold">2. Query Translation</h4>
+                        <p class="text-sm text-base-content/60">Natural language is converted to Cube.dev query format</p>
+                    </div>
+                </div>
+                <div class="step step-primary">
+                    <div class="step-content">
+                        <h4 class="font-semibold">3. Result Presentation</h4>
+                        <p class="text-sm text-base-content/60">Data is presented in charts, tables, or conversational format</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Implementing AI Chat Interfaces</h3>
+            <p>
+                The ConversationBuilder component makes it easy to add AI-powered chat to your Cube UI:
+            </p>
+
+            <div class="mockup-code mb-6">
+                <pre data-prefix="1"><code>import { ConversationBuilder } from '@cubekit/react';</code></pre>
+                <pre data-prefix="2"><code></code></pre>
+                <pre data-prefix="3"><code>function AIAnalyticsChat() {</code></pre>
+                <pre data-prefix="4"><code>  return (</code></pre>
+                <pre data-prefix="5"><code>    &lt;ConversationBuilder</code></pre>
+                <pre data-prefix="6"><code>      aiApiUrl="https://api.cubekit.dev/ai"</code></pre>
+                <pre data-prefix="7"><code>      aiApiKey="your-api-key"</code></pre>
+                <pre data-prefix="8"><code>      enableVoiceInput={true}</code></pre>
+                <pre data-prefix="9"><code>      showQueryExplanation={true}</code></pre>
+                <pre data-prefix="10"><code>      onQueryGenerated={(query) => {</code></pre>
+                <pre data-prefix="11"><code>        console.log('AI generated query:', query);</code></pre>
+                <pre data-prefix="12"><code>      }}</code></pre>
+                <pre data-prefix="13"><code>    /&gt;</code></pre>
+                <pre data-prefix="14"><code>  );</code></pre>
+                <pre data-prefix="15"><code>}</code></pre>
+            </div>
+
+            <div class="border-2 border-success rounded-lg p-4 mb-6">
+                <div class="flex items-start gap-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6 text-success">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <div>
+                        <h4 class="font-bold text-success">AI Chat Examples</h4>
+                        <div class="mt-2 space-y-1 text-sm">
+                            <p><strong>User:</strong> "Show me sales by region for the last quarter"</p>
+                            <p><strong>AI:</strong> Generates query with Sales.totalAmount measure, Region dimension, and Q4 time filter</p>
+                            <p><strong>User:</strong> "Which products are performing best?"</p>
+                            <p><strong>AI:</strong> Creates ranking query with product dimensions and relevant KPIs</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Simple Integration Within Any React App</h2>
+            <p>
+                One of the biggest advantages of modern Cube UI components is how easily they integrate into existing React applications. 
+                Whether you're building a new app or adding analytics to an existing platform, the integration process is straightforward.
+            </p>
+
+            <h3>Installation and Setup</h3>
+            <p>
+                Getting started with Cube UI components requires minimal setup:
+            </p>
+
+            <div class="mockup-code mb-6">
+                <pre data-prefix="$"><code>npm install @cubekit/react</code></pre>
+                <pre data-prefix="$"><code># Optional: Install peer dependencies</code></pre>
+                <pre data-prefix="$"><code>npm install react@^18.0.0 react-dom@^18.0.0</code></pre>
+            </div>
+
+            <h3>Basic Integration Pattern</h3>
+            <p>
+                Here's how to integrate Cube UI components into your existing React application:
+            </p>
+
+            <div class="mockup-code mb-6">
+                <pre data-prefix="1"><code>// App.jsx - Root level setup</code></pre>
+                <pre data-prefix="2"><code>import { CubeKitProvider } from '@cubekit/react';</code></pre>
+                <pre data-prefix="3"><code>import { QueryBuilder, DashboardBuilder } from '@cubekit/react';</code></pre>
+                <pre data-prefix="4"><code></code></pre>
+                <pre data-prefix="5"><code>function App() {</code></pre>
+                <pre data-prefix="6"><code>  return (</code></pre>
+                <pre data-prefix="7"><code>    &lt;CubeKitProvider</code></pre>
+                <pre data-prefix="8"><code>      config={{</code></pre>
+                <pre data-prefix="9"><code>        cubeApiUrl: process.env.REACT_APP_CUBE_API_URL,</code></pre>
+                <pre data-prefix="10"><code>        cubeApiToken: process.env.REACT_APP_CUBE_API_TOKEN,</code></pre>
+                <pre data-prefix="11"><code>        pollInterval: 60000</code></pre>
+                <pre data-prefix="12"><code>      }}</code></pre>
+                <pre data-prefix="13"><code>    &gt;</code></pre>
+                <pre data-prefix="14"><code>      &lt;Router&gt;</code></pre>
+                <pre data-prefix="15"><code>        &lt;Routes&gt;</code></pre>
+                <pre data-prefix="16"><code>          &lt;Route path="/analytics" element={&lt;AnalyticsPage /&gt;} /&gt;</code></pre>
+                <pre data-prefix="17"><code>          &lt;Route path="/dashboard" element={&lt;DashboardPage /&gt;} /&gt;</code></pre>
+                <pre data-prefix="18"><code>        &lt;/Routes&gt;</code></pre>
+                <pre data-prefix="19"><code>      &lt;/Router&gt;</code></pre>
+                <pre data-prefix="20"><code>    &lt;/CubeKitProvider&gt;</code></pre>
+                <pre data-prefix="21"><code>  );</code></pre>
+                <pre data-prefix="22"><code>}</code></pre>
+            </div>
+
+            <h3>Component-Level Integration</h3>
+            <p>
+                Each Cube UI component can be used independently or combined with others:
+            </p>
+
+            <div class="mockup-code mb-6">
+                <pre data-prefix="1"><code>// AnalyticsPage.jsx - Using multiple components</code></pre>
+                <pre data-prefix="2"><code>import { QueryBuilder, ChartVisualization } from '@cubekit/react';</code></pre>
+                <pre data-prefix="3"><code>import { useState } from 'react';</code></pre>
+                <pre data-prefix="4"><code></code></pre>
+                <pre data-prefix="5"><code>function AnalyticsPage() {</code></pre>
+                <pre data-prefix="6"><code>  const [currentQuery, setCurrentQuery] = useState(null);</code></pre>
+                <pre data-prefix="7"><code></code></pre>
+                <pre data-prefix="8"><code>  return (</code></pre>
+                <pre data-prefix="9"><code>    &lt;div className="grid grid-cols-1 lg:grid-cols-2 gap-6"&gt;</code></pre>
+                <pre data-prefix="10"><code>      &lt;QueryBuilder</code></pre>
+                <pre data-prefix="11"><code>        onQueryChange={setCurrentQuery}</code></pre>
+                <pre data-prefix="12"><code>        className="h-full"</code></pre>
+                <pre data-prefix="13"><code>      /&gt;</code></pre>
+                <pre data-prefix="14"><code>      {currentQuery && (</code></pre>
+                <pre data-prefix="15"><code>        &lt;ChartVisualization</code></pre>
+                <pre data-prefix="16"><code>          query={currentQuery}</code></pre>
+                <pre data-prefix="17"><code>          chartType="bar"</code></pre>
+                <pre data-prefix="18"><code>          responsive={true}</code></pre>
+                <pre data-prefix="19"><code>        /&gt;</code></pre>
+                <pre data-prefix="20"><code>      )}</code></pre>
+                <pre data-prefix="21"><code>    &lt;/div&gt;</code></pre>
+                <pre data-prefix="22"><code>  );</code></pre>
+                <pre data-prefix="23"><code>}</code></pre>
+            </div>
+
+            <h3>Styling and Theming</h3>
+            <p>
+                Cube UI components are designed to work with your existing design system:
+            </p>
+
+            <ul>
+                <li><strong>CSS-in-JS Support:</strong> Works with styled-components, emotion, and other CSS-in-JS libraries</li>
+                <li><strong>Tailwind CSS:</strong> Built-in support for Tailwind utility classes</li>
+                <li><strong>Custom Themes:</strong> Easy theme customization with CSS variables</li>
+                <li><strong>DaisyUI Integration:</strong> 30+ pre-built themes available out of the box</li>
+            </ul>
+
+            <h2>Best Practices for Cube UI Development</h2>
+            <p>
+                To get the most out of Cube UI components in your React applications, follow these best practices:
+            </p>
+
+            <h3>1. Performance Optimization</h3>
+            <ul>
+                <li>Use React.memo() for components that don't need frequent re-renders</li>
+                <li>Implement query caching to avoid redundant API calls</li>
+                <li>Use virtualization for large data sets</li>
+                <li>Optimize bundle size with tree-shaking</li>
+            </ul>
+
+            <h3>2. User Experience</h3>
+            <ul>
+                <li>Provide loading states and skeleton screens</li>
+                <li>Implement error boundaries for graceful error handling</li>
+                <li>Add keyboard navigation support</li>
+                <li>Ensure mobile responsiveness</li>
+            </ul>
+
+            <h3>3. Data Management</h3>
+            <ul>
+                <li>Use proper state management patterns</li>
+                <li>Implement optimistic updates where appropriate</li>
+                <li>Handle real-time data updates efficiently</li>
+                <li>Provide data export capabilities</li>
+            </ul>
+
+            <h2>The Future of Cube UI</h2>
+            <p>
+                As analytics applications become more sophisticated, Cube UI components will continue to evolve. 
+                We're seeing trends toward:
+            </p>
+
+            <ul>
+                <li><strong>AI-First Interfaces:</strong> More intelligent, context-aware components</li>
+                <li><strong>Real-time Collaboration:</strong> Multi-user editing and sharing capabilities</li>
+                <li><strong>Advanced Visualizations:</strong> 3D charts, interactive maps, and custom viz types</li>
+                <li><strong>Mobile-First Design:</strong> Touch-optimized interfaces for mobile analytics</li>
+                <li><strong>Accessibility:</strong> WCAG-compliant components for inclusive design</li>
+            </ul>
+
+            <h2>Getting Started with Cube UI</h2>
+            <p>
+                Ready to transform your Cube.dev applications with modern UI components? Here's how to get started:
+            </p>
+
+            <div class="steps steps-vertical mb-6">
+                <div class="step step-primary">
+                    <div class="step-content">
+                        <h4 class="font-semibold">1. Evaluate Your Needs</h4>
+                        <p class="text-sm text-base-content/60">Identify which components would benefit your application most</p>
+                    </div>
+                </div>
+                <div class="step step-primary">
+                    <div class="step-content">
+                        <h4 class="font-semibold">2. Start with Core Components</h4>
+                        <p class="text-sm text-base-content/60">Begin with QueryBuilder or DashboardBuilder for immediate impact</p>
+                    </div>
+                </div>
+                <div class="step step-primary">
+                    <div class="step-content">
+                        <h4 class="font-semibold">3. Integrate AI Features</h4>
+                        <p class="text-sm text-base-content/60">Add ConversationBuilder for natural language query capabilities</p>
+                    </div>
+                </div>
+                <div class="step step-primary">
+                    <div class="step-content">
+                        <h4 class="font-semibold">4. Customize and Scale</h4>
+                        <p class="text-sm text-base-content/60">Tailor components to your brand and scale across your application</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-2 border-primary rounded-lg p-6 mb-6">
+                <h3 class="font-bold text-primary mb-3">Ready to Build Modern Cube UI?</h3>
+                <p class="mb-4">
+                    CubeKit provides everything you need to build professional analytics interfaces with React and Cube.dev. 
+                    From simple query builders to AI-powered chat interfaces, our components help you ship faster and create 
+                    better user experiences.
+                </p>
+                <div class="flex gap-4">
+                    <a href="../docs.html" class="btn btn-primary">View Documentation</a>
+                    <a href="../index.html" class="btn btn-outline">Join Waiting List</a>
+                </div>
+            </div>
+
+            <p>
+                The future of analytics UIs is here, and it's built with React, powered by Cube.dev, and enhanced with AI. 
+                Start building your modern Cube UI today and see how much faster you can ship professional analytics applications.
+            </p>
+        </div>
+    </article>
+
+    <!-- Related Articles -->
+    <section class="max-w-4xl mx-auto px-4 py-8 border-t border-base-200">
+        <h2 class="text-2xl font-bold mb-6">Related Articles</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="card bg-base-100 shadow-lg">
+                <div class="card-body">
+                    <h3 class="card-title text-lg">
+                        <a href="getting-started-with-cubekit.html" class="hover:text-primary transition-colors">
+                            Getting Started with CubeKit
+                        </a>
+                    </h3>
+                    <p class="text-sm text-base-content/70">Learn the basics of CubeKit and how to build your first analytics interface.</p>
+                    <div class="card-actions justify-end">
+                        <div class="badge badge-outline">Getting Started</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card bg-base-100 shadow-lg">
+                <div class="card-body">
+                    <h3 class="card-title text-lg">
+                        <a href="why-cube-dev-perfect-data-platform.html" class="hover:text-primary transition-colors">
+                            Why Cube.dev is the Perfect Data Platform
+                        </a>
+                    </h3>
+                    <p class="text-sm text-base-content/70">Discover why Cube.dev provides the ideal foundation for modern analytics applications.</p>
+                    <div class="card-actions justify-end">
+                        <div class="badge badge-outline">Platform</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-base-200 mt-16">
+        <div class="max-w-6xl mx-auto px-4 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <img src="../icons/cubekit_logo.png" alt="CubeKit" class="h-8">
+                        <span class="font-bold text-lg">CubeKit</span>
+                    </div>
+                    <p class="text-sm text-base-content/70">
+                        Professional React components for Cube.dev applications. Build analytics UIs faster with pre-built, customizable components.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Product</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="../index.html#features" class="hover:text-primary transition-colors">Features</a></li>
+                        <li><a href="../docs.html" class="hover:text-primary transition-colors">Documentation</a></li>
+                        <li><a href="../index.html#pricing" class="hover:text-primary transition-colors">Pricing</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="../blog/" class="hover:text-primary transition-colors">Blog</a></li>
+                        <li><a href="../contact.html" class="hover:text-primary transition-colors">Contact</a></li>
+                        <li><a href="../license.html" class="hover:text-primary transition-colors">License</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="../index.html" class="hover:text-primary transition-colors">About</a></li>
+                        <li><a href="../faq.html" class="hover:text-primary transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-base-300 mt-8 pt-8 text-center text-sm text-base-content/70">
+                <p>&copy; 2024 CubeKit. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 
