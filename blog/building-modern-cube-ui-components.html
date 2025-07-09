@@ -415,16 +415,89 @@
             </div>
 
             <h3>Styling and Theming</h3>
-            <p>
-                Cube UI components are designed to work with your existing design system:
+            <p class="mb-6">
+                Cube UI components are designed to work seamlessly with your existing design system, offering multiple styling approaches to fit your development workflow:
             </p>
 
-            <ul>
-                <li><strong>CSS-in-JS Support:</strong> Works with styled-components, emotion, and other CSS-in-JS libraries</li>
-                <li><strong>Tailwind CSS:</strong> Built-in support for Tailwind utility classes</li>
-                <li><strong>Custom Themes:</strong> Easy theme customization with CSS variables</li>
-                <li><strong>DaisyUI Integration:</strong> 30+ pre-built themes available out of the box</li>
-            </ul>
+            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                <div class="card bg-base-100 shadow-lg border border-base-200">
+                    <div class="card-body">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+                                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a4 4 0 004-4V5z"></path>
+                                </svg>
+                            </div>
+                            <h4 class="font-semibold text-lg">CSS-in-JS Support</h4>
+                        </div>
+                        <p class="text-sm text-base-content/70">
+                            Works seamlessly with styled-components, emotion, and other CSS-in-JS libraries. Style components using your preferred JavaScript-based styling solution.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card bg-base-100 shadow-lg border border-base-200">
+                    <div class="card-body">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center">
+                                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                </svg>
+                            </div>
+                            <h4 class="font-semibold text-lg">Tailwind CSS</h4>
+                        </div>
+                        <p class="text-sm text-base-content/70">
+                            Built-in support for Tailwind utility classes. Apply responsive design, spacing, colors, and effects directly through className props.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card bg-base-100 shadow-lg border border-base-200">
+                    <div class="card-body">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center">
+                                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"></path>
+                                </svg>
+                            </div>
+                            <h4 class="font-semibold text-lg">Custom Themes</h4>
+                        </div>
+                        <p class="text-sm text-base-content/70">
+                            Easy theme customization with CSS variables. Create consistent branding across all components with centralized theme configuration.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card bg-base-100 shadow-lg border border-base-200">
+                    <div class="card-body">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-10 h-10 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg flex items-center justify-center">
+                                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a4 4 0 004-4V5z"></path>
+                                </svg>
+                            </div>
+                            <h4 class="font-semibold text-lg">DaisyUI Integration</h4>
+                        </div>
+                        <p class="text-sm text-base-content/70">
+                            30+ pre-built themes available out of the box. Switch between light, dark, and custom themes instantly with DaisyUI's theme system.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="alert alert-info mb-6">
+                <div class="flex items-start gap-3">
+                    <svg class="w-5 h-5 text-info flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <div>
+                        <h4 class="font-semibold mb-1">Pro Tip: Mix and Match</h4>
+                        <p class="text-sm">
+                            You can combine multiple styling approaches in the same project. Use Tailwind for rapid prototyping, CSS-in-JS for complex component styling, and DaisyUI themes for consistent design systems.
+                        </p>
+                    </div>
+                </div>
+            </div>
 
             <h2>Best Practices for Cube UI Development</h2>
             <p>
