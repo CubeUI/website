@@ -106,51 +106,51 @@
 
         <!-- Article Content -->
         <div class="prose prose-lg max-w-none">
-            <h2>What is Cube UI?</h2>
-            <p>
+            <h2 class="text-3xl font-bold mb-6 mt-12">What is Cube UI?</h2>
+            <p class="text-lg text-base-content/80 mb-8">
                 <strong>Cube UI</strong> represents the next evolution in building analytics interfaces for Cube.dev applications. 
                 Instead of writing custom components from scratch every time, Cube UI provides a comprehensive library of 
                 pre-built, production-ready React components that understand Cube.dev's data model natively.
             </p>
             
-            <p>
+            <p class="mb-6">
                 Whether you're building a simple dashboard or a complex analytics platform, Cube UI components handle the 
                 heavy lifting of data visualization, query building, and user interaction, allowing you to focus on your 
                 business logic and user experience.
             </p>
 
-            <div class="border-2 border-info rounded-lg p-4 mb-6">
+            <div class="border-2 border-info rounded-lg p-4 mb-8">
                 <div class="flex items-start gap-3">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6 text-info">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>
                     <div>
-                        <h4 class="font-bold text-info">Why Cube UI Matters</h4>
+                        <h4 class="text-lg font-semibold text-info">Why Cube UI Matters</h4>
                         <p class="mt-2 mb-0">Traditional UI libraries don't understand Cube.dev's semantic layer, measures, dimensions, or query structure. Cube UI components are specifically designed to work with Cube.dev's API, providing seamless integration and reducing development time by 70%.</p>
                     </div>
                 </div>
             </div>
 
-            <h2>Creating React Components That Work Seamlessly with Cube.dev</h2>
-            <p>
+            <h2 class="text-3xl font-bold mb-6 mt-12">Creating React Components That Work Seamlessly with Cube.dev</h2>
+            <p class="text-lg text-base-content/80 mb-8">
                 The key to successful Cube UI development lies in understanding how React components can integrate naturally 
                 with Cube.dev's architecture. Here's how modern Cube UI components are structured:
             </p>
 
-            <h3>1. Native Cube.dev Integration</h3>
-            <p>
+            <h3 class="text-xl font-bold mb-4 mt-8">1. Native Cube.dev Integration</h3>
+            <p class="mb-6">
                 The best Cube UI components don't just display data—they understand Cube.dev's semantic layer. This means 
                 they can automatically handle:
             </p>
 
-            <ul>
+            <ul class="space-y-3 mb-8">
                 <li><strong>Schema awareness:</strong> Components automatically discover available cubes, measures, and dimensions</li>
                 <li><strong>Query optimization:</strong> Smart caching and batching of Cube.dev API requests</li>
                 <li><strong>Type safety:</strong> Full TypeScript support with auto-generated types from your Cube schema</li>
                 <li><strong>Real-time updates:</strong> Automatic re-fetching when underlying data changes</li>
             </ul>
 
-            <div class="mockup-code mb-6">
+            <div class="mockup-code mb-8">
                 <pre data-prefix="1"><code>import { QueryBuilder } from '@cubekit/react';</code></pre>
                 <pre data-prefix="2"><code>import { CubeProvider } from '@cubekit/react';</code></pre>
                 <pre data-prefix="3"><code></code></pre>
@@ -172,14 +172,14 @@
                 <pre data-prefix="19"><code>}</code></pre>
             </div>
 
-            <h3>2. Component Architecture Best Practices</h3>
-            <p>
+            <h3 class="text-xl font-bold mb-4 mt-8">2. Component Architecture Best Practices</h3>
+            <p class="mb-6">
                 Modern Cube UI components follow a composable architecture that makes them flexible and reusable:
             </p>
 
-            <div class="bg-base-200 p-6 rounded-lg mb-6">
-                <h4 class="font-semibold mb-3">Key Architecture Principles:</h4>
-                <ul class="list-disc list-inside space-y-2 text-sm">
+            <div class="bg-base-200 p-6 rounded-lg mb-8">
+                <h4 class="text-lg font-semibold mb-4">Key Architecture Principles:</h4>
+                <ul class="list-disc list-inside space-y-3 text-sm">
                     <li><strong>Compound Components:</strong> Main components composed of smaller, focused sub-components</li>
                     <li><strong>Render Props:</strong> Flexible rendering patterns for customization</li>
                     <li><strong>Context API:</strong> Shared state management across component hierarchies</li>
@@ -188,14 +188,14 @@
                 </ul>
             </div>
 
-            <h2>Making Data Access Easy with Simple Builder Interfaces</h2>
-            <p>
+            <h2 class="text-3xl font-bold mb-6 mt-12">Making Data Access Easy with Simple Builder Interfaces</h2>
+            <p class="text-lg text-base-content/80 mb-8">
                 One of the biggest challenges in analytics applications is making complex data accessible to non-technical users. 
                 Cube UI solves this with intuitive builder interfaces that abstract away the complexity of query construction.
             </p>
 
-            <h3>The Visual Query Builder Approach</h3>
-            <p>
+            <h3 class="text-xl font-bold mb-4 mt-8">The Visual Query Builder Approach</h3>
+            <p class="mb-6">
                 Instead of requiring users to understand SQL or Cube.dev's query format, modern Cube UI components provide 
                 visual interfaces that feel natural and intuitive:
             </p>
@@ -203,7 +203,7 @@
             <div class="grid md:grid-cols-2 gap-6 mb-6">
                 <div class="card bg-base-100 shadow-lg">
                     <div class="card-body">
-                        <h4 class="card-title text-lg">Traditional Approach</h4>
+                        <h4 class="text-lg font-semibold">Traditional Approach</h4>
                         <div class="mockup-code text-xs">
                             <pre data-prefix="$"><code>SELECT orders.status,</code></pre>
                             <pre data-prefix="$"><code>       COUNT(*) as count</code></pre>
@@ -215,7 +215,7 @@
                 </div>
                 <div class="card bg-base-100 shadow-lg">
                     <div class="card-body">
-                        <h4 class="card-title text-lg">Cube UI Approach</h4>
+                        <h4 class="text-lg font-semibold">Cube UI Approach</h4>
                         <div class="space-y-3">
                             <div class="flex items-center gap-2">
                                 <span class="badge badge-primary">Orders.count</span>
@@ -234,12 +234,12 @@
                 </div>
             </div>
 
-            <h3>Key Builder Interface Features</h3>
-            <p>
+            <h3 class="text-xl font-bold mb-4 mt-8">Key Builder Interface Features</h3>
+            <p class="mb-6">
                 Effective Cube UI builder interfaces share several important characteristics:
             </p>
 
-            <ul>
+            <ul class="space-y-3 mb-8">
                 <li><strong>Drag & Drop:</strong> Intuitive interaction patterns that feel natural</li>
                 <li><strong>Smart Suggestions:</strong> Context-aware recommendations based on selected data</li>
                 <li><strong>Real-time Preview:</strong> Immediate feedback as users build their queries</li>
@@ -264,40 +264,40 @@
                 <pre data-prefix="14"><code>/&gt;</code></pre>
             </div>
 
-            <h2>Using CubeKit AI Service to Power AI Chat Interfaces</h2>
-            <p>
+            <h2 class="text-3xl font-bold mb-6 mt-12">Using CubeKit AI Service to Power AI Chat Interfaces</h2>
+            <p class="text-lg text-base-content/80 mb-8">
                 The future of data interaction is conversational. CubeKit's AI service transforms natural language questions 
                 into Cube.dev queries, making analytics accessible to everyone in your organization.
             </p>
 
-            <h3>How the AI Service Works</h3>
-            <p>
+            <h3 class="text-xl font-bold mb-4 mt-8">How the AI Service Works</h3>
+            <p class="mb-6">
                 The CubeKit AI service understands your Cube.dev schema and can translate natural language into optimized queries:
             </p>
 
             <div class="steps steps-vertical lg:steps-horizontal mb-6">
                 <div class="step step-primary">
                     <div class="step-content">
-                        <h4 class="font-semibold">1. Schema Understanding</h4>
+                        <h4 class="text-lg font-semibold">1. Schema Understanding</h4>
                         <p class="text-sm text-base-content/60">AI analyzes your Cube.dev schema to understand available data</p>
                     </div>
                 </div>
                 <div class="step step-primary">
                     <div class="step-content">
-                        <h4 class="font-semibold">2. Query Translation</h4>
+                        <h4 class="text-lg font-semibold">2. Query Translation</h4>
                         <p class="text-sm text-base-content/60">Natural language is converted to Cube.dev query format</p>
                     </div>
                 </div>
                 <div class="step step-primary">
                     <div class="step-content">
-                        <h4 class="font-semibold">3. Result Presentation</h4>
+                        <h4 class="text-lg font-semibold">3. Result Presentation</h4>
                         <p class="text-sm text-base-content/60">Data is presented in charts, tables, or conversational format</p>
                     </div>
                 </div>
             </div>
 
-            <h3>Implementing AI Chat Interfaces</h3>
-            <p>
+            <h3 class="text-xl font-bold mb-4 mt-8">Implementing AI Chat Interfaces</h3>
+            <p class="mb-6">
                 The ConversationBuilder component makes it easy to add AI-powered chat to your Cube UI:
             </p>
 
@@ -325,25 +325,30 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>
                     <div>
-                        <h4 class="font-bold text-success">AI Chat Examples</h4>
-                        <div class="mt-2 space-y-1 text-sm">
-                            <p><strong>User:</strong> "Show me sales by region for the last quarter"</p>
-                            <p><strong>AI:</strong> Generates query with Sales.totalAmount measure, Region dimension, and Q4 time filter</p>
-                            <p><strong>User:</strong> "Which products are performing best?"</p>
-                            <p><strong>AI:</strong> Creates ranking query with product dimensions and relevant KPIs</p>
+                        <h4 class="text-lg font-semibold text-success">CubeKit AI Service Integration</h4>
+                        <div class="mt-2 space-y-2 text-sm">
+                            <p><strong>User asks:</strong> "Show me sales by region for the last quarter"</p>
+                            <p><strong>AI service automatically provides:</strong></p>
+                            <ul class="list-disc list-inside ml-4 space-y-1">
+                                <li>Valid Cube.dev query generated from the question</li>
+                                <li>Executed query results from your data</li>
+                                <li>Intelligent commentary explaining the results</li>
+                                <li>Suggested visualization type (chart, table, etc.)</li>
+                            </ul>
+                            <p><strong>CubeKit chat component:</strong> Renders all this information automatically in a beautiful, interactive interface</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <h2>Simple Integration Within Any React App</h2>
-            <p>
+            <h2 class="text-3xl font-bold mb-6 mt-12">Simple Integration Within Any React App</h2>
+            <p class="text-lg text-base-content/80 mb-8">
                 One of the biggest advantages of modern Cube UI components is how easily they integrate into existing React applications. 
                 Whether you're building a new app or adding analytics to an existing platform, the integration process is straightforward.
             </p>
 
-            <h3>Installation and Setup</h3>
-            <p>
+            <h3 class="text-xl font-bold mb-4 mt-8">Installation and Setup</h3>
+            <p class="mb-6">
                 Getting started with Cube UI components requires minimal setup:
             </p>
 
@@ -353,8 +358,8 @@
                 <pre data-prefix="$"><code>npm install react@^18.0.0 react-dom@^18.0.0</code></pre>
             </div>
 
-            <h3>Basic Integration Pattern</h3>
-            <p>
+            <h3 class="text-xl font-bold mb-4 mt-8">Basic Integration Pattern</h3>
+            <p class="mb-6">
                 Here's how to integrate Cube UI components into your existing React application:
             </p>
 
@@ -383,8 +388,8 @@
                 <pre data-prefix="22"><code>}</code></pre>
             </div>
 
-            <h3>Component-Level Integration</h3>
-            <p>
+            <h3 class="text-xl font-bold mb-4 mt-8">Component-Level Integration</h3>
+            <p class="mb-6">
                 Each Cube UI component can be used independently or combined with others:
             </p>
 
@@ -414,7 +419,7 @@
                 <pre data-prefix="23"><code>}</code></pre>
             </div>
 
-            <h3>Styling and Theming</h3>
+            <h3 class="text-xl font-bold mb-4 mt-8">Styling and Theming</h3>
             <p class="mb-6">
                 Cube UI components are designed to work seamlessly with your existing design system, offering multiple styling approaches to fit your development workflow:
             </p>
@@ -428,7 +433,7 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a4 4 0 004-4V5z"></path>
                                 </svg>
                             </div>
-                            <h4 class="font-semibold text-lg">CSS-in-JS Support</h4>
+                            <h4 class="text-lg font-semibold mb-3">CSS-in-JS Support</h4>
                         </div>
                         <p class="text-sm text-base-content/70">
                             Works seamlessly with styled-components, emotion, and other CSS-in-JS libraries. Style components using your preferred JavaScript-based styling solution.
@@ -444,7 +449,7 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                                 </svg>
                             </div>
-                            <h4 class="font-semibold text-lg">Tailwind CSS</h4>
+                            <h4 class="text-lg font-semibold mb-3">Tailwind CSS</h4>
                         </div>
                         <p class="text-sm text-base-content/70">
                             Built-in support for Tailwind utility classes. Apply responsive design, spacing, colors, and effects directly through className props.
@@ -460,7 +465,7 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"></path>
                                 </svg>
                             </div>
-                            <h4 class="font-semibold text-lg">Custom Themes</h4>
+                            <h4 class="text-lg font-semibold mb-3">Custom Themes</h4>
                         </div>
                         <p class="text-sm text-base-content/70">
                             Easy theme customization with CSS variables. Create consistent branding across all components with centralized theme configuration.
@@ -476,7 +481,7 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a4 4 0 004-4V5z"></path>
                                 </svg>
                             </div>
-                            <h4 class="font-semibold text-lg">DaisyUI Integration</h4>
+                            <h4 class="text-lg font-semibold mb-3">DaisyUI Integration</h4>
                         </div>
                         <p class="text-sm text-base-content/70">
                             30+ pre-built themes available out of the box. Switch between light, dark, and custom themes instantly with DaisyUI's theme system.
@@ -485,13 +490,13 @@
                 </div>
             </div>
 
-            <div class="alert alert-info mb-6">
+            <div class="border-2 border-info rounded-lg p-4 mb-6">
                 <div class="flex items-start gap-3">
                     <svg class="w-5 h-5 text-info flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>
                     <div>
-                        <h4 class="font-semibold mb-1">Pro Tip: Mix and Match</h4>
+                        <h4 class="text-lg font-semibold mb-3">Pro Tip: Mix and Match</h4>
                         <p class="text-sm">
                             You can combine multiple styling approaches in the same project. Use Tailwind for rapid prototyping, CSS-in-JS for complex component styling, and DaisyUI themes for consistent design systems.
                         </p>
@@ -499,83 +504,257 @@
                 </div>
             </div>
 
-            <h2>Best Practices for Cube UI Development</h2>
-            <p>
-                To get the most out of Cube UI components in your React applications, follow these best practices:
+            <h2 class="text-3xl font-bold mb-6 mt-12">Best Practices for Cube UI Development</h2>
+            <p class="text-lg text-base-content/80 mb-8">
+                To get the most out of Cube UI components in your React applications, follow these essential best practices that ensure optimal performance, user experience, and maintainability:
             </p>
 
-            <h3>1. Performance Optimization</h3>
-            <ul>
-                <li>Use React.memo() for components that don't need frequent re-renders</li>
-                <li>Implement query caching to avoid redundant API calls</li>
-                <li>Use virtualization for large data sets</li>
-                <li>Optimize bundle size with tree-shaking</li>
-            </ul>
+            <div class="space-y-8 mb-12">
+                <div class="card bg-base-100 shadow-lg border border-base-200">
+                    <div class="card-body">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold mb-4">Performance Optimization</h3>
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div class="flex items-start gap-3">
+                                <div class="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                                <div>
+                                    <p class="font-medium">React.memo() Usage</p>
+                                    <p class="text-sm text-base-content/70">Wrap components that don't need frequent re-renders to prevent unnecessary updates</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                                <div>
+                                    <p class="font-medium">Query Caching</p>
+                                    <p class="text-sm text-base-content/70">Implement intelligent caching to avoid redundant API calls and improve response times</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                                <div>
+                                    <p class="font-medium">Virtualization</p>
+                                    <p class="text-sm text-base-content/70">Use virtualization for large data sets to maintain smooth scrolling and rendering</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                                <div>
+                                    <p class="font-medium">Bundle Optimization</p>
+                                    <p class="text-sm text-base-content/70">Optimize bundle size with tree-shaking and code splitting techniques</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-            <h3>2. User Experience</h3>
-            <ul>
-                <li>Provide loading states and skeleton screens</li>
-                <li>Implement error boundaries for graceful error handling</li>
-                <li>Add keyboard navigation support</li>
-                <li>Ensure mobile responsiveness</li>
-            </ul>
+                <div class="card bg-base-100 shadow-lg border border-base-200">
+                    <div class="card-body">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1.01M15 10h1.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold mb-4">User Experience</h3>
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div class="flex items-start gap-3">
+                                <div class="w-2 h-2 bg-secondary rounded-full mt-2 flex-shrink-0"></div>
+                                <div>
+                                    <p class="font-medium">Loading States</p>
+                                    <p class="text-sm text-base-content/70">Provide skeleton screens and loading indicators for better perceived performance</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-2 h-2 bg-secondary rounded-full mt-2 flex-shrink-0"></div>
+                                <div>
+                                    <p class="font-medium">Error Boundaries</p>
+                                    <p class="text-sm text-base-content/70">Implement error boundaries for graceful error handling and recovery</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-2 h-2 bg-secondary rounded-full mt-2 flex-shrink-0"></div>
+                                <div>
+                                    <p class="font-medium">Keyboard Navigation</p>
+                                    <p class="text-sm text-base-content/70">Add comprehensive keyboard navigation support for accessibility</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-2 h-2 bg-secondary rounded-full mt-2 flex-shrink-0"></div>
+                                <div>
+                                    <p class="font-medium">Mobile Responsiveness</p>
+                                    <p class="text-sm text-base-content/70">Ensure all components work seamlessly across different screen sizes</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-            <h3>3. Data Management</h3>
-            <ul>
-                <li>Use proper state management patterns</li>
-                <li>Implement optimistic updates where appropriate</li>
-                <li>Handle real-time data updates efficiently</li>
-                <li>Provide data export capabilities</li>
-            </ul>
+                <div class="card bg-base-100 shadow-lg border border-base-200">
+                    <div class="card-body">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold mb-4">Data Management</h3>
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div class="flex items-start gap-3">
+                                <div class="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
+                                <div>
+                                    <p class="font-medium">State Management</p>
+                                    <p class="text-sm text-base-content/70">Use proper state management patterns like Redux or Zustand for complex applications</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
+                                <div>
+                                    <p class="font-medium">Optimistic Updates</p>
+                                    <p class="text-sm text-base-content/70">Implement optimistic updates where appropriate for better user experience</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
+                                <div>
+                                    <p class="font-medium">Real-time Updates</p>
+                                    <p class="text-sm text-base-content/70">Handle real-time data updates efficiently with WebSockets or polling</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
+                                <div>
+                                    <p class="font-medium">Data Export</p>
+                                    <p class="text-sm text-base-content/70">Provide data export capabilities in multiple formats (CSV, JSON, PDF)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-            <h2>The Future of Cube UI</h2>
-            <p>
+            <h2 class="text-3xl font-bold mb-6 mt-12">The Future of Cube UI</h2>
+            <p class="text-lg text-base-content/80 mb-8">
                 As analytics applications become more sophisticated, Cube UI components will continue to evolve. 
-                We're seeing trends toward:
+                We're seeing exciting trends toward more intelligent, collaborative, and accessible interfaces:
             </p>
 
-            <ul>
-                <li><strong>AI-First Interfaces:</strong> More intelligent, context-aware components</li>
-                <li><strong>Real-time Collaboration:</strong> Multi-user editing and sharing capabilities</li>
-                <li><strong>Advanced Visualizations:</strong> 3D charts, interactive maps, and custom viz types</li>
-                <li><strong>Mobile-First Design:</strong> Touch-optimized interfaces for mobile analytics</li>
-                <li><strong>Accessibility:</strong> WCAG-compliant components for inclusive design</li>
-            </ul>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                <div class="card bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-200">
+                    <div class="card-body">
+                        <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                            </svg>
+                        </div>
+                        <h4 class="text-lg font-semibold mb-3">AI-First Interfaces</h4>
+                        <p class="text-sm text-base-content/70">More intelligent, context-aware components that understand user intent and provide smart suggestions</p>
+                    </div>
+                </div>
 
-            <h2>Getting Started with Cube UI</h2>
-            <p>
+                <div class="card bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200">
+                    <div class="card-body">
+                        <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                            </svg>
+                        </div>
+                        <h4 class="text-lg font-semibold mb-3">Real-time Collaboration</h4>
+                        <p class="text-sm text-base-content/70">Multi-user editing and sharing capabilities for team-based analytics workflows</p>
+                    </div>
+                </div>
+
+                <div class="card bg-gradient-to-br from-purple-50 to-pink-50 border border-purple-200">
+                    <div class="card-body">
+                        <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                            </svg>
+                        </div>
+                        <h4 class="text-lg font-semibold mb-3">Advanced Visualizations</h4>
+                        <p class="text-sm text-base-content/70">3D charts, interactive maps, and custom visualization types for complex data storytelling</p>
+                    </div>
+                </div>
+
+                <div class="card bg-gradient-to-br from-orange-50 to-red-50 border border-orange-200">
+                    <div class="card-body">
+                        <div class="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <h4 class="text-lg font-semibold mb-3">Mobile-First Design</h4>
+                        <p class="text-sm text-base-content/70">Touch-optimized interfaces designed specifically for mobile analytics consumption</p>
+                    </div>
+                </div>
+
+                <div class="card bg-gradient-to-br from-cyan-50 to-blue-50 border border-cyan-200">
+                    <div class="card-body">
+                        <div class="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                            </svg>
+                        </div>
+                        <h4 class="text-lg font-semibold mb-3">Accessibility</h4>
+                        <p class="text-sm text-base-content/70">WCAG-compliant components ensuring inclusive design for all users</p>
+                    </div>
+                </div>
+
+                <div class="card bg-gradient-to-br from-indigo-50 to-purple-50 border border-indigo-200">
+                    <div class="card-body">
+                        <div class="w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <h4 class="text-lg font-semibold mb-3">Performance</h4>
+                        <p class="text-sm text-base-content/70">Optimized components with built-in performance monitoring and automatic optimization</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="text-3xl font-bold mb-6 mt-12">Getting Started with Cube UI</h2>
+            <p class="text-lg text-base-content/80 mb-8">
                 Ready to transform your Cube.dev applications with modern UI components? Here's how to get started:
             </p>
 
             <div class="steps steps-vertical mb-6">
                 <div class="step step-primary">
                     <div class="step-content">
-                        <h4 class="font-semibold">1. Evaluate Your Needs</h4>
+                        <h4 class="text-lg font-semibold mb-3">1. Evaluate Your Needs</h4>
                         <p class="text-sm text-base-content/60">Identify which components would benefit your application most</p>
                     </div>
                 </div>
                 <div class="step step-primary">
                     <div class="step-content">
-                        <h4 class="font-semibold">2. Start with Core Components</h4>
+                        <h4 class="text-lg font-semibold mb-3">2. Start with Core Components</h4>
                         <p class="text-sm text-base-content/60">Begin with QueryBuilder or DashboardBuilder for immediate impact</p>
                     </div>
                 </div>
                 <div class="step step-primary">
                     <div class="step-content">
-                        <h4 class="font-semibold">3. Integrate AI Features</h4>
+                        <h4 class="text-lg font-semibold mb-3">3. Integrate AI Features</h4>
                         <p class="text-sm text-base-content/60">Add ConversationBuilder for natural language query capabilities</p>
                     </div>
                 </div>
                 <div class="step step-primary">
                     <div class="step-content">
-                        <h4 class="font-semibold">4. Customize and Scale</h4>
+                        <h4 class="text-lg font-semibold mb-3">4. Customize and Scale</h4>
                         <p class="text-sm text-base-content/60">Tailor components to your brand and scale across your application</p>
                     </div>
                 </div>
             </div>
 
             <div class="border-2 border-primary rounded-lg p-6 mb-6">
-                <h3 class="font-bold text-primary mb-3">Ready to Build Modern Cube UI?</h3>
+                <h3 class="text-xl font-bold text-primary mb-4">Ready to Build Modern Cube UI?</h3>
                 <p class="mb-4">
                     CubeKit provides everything you need to build professional analytics interfaces with React and Cube.dev. 
                     From simple query builders to AI-powered chat interfaces, our components help you ship faster and create 
@@ -596,11 +775,11 @@
 
     <!-- Related Articles -->
     <section class="max-w-4xl mx-auto px-4 py-8 border-t border-base-200">
-        <h2 class="text-2xl font-bold mb-6">Related Articles</h2>
+                    <h2 class="text-3xl font-bold mb-6 mt-12">Related Articles</h2>
         <div class="grid md:grid-cols-2 gap-6">
             <div class="card bg-base-100 shadow-lg">
                 <div class="card-body">
-                    <h3 class="card-title text-lg">
+                    <h3 class="text-lg font-semibold">
                         <a href="getting-started-with-cubekit.html" class="hover:text-primary transition-colors">
                             Getting Started with CubeKit
                         </a>
@@ -613,7 +792,7 @@
             </div>
             <div class="card bg-base-100 shadow-lg">
                 <div class="card-body">
-                    <h3 class="card-title text-lg">
+                    <h3 class="text-lg font-semibold">
                         <a href="why-cube-dev-perfect-data-platform.html" class="hover:text-primary transition-colors">
                             Why Cube.dev is the Perfect Data Platform
                         </a>
@@ -641,7 +820,7 @@
                     </p>
                 </div>
                 <div>
-                    <h4 class="font-semibold mb-4">Product</h4>
+                    <h4 class="text-lg font-semibold mb-4">Product</h4>
                     <ul class="space-y-2 text-sm">
                         <li><a href="../index.html#features" class="hover:text-primary transition-colors">Features</a></li>
                         <li><a href="../docs.html" class="hover:text-primary transition-colors">Documentation</a></li>
@@ -649,7 +828,7 @@
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-semibold mb-4">Resources</h4>
+                    <h4 class="text-lg font-semibold mb-4">Resources</h4>
                     <ul class="space-y-2 text-sm">
                         <li><a href="../blog/" class="hover:text-primary transition-colors">Blog</a></li>
                         <li><a href="../contact.html" class="hover:text-primary transition-colors">Contact</a></li>
@@ -657,7 +836,7 @@
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-semibold mb-4">Company</h4>
+                    <h4 class="text-lg font-semibold mb-4">Company</h4>
                     <ul class="space-y-2 text-sm">
                         <li><a href="../index.html" class="hover:text-primary transition-colors">About</a></li>
                         <li><a href="../faq.html" class="hover:text-primary transition-colors">FAQ</a></li>
