@@ -328,4 +328,101 @@ img.cursor-pointer:hover {
   }
 }
 
+/* ConvertKit Form Styling */
+.formkit-form {
+  max-width: 100% !important;
+  margin: 0 auto;
+}
+
+.formkit-form .formkit-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.formkit-form .formkit-field {
+  margin-bottom: 0 !important;
+}
+
+.formkit-form .formkit-input {
+  width: 100% !important;
+  padding: 0.75rem !important;
+  border: 1px solid hsl(var(--bc) / 0.2) !important;
+  border-radius: 0.5rem !important;
+  background: hsl(var(--b1)) !important;
+  color: hsl(var(--bc)) !important;
+  font-size: 1rem !important;
+  transition: border-color 0.2s ease !important;
+}
+
+.formkit-form .formkit-input:focus {
+  outline: none !important;
+  border-color: hsl(var(--p)) !important;
+  box-shadow: 0 0 0 3px hsl(var(--p) / 0.1) !important;
+}
+
+.formkit-form .formkit-input::placeholder {
+  color: hsl(var(--bc) / 0.5) !important;
+}
+
+.formkit-form .formkit-submit {
+  width: 100% !important;
+  padding: 0.75rem 1.5rem !important;
+  background-color: hsl(var(--p)) !important;
+  color: hsl(var(--pc)) !important;
+  border: none !important;
+  border-radius: 0.5rem !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  margin-top: 0.5rem !important;
+}
+
+.formkit-form .formkit-submit:hover {
+  background-color: hsl(var(--p) / 0.9) !important;
+  transform: translateY(-1px) !important;
+}
+
+.formkit-form .formkit-submit:active {
+  transform: translateY(0) !important;
+}
+
+.formkit-form .formkit-alert {
+  margin-bottom: 1rem !important;
+  padding: 0.75rem !important;
+  border-radius: 0.5rem !important;
+  background: hsl(var(--er) / 0.1) !important;
+  border: 1px solid hsl(var(--er) / 0.2) !important;
+  color: hsl(var(--er)) !important;
+}
+
+.formkit-form .formkit-powered-by-convertkit-container {
+  margin-top: 1rem !important;
+  text-align: center !important;
+}
+
+.formkit-form .formkit-powered-by-convertkit {
+  opacity: 0.6 !important;
+  font-size: 0.875rem !important;
+  color: hsl(var(--bc) / 0.6) !important;
+  text-decoration: none !important;
+  transition: opacity 0.2s ease !important;
+}
+
+.formkit-form .formkit-powered-by-convertkit:hover {
+  opacity: 1 !important;
+}
+
+/* Mobile responsive adjustments for ConvertKit form */
+@media (max-width: 768px) {
+  .formkit-form .formkit-input {
+    font-size: 16px !important; /* Prevents zoom on iOS */
+  }
+  
+  .formkit-form .formkit-submit {
+    padding: 1rem 1.5rem !important;
+  }
+}
+
  

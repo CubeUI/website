@@ -195,77 +195,36 @@
         <div class="max-w-4xl mx-auto px-4">
             <div class="text-center mb-12">
                 <h2 class="text-3xl lg:text-4xl font-bold mb-4">Send Us a Message</h2>
-                <p class="text-lg text-base-content/70">Prefer to use a form? Fill out the details below and we'll get back to you within 24 hours.</p>
+                <p class="text-lg text-base-content/70">Fill out the form below and we'll get back to you within 24 hours.</p>
             </div>
             
             <div class="card bg-base-100 shadow-lg">
                 <div class="card-body">
-                    <form class="space-y-6" action="#" method="POST">
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div class="form-control">
-                                <label class="label">
-                                    <span class="label-text font-semibold">First Name *</span>
-                                </label>
-                                <input type="text" name="firstName" required class="input input-bordered w-full" placeholder="John">
+                    <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
+                    <form action="https://app.kit.com/forms/8291154/subscriptions" class="seva-form formkit-form" method="post" data-sv-form="8291154" data-uid="72378beb2b" data-format="inline" data-version="5" data-options="{&quot;settings&quot;:{&quot;after_subscribe&quot;:{&quot;action&quot;:&quot;message&quot;,&quot;success_message&quot;:&quot;Success! Now check your email to confirm your subscription.&quot;,&quot;redirect_url&quot;:&quot;&quot;},&quot;analytics&quot;:{&quot;google&quot;:null,&quot;fathom&quot;:null,&quot;facebook&quot;:null,&quot;segment&quot;:null,&quot;pinterest&quot;:null,&quot;sparkloop&quot;:null,&quot;googletagmanager&quot;:null},&quot;modal&quot;:{&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15},&quot;powered_by&quot;:{&quot;show&quot;:true,&quot;url&quot;:&quot;https://kit.com/features/forms?utm_campaign=poweredby&amp;utm_content=form&amp;utm_medium=referral&amp;utm_source=dynamic&quot;},&quot;recaptcha&quot;:{&quot;enabled&quot;:false},&quot;return_visitor&quot;:{&quot;action&quot;:&quot;show&quot;,&quot;custom_content&quot;:&quot;&quot;},&quot;slide_in&quot;:{&quot;display_in&quot;:&quot;bottom_right&quot;,&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15},&quot;sticky_bar&quot;:{&quot;display_in&quot;:&quot;top&quot;,&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15}},&quot;version&quot;:&quot;5&quot;}" min-width="400 500 600 700 800">
+                        <div data-style="clean">
+                            <ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
+                            <div data-element="fields" data-stacked="true" class="seva-fields formkit-fields">
+                                <div class="formkit-field">
+                                    <input class="formkit-input" name="email_address" aria-label="Email Address" placeholder="Email Address" required="" type="email" style="color: rgb(0, 0, 0); border-color: rgb(227, 227, 227); border-radius: 4px; font-weight: 400;">
+                                </div>
+                                <div class="formkit-field">
+                                    <input class="formkit-input" aria-label="First Name" name="fields[first_name]" required="" placeholder="First Name" type="text" style="color: rgb(0, 0, 0); border-color: rgb(227, 227, 227); border-radius: 4px; font-weight: 400;">
+                                </div>
+                                <div class="formkit-field">
+                                    <input class="formkit-input" aria-label="Last Name" name="fields[last_name]" required="" placeholder="Last Name" type="text" style="color: rgb(0, 0, 0); border-color: rgb(227, 227, 227); border-radius: 4px; font-weight: 400;">
+                                </div>
+                                <div class="formkit-field">
+                                    <input class="formkit-input" aria-label="Message" name="fields[message]" required="" placeholder="Message" type="text" style="color: rgb(0, 0, 0); border-color: rgb(227, 227, 227); border-radius: 4px; font-weight: 400;">
+                                </div>
+                                <button data-element="submit" class="formkit-submit formkit-submit" style="color: rgb(255, 255, 255); background-color: rgb(22, 119, 190); border-radius: 4px; font-weight: 400;">
+                                    <div class="formkit-spinner"><div></div><div></div><div></div></div>
+                                    <span class="">Send</span>
+                                </button>
                             </div>
-                            <div class="form-control">
-                                <label class="label">
-                                    <span class="label-text font-semibold">Last Name *</span>
-                                </label>
-                                <input type="text" name="lastName" required class="input input-bordered w-full" placeholder="Doe">
+                            <div class="formkit-powered-by-convertkit-container">
+                                <a href="https://kit.com/features/forms?utm_campaign=poweredby&amp;utm_content=form&amp;utm_medium=referral&amp;utm_source=dynamic" data-element="powered-by" class="formkit-powered-by-convertkit" data-variant="dark" target="_blank" rel="nofollow">Built with Kit</a>
                             </div>
-                        </div>
-                        
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div class="form-control">
-                                <label class="label">
-                                    <span class="label-text font-semibold">Email Address *</span>
-                                </label>
-                                <input type="email" name="email" required class="input input-bordered w-full" placeholder="john@company.com">
-                            </div>
-                            <div class="form-control">
-                                <label class="label">
-                                    <span class="label-text font-semibold">Company</span>
-                                </label>
-                                <input type="text" name="company" class="input input-bordered w-full" placeholder="Your Company">
-                            </div>
-                        </div>
-                        
-                        <div class="form-control">
-                            <label class="label">
-                                <span class="label-text font-semibold">Subject *</span>
-                            </label>
-                            <select name="subject" required class="select select-bordered w-full">
-                                <option disabled selected>Choose a subject</option>
-                                <option value="sales">Sales Inquiry</option>
-                                <option value="support">Technical Support</option>
-                                <option value="partnership">Partnership</option>
-                                <option value="feedback">Feedback</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-control">
-                            <label class="label">
-                                <span class="label-text font-semibold">Message *</span>
-                            </label>
-                            <textarea name="message" required class="textarea textarea-bordered h-32 w-full" placeholder="Tell us about your project, questions, or how we can help you..."></textarea>
-                        </div>
-                        
-                        <div class="form-control">
-                            <label class="label cursor-pointer justify-start gap-3">
-                                <input type="checkbox" name="newsletter" class="checkbox checkbox-primary">
-                                <span class="label-text">Subscribe to CubeKit updates and product announcements</span>
-                            </label>
-                        </div>
-                        
-                        <div class="form-control">
-                            <button type="submit" class="btn btn-primary btn-lg">
-                                Send Message
-                                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
-                                </svg>
-                            </button>
                         </div>
                     </form>
                 </div>
