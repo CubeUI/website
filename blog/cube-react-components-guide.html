@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cubekit">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Guide to Cube React Components - CubeJS React UI Library | CubeKit</title>
+    <meta name="description" content="Comprehensive guide to Cube React Components and CubeJS React libraries. Learn how to build professional Cube UI components, React Query Builders, and Dashboard components for your Cube.dev applications.">
+    <meta name="keywords" content="Cube React Components, CubeJS React, Cube UI Components, Cube React Query Builder, CubeJS UI Library, Cube React Dashboard, React Analytics Components">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://cube-kit.com/blog/cube-react-components-guide.html">
+    <meta property="og:title" content="Complete Guide to Cube React Components - CubeJS React UI Library">
+    <meta property="og:description" content="Comprehensive guide to Cube React Components and CubeJS React libraries. Learn how to build professional Cube UI components for your Cube.dev applications.">
+    <meta property="og:image" content="https://cube-kit.com/screenshots/hero-image.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://cube-kit.com/blog/cube-react-components-guide.html">
+    <meta property="twitter:title" content="Complete Guide to Cube React Components - CubeJS React UI Library">
+    <meta property="twitter:description" content="Comprehensive guide to Cube React Components and CubeJS React libraries. Learn how to build professional Cube UI components for your Cube.dev applications.">
+    <meta property="twitter:image" content="https://cube-kit.com/screenshots/hero-image.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://cube-kit.com/blog/cube-react-components-guide.html">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../icons/cubekit_logo.png">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Complete Guide to Cube React Components - CubeJS React UI Library",
+        "description": "Comprehensive guide to Cube React Components and CubeJS React libraries. Learn how to build professional Cube UI components for your Cube.dev applications.",
+        "author": {
+            "@type": "Organization",
+            "name": "CubeKit"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "CubeKit",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://cube-kit.com/icons/cubekit_logo.png"
+            }
+        },
+        "datePublished": "2024-12-20",
+        "dateModified": "2024-12-20",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://cube-kit.com/blog/cube-react-components-guide.html"
+        },
+        "keywords": "Cube React Components, CubeJS React, Cube UI Components, Cube React Query Builder, CubeJS UI Library"
+    }
+    </script>
+</head>
+<body class="font-sans">
+    <!-- Navigation -->
+    <div class="navbar bg-base-100 border-b border-base-200 sticky top-0 z-50">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16"></path>
+                    </svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <li><a href="../index.html#features">Features</a></li>
+                    <li><a href="../index.html#pricing">Pricing</a></li>
+                    <li><a href="../docs.html">Docs</a></li>
+                    <li><a href="../blog/">Blog</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <a href="../index.html" class="btn btn-ghost">
+                <img src="../icons/cubekit_logo.png" alt="CubeKit" class="h-12">
+            </a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+                <li><a href="../index.html#features" class="hover:text-primary">Features</a></li>
+                <li><a href="../index.html#pricing" class="hover:text-primary">Pricing</a></li>
+                <li><a href="../docs.html" class="hover:text-primary">Docs</a></li>
+                <li><a href="../blog/" class="hover:text-primary text-primary">Blog</a></li>
+                <li><a href="../contact.html" class="hover:text-primary">Contact</a></li>
+            </ul>
+        </div>
+        <div class="navbar-end">
+            <a href="../index.html" class="btn btn-primary">Join Waiting List</a>
+        </div>
+    </div>
+
+    <!-- Article Header -->
+    <section class="py-20 bg-gradient-to-br from-base-200 to-base-300">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="breadcrumbs text-sm mb-4">
+                <ul>
+                    <li><a href="../index.html" class="text-primary">CubeKit</a></li>
+                    <li><a href="../blog/" class="text-primary">Blog</a></li>
+                    <li>Cube React Components Guide</li>
+                </ul>
+            </div>
+            <h1 class="text-4xl lg:text-6xl font-bold leading-tight mb-6">
+                Complete Guide to <span class="text-primary">Cube React Components</span>
+            </h1>
+            <p class="text-xl text-base-content/70 mb-8 leading-relaxed">
+                Everything you need to know about building professional Cube UI components with React. From CubeJS React integration to advanced Query Builder components.
+            </p>
+            <div class="flex items-center gap-4 text-base-content/70">
+                <span>Published: December 20, 2024</span>
+                <span>•</span>
+                <span>15 min read</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Content -->
+    <article class="py-20 bg-base-100">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="prose prose-lg max-w-none">
+                
+                <!-- Introduction -->
+                <section class="mb-12">
+                    <h2 class="text-3xl font-bold mb-6">What Are Cube React Components?</h2>
+                    <p class="text-lg leading-relaxed mb-6">
+                        <strong>Cube React Components</strong> are specialized UI components designed to work seamlessly with <strong>Cube.dev</strong> and <strong>CubeJS</strong>. These components provide a complete solution for building analytics dashboards, data visualization tools, and business intelligence applications using React.
+                    </p>
+                    <p class="text-lg leading-relaxed mb-6">
+                        Unlike generic React components, <strong>Cube UI Components</strong> are specifically built to handle the unique requirements of analytics applications - from complex query building to real-time data visualization. They integrate directly with the Cube.dev API and provide a professional user experience out of the box.
+                    </p>
+                    <div class="bg-primary/10 p-6 rounded-lg border border-primary/20 mb-8">
+                        <h3 class="text-xl font-bold text-primary mb-3">Why Choose Cube React Components?</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-start gap-2">
+                                <span class="text-primary">✓</span>
+                                <span>Built specifically for Cube.dev and CubeJS applications</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-primary">✓</span>
+                                <span>Professional UI/UX designed for analytics use cases</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-primary">✓</span>
+                                <span>Save hundreds of hours of development time</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-primary">✓</span>
+                                <span>TypeScript support with full type safety</span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Core Components -->
+                <section class="mb-12">
+                    <h2 class="text-3xl font-bold mb-6">Essential Cube React Components</h2>
+                    
+                    <h3 class="text-2xl font-bold mb-4">1. Cube React Query Builder</h3>
+                    <p class="text-lg leading-relaxed mb-6">
+                        The <strong>Cube React Query Builder</strong> is the cornerstone of any analytics application. This component provides an intuitive interface for users to build complex Cube queries without writing code.
+                    </p>
+                    <div class="bg-base-200 p-6 rounded-lg mb-6">
+                        <h4 class="text-lg font-bold mb-3">Key Features:</h4>
+                        <ul class="space-y-2">
+                            <li>• Drag-and-drop dimension and measure selection</li>
+                            <li>• Advanced filter builder with multiple operators</li>
+                            <li>• Time dimension controls with granularity options</li>
+                            <li>• Real-time query preview and validation</li>
+                            <li>• Responsive design for mobile and desktop</li>
+                        </ul>
+                    </div>
+
+                    <h3 class="text-2xl font-bold mb-4">2. CubeJS React Dashboard Components</h3>
+                    <p class="text-lg leading-relaxed mb-6">
+                        <strong>CubeJS React Dashboard</strong> components provide a complete solution for building interactive dashboards. These components handle everything from layout management to chart rendering.
+                    </p>
+                    <div class="bg-base-200 p-6 rounded-lg mb-6">
+                        <h4 class="text-lg font-bold mb-3">Dashboard Features:</h4>
+                        <ul class="space-y-2">
+                            <li>• Flexible grid layout system</li>
+                            <li>• Multiple chart types (bar, line, pie, table)</li>
+                            <li>• Interactive filters and drill-down capabilities</li>
+                            <li>• Export functionality (PDF, CSV, PNG)</li>
+                            <li>• Real-time data updates</li>
+                        </ul>
+                    </div>
+
+                    <h3 class="text-2xl font-bold mb-4">3. Cube SQL Editor Component</h3>
+                    <p class="text-lg leading-relaxed mb-6">
+                        For power users who need direct SQL access, the <strong>Cube SQL Editor</strong> provides a professional code editor with syntax highlighting and intelligent autocomplete.
+                    </p>
+                </section>
+
+                <!-- Integration Guide -->
+                <section class="mb-12">
+                    <h2 class="text-3xl font-bold mb-6">How to Integrate CubeJS React Components</h2>
+                    
+                    <h3 class="text-2xl font-bold mb-4">Step 1: Installation</h3>
+                    <div class="mockup-code bg-neutral text-neutral-content mb-6">
+                        <pre><code>npm install @cubekit/react @cube-dev/client</code></pre>
+                    </div>
+
+                    <h3 class="text-2xl font-bold mb-4">Step 2: Basic Setup</h3>
+                    <div class="mockup-code bg-neutral text-neutral-content mb-6">
+                        <pre><code>import { QueryBuilder, Dashboard } from '@cubekit/react';
+import CubeApi from '@cube-dev/client-core';
+
+const cubeApi = new CubeApi({
+  token: 'your-cube-token',
+  apiUrl: 'https://your-cube-api.com'
+});
+
+function App() {
+  return (
+    &lt;div&gt;
+      &lt;QueryBuilder 
+        cubeApi={cubeApi}
+        onQueryChange={handleQueryChange}
+      /&gt;
+      &lt;Dashboard 
+        cubeApi={cubeApi}
+        queries={queries}
+      /&gt;
+    &lt;/div&gt;
+  );
+}</code></pre>
+                    </div>
+
+                    <h3 class="text-2xl font-bold mb-4">Step 3: Advanced Configuration</h3>
+                    <p class="text-lg leading-relaxed mb-6">
+                        <strong>Cube UI Components</strong> are highly customizable. You can configure themes, add custom logic, and integrate with your existing design system.
+                    </p>
+                </section>
+
+                <!-- Best Practices -->
+                <section class="mb-12">
+                    <h2 class="text-3xl font-bold mb-6">Best Practices for Cube React Components</h2>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 mb-8">
+                        <div class="bg-success/10 p-6 rounded-lg border border-success/20">
+                            <h3 class="text-xl font-bold text-success mb-3">✓ Do</h3>
+                            <ul class="space-y-2">
+                                <li>• Use TypeScript for better development experience</li>
+                                <li>• Implement proper error handling</li>
+                                <li>• Cache queries for better performance</li>
+                                <li>• Follow React best practices</li>
+                                <li>• Test components thoroughly</li>
+                            </ul>
+                        </div>
+                        <div class="bg-error/10 p-6 rounded-lg border border-error/20">
+                            <h3 class="text-xl font-bold text-error mb-3">✗ Don't</h3>
+                            <ul class="space-y-2">
+                                <li>• Ignore loading states</li>
+                                <li>• Skip error boundaries</li>
+                                <li>• Overload components with props</li>
+                                <li>• Forget about accessibility</li>
+                                <li>• Neglect mobile responsiveness</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Performance -->
+                <section class="mb-12">
+                    <h2 class="text-3xl font-bold mb-6">Performance Optimization</h2>
+                    <p class="text-lg leading-relaxed mb-6">
+                        <strong>CubeJS React</strong> applications can handle large datasets efficiently with proper optimization techniques:
+                    </p>
+                    <div class="space-y-4">
+                        <div class="bg-base-200 p-4 rounded-lg">
+                            <h4 class="font-bold mb-2">Query Optimization</h4>
+                            <p>Use Cube.dev's pre-aggregations and caching features to improve query performance.</p>
+                        </div>
+                        <div class="bg-base-200 p-4 rounded-lg">
+                            <h4 class="font-bold mb-2">Component Memoization</h4>
+                            <p>Implement React.memo and useMemo to prevent unnecessary re-renders.</p>
+                        </div>
+                        <div class="bg-base-200 p-4 rounded-lg">
+                            <h4 class="font-bold mb-2">Lazy Loading</h4>
+                            <p>Load components and data on-demand to reduce initial bundle size.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Conclusion -->
+                <section class="mb-12">
+                    <h2 class="text-3xl font-bold mb-6">Conclusion</h2>
+                    <p class="text-lg leading-relaxed mb-6">
+                        <strong>Cube React Components</strong> provide the fastest way to build professional analytics applications with <strong>Cube.dev</strong>. Whether you're building a simple dashboard or a complex business intelligence platform, these components give you the tools you need to create exceptional user experiences.
+                    </p>
+                    <p class="text-lg leading-relaxed mb-6">
+                        The <strong>CubeJS React</strong> ecosystem continues to evolve, with new components and features being added regularly. By choosing a comprehensive <strong>Cube UI Components</strong> library like CubeKit, you're investing in a solution that will grow with your needs.
+                    </p>
+                    <div class="bg-primary/10 p-6 rounded-lg border border-primary/20">
+                        <h3 class="text-xl font-bold text-primary mb-3">Ready to Get Started?</h3>
+                        <p class="mb-4">Join our waiting list to be notified when CubeKit launches with the most comprehensive Cube React Components library available.</p>
+                        <a href="../index.html" class="btn btn-primary">Join Waiting List</a>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </article>
+
+    <!-- Related Articles -->
+    <section class="py-20 bg-base-200">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Related Articles</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="card bg-base-100 shadow-lg">
+                    <div class="card-body">
+                        <h3 class="card-title">Building Modern Cube UI Components</h3>
+                        <p class="text-base-content/70">Learn how to create professional UI components for your Cube.dev applications.</p>
+                        <div class="card-actions justify-end">
+                            <a href="building-modern-cube-ui-components.html" class="btn btn-primary btn-sm">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card bg-base-100 shadow-lg">
+                    <div class="card-body">
+                        <h3 class="card-title">Getting Started with CubeKit</h3>
+                        <p class="text-base-content/70">A comprehensive guide to getting started with CubeKit components.</p>
+                        <div class="card-actions justify-end">
+                            <a href="getting-started-with-cubekit.html" class="btn btn-primary btn-sm">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card bg-base-100 shadow-lg">
+                    <div class="card-body">
+                        <h3 class="card-title">Why Cube.dev is Perfect</h3>
+                        <p class="text-base-content/70">Discover why Cube.dev is the perfect foundation for analytics applications.</p>
+                        <div class="card-actions justify-end">
+                            <a href="why-cube-dev-perfect-data-platform.html" class="btn btn-primary btn-sm">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer footer-center p-10 bg-base-200 text-base-content">
+        <aside>
+            <div class="flex justify-center mb-4">
+                <img src="../icons/cubekit_logo.png" alt="CubeKit" class="h-12">
+            </div>
+            <p class="text-base-content/70">Professional Cube UI components for enhanced user experience.</p>
+        </aside>
+        <nav>
+            <div class="grid grid-flow-col gap-8">
+                <div class="flex flex-col gap-2">
+                    <span class="footer-title">Product</span>
+                    <a href="../index.html#features" class="link link-hover">Features</a>
+                    <a href="../index.html#pricing" class="link link-hover">Pricing</a>
+                    <a href="../docs.html" class="link link-hover">Documentation</a>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <span class="footer-title">Support</span>
+                    <a href="../contact.html" class="link link-hover">Contact</a>
+                    <a href="../faq.html" class="link link-hover">FAQ</a>
+                    <a href="../license.html" class="link link-hover">License</a>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <span class="footer-title">Resources</span>
+                    <a href="../blog/" class="link link-hover">Blog</a>
+                    <a href="../docs.html" class="link link-hover">Documentation</a>
+                </div>
+            </div>
+        </nav>
+        <aside>
+            <p>&copy; 2024 CubeKit. All rights reserved.</p>
+        </aside>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html> 
